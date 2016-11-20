@@ -20,7 +20,8 @@
 #include <iostream>
 #include "Scene.h"
 
-main(){
-	Scene test;
-	test.out();	
+void Scene::out(){
+	std::cout<<"test geslaagd"<<std::endl;
 }
+
+

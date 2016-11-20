@@ -1,5 +1,5 @@
 #OBJS specifies wicht files to compile
-OBJS = src/main.cpp
+OBJS = src/main.cpp src/Scene.cpp
 
 #CC spesifies compiler 
 CC = g++

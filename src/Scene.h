@@ -18,9 +18,9 @@
 
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "Scene.h"
 
-main(){
-	Scene test;
-	test.out();	
-}
+class Scene {
+	public:
+		void out();
+};
+

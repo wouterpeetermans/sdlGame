@@ -15,6 +15,9 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef Scene_Included //include guard this makes shure the file is not included more then once
+#define Scene_Included
+
 
 #include <SDL2/SDL.h>
 #include <iostream>
@@ -23,4 +26,7 @@ class Scene {
 	public:
 		void out();
 };
+
+
+#endif
 

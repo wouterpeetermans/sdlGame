@@ -21,12 +21,22 @@
 
 #include <SDL2/SDL.h>
 #include <iostream>
+#define window_Height 480
+#define window_Width 640
+#define fps 60
 
 class Scene {
+	private:
+		SDL_Window* window;
+		SDL_Surface* screen;
+
 	public:
-		void out();
+	Scene();
+	void Run();
+	~Scene();
+
+
 };
 
 
 #endif
-

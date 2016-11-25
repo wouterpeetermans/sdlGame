@@ -16,11 +16,17 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+
+
 #include <SDL2/SDL.h>
 #include <iostream>
 #include "Scene.h"
 
-main(){
+main(int argc, char* argv[]){
+
+	atexit(SDL_Quit);
 	Scene test;
-	test.out();	
+	test.Run();
+
+	return 0;
 }

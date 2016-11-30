@@ -19,24 +19,29 @@
 #define Scene_Included
 
 
-#include <SDL2/SDL.h>
-#include <iostream>
-#define window_Height 480
-#define window_Width 640
-#define fps 60
+#include <SDL2/SDL.h>  //import the main SDL library
+#include <SDL2/SDL_image.h>  // import the image convorting part of SDL
+#include <iostream> //give me some c++ powers like string support and cout
+#define window_Height 480 //set the height of the window (this wil go out in a later stage)
+#define window_Width 640 // set the width
+#define fps 60 // set the disired frames per second (not implemented yet)
 
-class Scene {
+class Scene {  //all screen related activitys go in here
 	private:
-		SDL_Window* window;
-		SDL_Surface* screen;
+		//variables
+		SDL_Window* window; // this wil be the pointer to the SDL window we are using
+		SDL_Surface* screen; // pointer to the surface of the window above
+		//functions
+		SDL_Surface* loadSurface(std::string);//function to load an image to a surface and optimize it
+
 
 	public:
-	Scene();
-	void Run();
-	~Scene();
-
+		//constructor and deconstructor
+		Scene();
+	  ~Scene();
+		//functions
+		void Run();// this is the main function of Scene and it wil go on till the program ends
 
 };
 
-
-#endif
+#endif // end of includeGuard

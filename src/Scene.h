@@ -30,9 +30,9 @@ class Scene {  //all screen related activitys go in here
 	private:
 		//variables
 		SDL_Window* window; // this wil be the pointer to the SDL window we are using
-		SDL_Surface* screen; // pointer to the surface of the window above
+		SDL_Renderer* screenRenderer; // pointer to the renderer of the window above
 		//functions
-		SDL_Surface* loadSurface(std::string);//function to load an image to a surface and optimize it
+		SDL_Texture* loadTexture(std::string);//function to load an image to a surface and optimize it
 
 
 	public:

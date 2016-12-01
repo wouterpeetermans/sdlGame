@@ -25,29 +25,48 @@ Scene::Scene(){
 					SDL_WINDOWPOS_UNDEFINED,
 					window_Width, //window width defined in the header file
 					window_Height, //same here
-					SDL_WINDOW_RESIZABLE);// I like resizable windows so for the heck of it
-	screen = SDL_GetWindowSurface(window); // make screen point to the surface of the window
+					SDL_WINDOW_RESIZABLE);// I like resizable windows so why not
+	if (window == NULL) {
+		std::cout<< "window could not be created" << SDL_GetError() << std::endl;
+	}
+	else {
+		screenRenderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
+		if (screenRenderer == NULL) {
+			std::cout << "screen render could not be created" << SDL_GetError() << std::endl;
+		}
+		else {
+			SDL_SetRenderDrawColor(screenRenderer, 0x12, 0xFF, 0xFF, 0xFF);
+			if(!IMG_Init(IMG_INIT_PNG)){
+				std::cout<<"image library could not be loaded" << IMG_GetError() <<std::endl;
+			}
+		}
+	}
 }
 	//destructor because I dont like memory leaks
 Scene::~Scene(){
-		SDL_DestroyWindow(window); // blow up the window with electronic magic
+		SDL_DestroyRenderer(screenRenderer);
+		SDL_DestroyWindow(window);
+		screenRenderer = NULL; // destroy the pointers to
+		window = NULL;
+		IMG_Quit();
 		SDL_Quit(); // quit SDL
+		std::cout << "quited properly" << std::endl;
 }
 // fuction does what it tells you it does
-SDL_Surface* Scene::loadSurface(std::string path){
-		SDL_Surface* optimizedSurface = NULL; //here I store the newly generated surface
-		SDL_Surface* loadedSurface = SDL_LoadBMP(path.c_str());//load a surface from a file
+SDL_Texture* Scene::loadTexture(std::string path){
+		SDL_Texture* newTexture = NULL; //here I store the newly generated surface
+		SDL_Surface* loadedSurface = IMG_Load(path.c_str());//load a surface from a file
 		if (loadedSurface == NULL) {//detect if there is something in is and if not give some error
-			std::cout << "image could not be loaded" << std::endl;
-		}
+			std::cout << "image could not be loaded" << SDL_GetError() << std::endl;
+			}
 		else {//optimize the surface for the screen we are using
-			optimizedSurface = SDL_ConvertSurface(loadedSurface, screen->format, NULL); //see SDL docs for wath it does
-			if(optimizedSurface == NULL){//same as above
-				std::cout << "image not optimized" << std::endl;
+			newTexture = SDL_CreateTextureFromSurface(screenRenderer, loadedSurface);
+			if(newTexture == NULL){//same as above
+				std::cout << "texture not created" << SDL_GetError() << std::endl;
 			}
 			SDL_FreeSurface(loadedSurface);//prevent memory leaks because they are anoying
 		}
-		return optimizedSurface; //return something
+		return newTexture; //return something
 }
 
 void Scene::Run(){ // the place where all the magic happens
@@ -58,7 +77,7 @@ void Scene::Run(){ // the place where all the magic happens
 		scrn_rect.h = 48;
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
-		SDL_Surface* image = loadSurface("game/hello.bmp"); // use the above created surface
+		SDL_Texture* image = loadTexture("game/castle.png"); // use the above created surface
 		if (image == NULL) { // errors ...
 			std::cout << "de afbeelding is niet geladen" << std::endl;
 		}
@@ -67,7 +86,7 @@ void Scene::Run(){ // the place where all the magic happens
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
 					quit = true;
 				}
-				else if(e.type = SDL_KEYDOWN) {
+				else if(e.type = SDL_KEYDOWN) {//keys pressed
 					switch (e.key.keysym.sym) {
 						case SDLK_ESCAPE: //escape makes the program quit for now
 						quit = true;
@@ -77,10 +96,10 @@ void Scene::Run(){ // the place where all the magic happens
 					}
 				}
 			}
-			SDL_BlitSurface(image,NULL,screen,NULL);// put the optimized surface on the screen surface
-			SDL_BlitScaled(image,NULL,screen,&scrn_rect);//put a smaller version of the image on the screen in the bottom right corner (minimap)
-			SDL_UpdateWindowSurface(window);//push this all to the real screen
-
+			SDL_RenderClear(screenRenderer);
+			SDL_RenderCopy(screenRenderer, image, NULL, NULL);
+			SDL_RenderPresent(screenRenderer);
 		}
-		SDL_FreeSurface(image);//clean up
+		SDL_DestroyTexture(image);
+		image = NULL;
 }

@@ -98,6 +98,7 @@ void Scene::Run(){ // the place where all the magic happens
 			}
 			SDL_RenderClear(screenRenderer);
 			SDL_RenderCopy(screenRenderer, image, NULL, NULL);
+			SDL_RenderCopy(screenRenderer, image, NULL, &scrn_rect);
 			SDL_RenderPresent(screenRenderer);
 		}
 		SDL_DestroyTexture(image);

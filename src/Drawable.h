@@ -15,17 +15,21 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef _Drawable
+#define _Drawable 1
+#include <SDL2/SDL.h>  //import the main SDL library
+#include <SDL2/SDL_image.h>  // import the image convorting part of SDL
+#include <iostream> //give me some c++ powers like string support and cout
+
+class Drawable {
+private:
+  SDL_Texture* object;//the actual texture this class is all about
+public:
+  Drawable(SDL_Renderer*, SDL_Surface*, SDL_Rect*);
+  Drawable(SDL_Renderer*, SDL_Surface*, int, int, int, int);
+  Drawable(SDL_Renderer*, SDL_Surface*);
+  ~Drawable();
+};
 
 
-
-#include <iostream>
-#include "Scene.h"
-
-main(int argc, char* argv[]){ // main program
-
-	atexit(SDL_Quit); // make sure SDL is quited if the program is closed
-	Scene test; // make Scene object test constructor doesn't have arguments so no brackets needed
-	test.Run();
-
-	return 0;
-}
+#endif

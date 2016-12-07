@@ -24,11 +24,13 @@
 class Drawable {
 private:
   SDL_Texture* object;//the actual texture this class is all about
+  SDL_Rect destRect;//the rectangle where it ends when Draw is called
 public:
   Drawable(SDL_Renderer*, SDL_Surface*, SDL_Rect*);
   Drawable(SDL_Renderer*, SDL_Surface*, int, int, int, int);
   Drawable(SDL_Renderer*, SDL_Surface*);
   ~Drawable();
+  virtual void Draw(SDL_Renderer*);
 };
 
 

@@ -23,6 +23,10 @@ Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file ,SDL_Rect* posRect)
   SDL_BlitSurface(file,posRect,dest,NULL);
   object = SDL_CreateTextureFromSurface(renderer,dest);
   SDL_FreeSurface(dest);
+  destRect.w = posRect->w;
+  destRect.h = posRect->h;
+  destRect.x = 0;
+  destRect.y = 0;
 }
 //constructor 2
 Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file ,int w ,int h ,int x ,int y){
@@ -35,6 +39,10 @@ Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file ,int w ,int h ,int 
   SDL_BlitSurface(file,&posRect,dest,NULL);
   object = SDL_CreateTextureFromSurface(renderer,dest);
   SDL_FreeSurface(dest);
+  destRect.w = w;
+  destRect.h = h;
+  destRect.x = 0;
+  destRect.y = 0;
 }
 // constructor 3
 Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file){
@@ -42,8 +50,16 @@ Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file){
   SDL_BlitSurface(file,NULL,dest,NULL);
   object = SDL_CreateTextureFromSurface(renderer,dest);
   SDL_FreeSurface(dest);
+  destRect.w = dest->w;
+  destRect.h = dest->h;
+  destRect.x = 0;
+  destRect.y = 0;
 }
 
 Drawable::~Drawable(){
   SDL_DestroyTexture(object);
+}
+
+void Drawable::Draw(SDL_Renderer* renderer) {
+  SDL_RenderCopy(renderer, object, NULL, &destRect);
 }

@@ -57,3 +57,7 @@ void Drawable::SetPos(int x, int y){
   destRect->x = x;
   destRect->y = y;
 }
+
+OverlapType Drawable::OverlapDetect(SDL_Rect * rect){
+  return OL_NO_COLLISION;
+}

@@ -19,7 +19,7 @@
 
 
 UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect):Drawable(renderer, texture, rect){
-  
+
 }
 
 UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h ,int x ,int y):Drawable(renderer, texture , w , h , x , y){
@@ -28,4 +28,18 @@ UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h 
 
 UnMovable::~UnMovable(){
 
+}
+
+
+void UnMovable::SetColidable(SDL_Rect* rect){
+  if ((rect->w <= destRect->w)&&(rect->h <= destRect->h)) {
+    colideRect == rect;
+  }
+  else {
+    std::cout << "this rect was a litle to big for this block" << '\n';
+  }
+}
+
+OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){
+  
 }

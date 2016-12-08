@@ -21,8 +21,14 @@
 #include <SDL2/SDL_image.h>  // import the image convorting part of SDL
 #include <iostream> //give me some c++ powers like string support and cout
 
+enum OverlapType {
+  OL_NO_COLLISION=0,
+  OL_COLLISION,
+  OL_SPECIAL
+};
+
 class Drawable {
-private:
+protected:
   SDL_Texture* file;//the actual texture this class is all about
   SDL_Rect* posRect;//the rectangle around the object in the file
   SDL_Rect* destRect;//the rectangle where it ends when Draw is called
@@ -33,6 +39,7 @@ public:
   ~Drawable();
   virtual void Draw(SDL_Renderer*);
   virtual void SetPos(int,int);
+  virtual OverlapType OverlapDetect(SDL_Rect*);
 };
 
 

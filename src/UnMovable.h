@@ -20,11 +20,15 @@
 #include "Drawable.h"
 
 class UnMovable: public Drawable {
+protected:
+  SDL_Rect* colideRect = NULL;
 
 public:
   UnMovable(SDL_Renderer*, SDL_Texture*, SDL_Rect*);
   UnMovable(SDL_Renderer*, SDL_Texture*, int, int, int, int);
   ~UnMovable();
+  void SetColidable(SDL_Rect*);
+  OverlapType OverlapDetect(SDL_Rect*);
 };
 
 

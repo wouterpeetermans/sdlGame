@@ -30,12 +30,14 @@ Scene::Scene(){
 		std::cout<< "window could not be created" << SDL_GetError() << std::endl;
 	}
 	else {
-		screenRenderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
+		screenRenderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 		if (screenRenderer == NULL) {
 			std::cout << "screen render could not be created" << SDL_GetError() << std::endl;
 		}
 		else {
-			SDL_SetRenderDrawColor(screenRenderer, 0x12, 0xFF, 0xFF, 0xFF);
+			if(0!=SDL_SetRenderDrawColor(screenRenderer, 0x12, 0xFF, 0xFF, 0xFF)){
+				std::cout << "something wrong with renerDrawCollor" << SDL_GetError() << std::endl;
+			}
 			if(!IMG_Init(IMG_INIT_PNG)){
 				std::cout<<"image library could not be loaded" << IMG_GetError() <<std::endl;
 			}
@@ -81,7 +83,12 @@ void Scene::Run(){ // the place where all the magic happens
 		if (image == NULL) { // errors ...
 			std::cout << "de afbeelding is niet geladen" << std::endl;
 		}
+		Drawable bla(screenRenderer,image,64,64,0,64);
+		Drawable blabla(screenRenderer,image,64,64,64,128);
+		int pos = 0;
+		unsigned int startTime=0 , currentTime;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
+			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
 			while ( SDL_PollEvent( &e ) !=0 ) {//a loop to go over all the events the user managed to create in a fraction of a second
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
 					quit = true;
@@ -91,15 +98,26 @@ void Scene::Run(){ // the place where all the magic happens
 						case SDLK_ESCAPE: //escape makes the program quit for now
 						quit = true;
 						break;
+						case SDLK_RIGHT:
+						pos++;
+						break;
+						case SDLK_LEFT:
+						pos--;
+						break;
 						default:
 						break;
 					}
 				}
 			}
 			SDL_RenderClear(screenRenderer);
-			SDL_RenderCopy(screenRenderer, image, NULL, NULL);
-			SDL_RenderCopy(screenRenderer, image, NULL, &scrn_rect);
+			bla.SetPos(pos, 0);
+			blabla.Draw(screenRenderer);
+			bla.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
+			currentTime = SDL_GetTicks();
+			if (currentTime<(startTime+10)) {//cap the framerate at about 100 fps not used when vsync is working
+				SDL_Delay((startTime+10)-currentTime);
+			}
 		}
 		SDL_DestroyTexture(image);
 		image = NULL;

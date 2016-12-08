@@ -18,48 +18,42 @@
 #include "Drawable.h"
 
 //constructor 1
-Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file ,SDL_Rect* posRect){
-  SDL_Surface* dest;
-  SDL_BlitSurface(file,posRect,dest,NULL);
-  object = SDL_CreateTextureFromSurface(renderer,dest);
-  SDL_FreeSurface(dest);
-  destRect.w = posRect->w;
-  destRect.h = posRect->h;
-  destRect.x = 0;
-  destRect.y = 0;
+Drawable::Drawable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect){
+  file = texture;
+  posRect = rect;
+  destRect = new SDL_Rect;
+  destRect->w = posRect->w;
+  destRect->h = posRect->h;
+  destRect->x = 0;
+  destRect->y = 0;
 }
 //constructor 2
-Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file ,int w ,int h ,int x ,int y){
-  SDL_Rect posRect;
-  posRect.w = w;
-  posRect.h = h;
-  posRect.x = x;
-  posRect.y = y;
-  SDL_Surface* dest;
-  SDL_BlitSurface(file,&posRect,dest,NULL);
-  object = SDL_CreateTextureFromSurface(renderer,dest);
-  SDL_FreeSurface(dest);
-  destRect.w = w;
-  destRect.h = h;
-  destRect.x = 0;
-  destRect.y = 0;
-}
-// constructor 3
-Drawable::Drawable(SDL_Renderer* renderer, SDL_Surface* file){
-  SDL_Surface* dest;
-  SDL_BlitSurface(file,NULL,dest,NULL);
-  object = SDL_CreateTextureFromSurface(renderer,dest);
-  SDL_FreeSurface(dest);
-  destRect.w = dest->w;
-  destRect.h = dest->h;
-  destRect.x = 0;
-  destRect.y = 0;
+Drawable::Drawable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h ,int x ,int y){
+  file = texture;
+  posRect = new SDL_Rect;
+  posRect->w = w;
+  posRect->h = h;
+  posRect->x = x;
+  posRect->y = y;
+  destRect = new SDL_Rect;
+  destRect->w = posRect->w;
+  destRect->h = posRect->h;
+  destRect->x = 0;
+  destRect->y = 0;
 }
 
+
 Drawable::~Drawable(){
-  SDL_DestroyTexture(object);
+  delete destRect;
+  delete posRect;
+  file = NULL;
 }
 
 void Drawable::Draw(SDL_Renderer* renderer) {
-  SDL_RenderCopy(renderer, object, NULL, &destRect);
+  SDL_RenderCopy(renderer, file, posRect, destRect);
+}
+
+void Drawable::SetPos(int x, int y){
+  destRect->x = x;
+  destRect->y = y;
 }

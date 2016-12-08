@@ -83,7 +83,7 @@ void Scene::Run(){ // the place where all the magic happens
 		if (image == NULL) { // errors ...
 			std::cout << "de afbeelding is niet geladen" << std::endl;
 		}
-		Drawable bla(screenRenderer,image,64,64,0,64);
+		UnMovable bla(screenRenderer,image,64,64,0,64);
 		Drawable blabla(screenRenderer,image,64,64,64,128);
 		int pos = 0;
 		unsigned int startTime=0 , currentTime;

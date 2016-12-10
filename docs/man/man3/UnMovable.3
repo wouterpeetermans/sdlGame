@@ -1,0 +1,62 @@
+.TH "UnMovable" 3 "Sat Dec 10 2016" "sdlGame" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UnMovable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UnMovable\&.h>\fP
+.PP
+Inherits \fBDrawable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUnMovable\fP (SDL_Renderer *, SDL_Texture *, SDL_Rect *)"
+.br
+.ti -1c
+.RI "\fBUnMovable\fP (SDL_Renderer *, SDL_Texture *, int, int, int, int)"
+.br
+.ti -1c
+.RI "\fB~UnMovable\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetColidable\fP (SDL_Rect *)"
+.br
+.ti -1c
+.RI "\fBOverlapType\fP \fBOverlapDetect\fP (SDL_Rect *)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "SDL_Rect * \fBcolideRect\fP = NULL"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "UnMovable::UnMovable (SDL_Renderer *renderer, SDL_Texture *texture, SDL_Rect *rect)"
+
+.SS "UnMovable::UnMovable (SDL_Renderer *renderer, SDL_Texture *texture, intw, inth, intx, inty)"
+
+.SS "UnMovable::~UnMovable ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBOverlapType\fP UnMovable::OverlapDetect (SDL_Rect *rect)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDrawable\fP\&.
+.SS "void UnMovable::SetColidable (SDL_Rect *rect)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "SDL_Rect* UnMovable::colideRect = NULL\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for sdlGame from the source code\&.

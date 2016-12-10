@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_scene" kind="class" prot="public">
+    <compoundname>Scene</compoundname>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" prot="private" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* Scene::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_1a5940585c9ed6cf5b92fff54a966551ab" prot="private" static="no" mutable="no">
+        <type>SDL_Renderer *</type>
+        <definition>SDL_Renderer* Scene::screenRenderer</definition>
+        <argsstring></argsstring>
+        <name>screenRenderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="35" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture * Scene::loadTexture</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>loadTexture</name>
+        <param>
+          <type>std::string</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="58" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="42" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="21" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="48" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scene::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="45" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="74" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.h" bodystart="31" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" prot="private" virt="non-virtual"><scope>Scene</scope><name>loadTexture</name></member>
+      <member refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" prot="public" virt="non-virtual"><scope>Scene</scope><name>Run</name></member>
+      <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene</scope><name>Scene</name></member>
+      <member refid="class_scene_1a5940585c9ed6cf5b92fff54a966551ab" prot="private" virt="non-virtual"><scope>Scene</scope><name>screenRenderer</name></member>
+      <member refid="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" prot="private" virt="non-virtual"><scope>Scene</scope><name>window</name></member>
+      <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

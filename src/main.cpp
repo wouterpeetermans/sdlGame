@@ -21,7 +21,7 @@
 #include <iostream>
 #include "Scene.h"
 
-main(int argc, char* argv[]){ // main program
+int main(int argc, char* argv[]){ // main program
 
 	atexit(SDL_Quit); // make sure SDL is quited if the program is closed
 	Scene test; // make Scene object test constructor doesn't have arguments so no brackets needed

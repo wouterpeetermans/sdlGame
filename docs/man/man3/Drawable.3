@@ -1,0 +1,77 @@
+.TH "Drawable" 3 "Sat Dec 10 2016" "sdlGame" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drawable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Drawable\&.h>\fP
+.PP
+Inherited by \fBUnMovable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDrawable\fP (SDL_Renderer *, SDL_Texture *, SDL_Rect *)"
+.br
+.ti -1c
+.RI "\fBDrawable\fP (SDL_Renderer *, SDL_Texture *, int, int, int, int)"
+.br
+.ti -1c
+.RI "\fB~Drawable\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP (SDL_Renderer *)"
+.br
+.ti -1c
+.RI "virtual void \fBSetPos\fP (int, int)"
+.br
+.ti -1c
+.RI "virtual \fBOverlapType\fP \fBOverlapDetect\fP (SDL_Rect *)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "SDL_Texture * \fBfile\fP"
+.br
+.ti -1c
+.RI "SDL_Rect * \fBposRect\fP"
+.br
+.ti -1c
+.RI "SDL_Rect * \fBdestRect\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Drawable::Drawable (SDL_Renderer *renderer, SDL_Texture *texture, SDL_Rect *rect)"
+
+.SS "Drawable::Drawable (SDL_Renderer *renderer, SDL_Texture *texture, intw, inth, intx, inty)"
+
+.SS "Drawable::~Drawable ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Drawable::Draw (SDL_Renderer *renderer)\fC [virtual]\fP"
+
+.SS "\fBOverlapType\fP Drawable::OverlapDetect (SDL_Rect *rect)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBUnMovable\fP\&.
+.SS "void Drawable::SetPos (intx, inty)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "SDL_Rect* Drawable::destRect\fC [protected]\fP"
+
+.SS "SDL_Texture* Drawable::file\fC [protected]\fP"
+
+.SS "SDL_Rect* Drawable::posRect\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for sdlGame from the source code\&.

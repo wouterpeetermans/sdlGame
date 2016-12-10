@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_drawable" kind="class" prot="public">
+    <compoundname>Drawable</compoundname>
+    <derivedcompoundref refid="class_un_movable" prot="public" virt="non-virtual">UnMovable</derivedcompoundref>
+    <includes refid="_drawable_8h" local="no">Drawable.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" prot="protected" static="no" mutable="no">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture* Drawable::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Drawable::posRect</definition>
+        <argsstring></argsstring>
+        <name>posRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_drawable_1a38f8357dfc584338752cf7840b994494" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Drawable::destRect</definition>
+        <argsstring></argsstring>
+        <name>destRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drawable::Drawable</definition>
+        <argsstring>(SDL_Renderer *, SDL_Texture *, SDL_Rect *)</argsstring>
+        <name>Drawable</name>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <param>
+          <type>SDL_Texture *</type>
+          <defname>texture</defname>
+        </param>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>rect</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_drawable_1a31b158222ec48b27ffc5b9af16f5870a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drawable::Drawable</definition>
+        <argsstring>(SDL_Renderer *, SDL_Texture *, int, int, int, int)</argsstring>
+        <name>Drawable</name>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <param>
+          <type>SDL_Texture *</type>
+          <defname>texture</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>w</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>h</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>y</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="38" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="31" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_drawable_1a5db44942658aab760a7418e338582e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drawable::~Drawable</definition>
+        <argsstring>()</argsstring>
+        <name>~Drawable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="39" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_drawable_1a096acb81829742f6578556ca0128e838" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Drawable::Draw</definition>
+        <argsstring>(SDL_Renderer *)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Drawable::SetPos</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>SetPos</name>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>y</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="41" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
+        <definition>OverlapType Drawable::OverlapDetect</definition>
+        <argsstring>(SDL_Rect *)</argsstring>
+        <name>OverlapDetect</name>
+        <reimplementedby refid="class_un_movable_1abf6321ffd2bc2bd42c7d706247fa0df2">OverlapDetect</reimplementedby>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>rect</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="42" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>UnMovable</label>
+        <link refid="class_un_movable"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="30" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_drawable_1a38f8357dfc584338752cf7840b994494" prot="protected" virt="non-virtual"><scope>Drawable</scope><name>destRect</name></member>
+      <member refid="class_drawable_1a096acb81829742f6578556ca0128e838" prot="public" virt="virtual"><scope>Drawable</scope><name>Draw</name></member>
+      <member refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" prot="public" virt="non-virtual"><scope>Drawable</scope><name>Drawable</name></member>
+      <member refid="class_drawable_1a31b158222ec48b27ffc5b9af16f5870a" prot="public" virt="non-virtual"><scope>Drawable</scope><name>Drawable</name></member>
+      <member refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" prot="protected" virt="non-virtual"><scope>Drawable</scope><name>file</name></member>
+      <member refid="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" prot="public" virt="virtual"><scope>Drawable</scope><name>OverlapDetect</name></member>
+      <member refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" prot="protected" virt="non-virtual"><scope>Drawable</scope><name>posRect</name></member>
+      <member refid="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" prot="public" virt="virtual"><scope>Drawable</scope><name>SetPos</name></member>
+      <member refid="class_drawable_1a5db44942658aab760a7418e338582e0a" prot="public" virt="non-virtual"><scope>Drawable</scope><name>~Drawable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

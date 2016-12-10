@@ -34,6 +34,8 @@ UnMovable::~UnMovable(){
 void UnMovable::SetColidable(SDL_Rect* rect){
   if ((rect->w <= destRect->w)&&(rect->h <= destRect->h)) {
     colideRect == rect;
+    colideRect->x = destRect->x;
+    colideRect->y = destRect->y;
   }
   else {
     std::cout << "this rect was a litle to big for this block" << '\n';
@@ -41,5 +43,5 @@ void UnMovable::SetColidable(SDL_Rect* rect){
 }
 
 OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){
-  
+
 }

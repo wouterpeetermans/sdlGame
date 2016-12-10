@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_drawable_8h" kind="file">
+    <compoundname>Drawable.h</compoundname>
+    <includes local="no">SDL2/SDL.h</includes>
+    <includes local="no">SDL2/SDL_image.h</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="_drawable_8cpp" local="yes">src/Drawable.cpp</includedby>
+    <includedby refid="_scene_8h" local="yes">src/Scene.h</includedby>
+    <includedby refid="_un_movable_8h" local="yes">src/UnMovable.h</includedby>
+    <incdepgraph>
+      <node id="67">
+        <label>SDL2/SDL_image.h</label>
+      </node>
+      <node id="66">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="65">
+        <label>src/Drawable.h</label>
+        <link refid="Drawable.h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="72">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="75">
+        <label>src/UnMovable.cpp</label>
+        <link refid="_un_movable_8cpp"/>
+      </node>
+      <node id="73">
+        <label>src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="69">
+        <label>src/Drawable.h</label>
+        <link refid="Drawable.h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>src/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>src/Drawable.cpp</label>
+        <link refid="_drawable_8cpp"/>
+      </node>
+      <node id="74">
+        <label>src/UnMovable.h</label>
+        <link refid="_un_movable_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_drawable" prot="public">Drawable</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" prot="public" static="no">
+        <name>OverlapType</name>
+        <enumvalue id="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" prot="public">
+          <name>OL_NO_COLLISION</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" prot="public">
+          <name>OL_COLLISION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" prot="public">
+          <name>OL_SPECIAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="24" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>a<sp/>simple<sp/>platformer<sp/>game<sp/>written<sp/>for<sp/>a<sp/>shool<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/><sp/>Wouter<sp/>Peetermans</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_Drawable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Drawable<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL2/SDL.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//import<sp/>the<sp/>main<sp/>SDL<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL2/SDL_image.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>import<sp/>the<sp/>image<sp/>convorting<sp/>part<sp/>of<sp/>SDL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//give<sp/>me<sp/>some<sp/>c++<sp/>powers<sp/>like<sp/>string<sp/>support<sp/>and<sp/>cout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kindref="member">OL_NO_COLLISION</ref>=0,</highlight></codeline>
+<codeline lineno="26" refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kindref="member">OL_COLLISION</ref>,</highlight></codeline>
+<codeline lineno="27" refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kindref="member">OL_SPECIAL</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_drawable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" refkind="member"><highlight class="normal"><sp/><sp/>SDL_Texture*<sp/><ref refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kindref="member">file</ref>;</highlight><highlight class="comment">//the<sp/>actual<sp/>texture<sp/>this<sp/>class<sp/>is<sp/>all<sp/>about</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" refkind="member"><highlight class="normal"><sp/><sp/>SDL_Rect*<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>;</highlight><highlight class="comment">//the<sp/>rectangle<sp/>around<sp/>the<sp/>object<sp/>in<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_drawable_1a38f8357dfc584338752cf7840b994494" refkind="member"><highlight class="normal"><sp/><sp/>SDL_Rect*<sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>;</highlight><highlight class="comment">//the<sp/>rectangle<sp/>where<sp/>it<sp/>ends<sp/>when<sp/>Draw<sp/>is<sp/>called</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" kindref="member">Drawable</ref>(SDL_Renderer*,<sp/>SDL_Texture*,<sp/>SDL_Rect*);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" kindref="member">Drawable</ref>(SDL_Renderer*,<sp/>SDL_Texture*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a5db44942658aab760a7418e338582e0a" kindref="member">~Drawable</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1a096acb81829742f6578556ca0128e838" kindref="member">Draw</ref>(SDL_Renderer*);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" kindref="member">SetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" kindref="member">OverlapDetect</ref>(SDL_Rect*);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/wouter/Documents/sdlGame/src/Drawable.h"/>
+  </compounddef>
+</doxygen>

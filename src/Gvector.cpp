@@ -15,38 +15,30 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "UnMovable.h"
 
+#include "Gvector.h"
 
-UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect):Drawable(renderer, texture, rect){
-
-}
-
-UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h ,int x ,int y):Drawable(renderer, texture , w , h , x , y){
-
-}
-
-UnMovable::~UnMovable(){
-
-}
-
-
-void UnMovable::SetColidable(SDL_Rect* rect){
-  if ((rect->w <= destRect->w)&&(rect->h <= destRect->h)) {
-    colideRect == rect;
-    colideRect->x = destRect->x;
-    colideRect->y = destRect->y;
+int Gvector::xDir(){
+  if (x < 0) {
+    return 1;
+  }
+  else if(x > 0){
+    return -1;
   }
   else {
-    std::cout << "this rect was a litle to big for this block" << '\n';
+    return 0;
   }
 }
 
-OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){
-  if (colideRect == NULL) {
-    return OL_NO_COLLISION;
+
+int Gvector::yDir(){
+  if (y < 0) {
+    return 1;
   }
-  else if (false) {
-    /* code */
+  else if(y > 0){
+    return -1;
+  }
+  else {
+    return 0;
   }
 }

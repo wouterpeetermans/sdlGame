@@ -1,5 +1,5 @@
 #OBJS specifies wicht files to compile
-OBJS = src/main.cpp src/Scene.cpp src/Drawable.cpp src/UnMovable.cpp
+OBJS = src/main.cpp src/Scene.cpp src/Drawable.cpp src/UnMovable.cpp src/Gvector.cpp
 
 #CC spesifies compiler
 CC = g++

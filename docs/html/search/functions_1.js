@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['gvector',['Gvector',['../class_gvector.html#aedfaa9735f1517e744f58229716da263',1,'Gvector::Gvector()'],['../class_gvector.html#a1989c82b46be888dcfb356d5ab285f3a',1,'Gvector::Gvector(int a, int b)']]]
 ];

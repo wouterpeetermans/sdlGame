@@ -42,3 +42,8 @@ int Gvector::yDir(){
     return 0;
   }
 }
+
+void Gvector::operator+=(const Gvector& other){
+  x += other.x;
+  y += other.y;
+}

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['unmovable',['UnMovable',['../class_un_movable.html#a87504be12939f92e094a8642648560b5',1,'UnMovable::UnMovable(SDL_Renderer *, SDL_Texture *, SDL_Rect *)'],['../class_un_movable.html#a8f273d433d88e38ae5e6c9bf2d0e924c',1,'UnMovable::UnMovable(SDL_Renderer *, SDL_Texture *, int, int, int, int)']]]
+  ['scene',['Scene',['../class_scene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene']]],
+  ['setcolidable',['SetColidable',['../class_un_movable.html#ad26a7001aa816ce00805871a98d4a953',1,'UnMovable']]],
+  ['setpos',['SetPos',['../class_drawable.html#aabeff5eb347480f67b6f044236ae5eea',1,'Drawable']]]
 ];

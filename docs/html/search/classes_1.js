@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scene',['Scene',['../class_scene.html',1,'']]]
+  ['gvector',['Gvector',['../class_gvector.html',1,'']]]
 ];

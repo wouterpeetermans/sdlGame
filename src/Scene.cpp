@@ -72,11 +72,11 @@ SDL_Texture* Scene::loadTexture(std::string path){
 }
 
 void Scene::Run(){ // the place where all the magic happens
-		SDL_Rect scrn_rect; //this will go in to some class later on
-		scrn_rect.x = 576;
-		scrn_rect.y = 432;
-		scrn_rect.w = 64;
-		scrn_rect.h = 48;
+		//SDL_Rect scrn_rect; //this will go in to some class later on
+		//scrn_rect.x = 576;
+		//scrn_rect.y = 432;
+		//scrn_rect.w = 64;
+		//scrn_rect.h = 48;
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
 		SDL_Texture* image = loadTexture("game/castle.png"); // use the above created surface
@@ -93,7 +93,7 @@ void Scene::Run(){ // the place where all the magic happens
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
 					quit = true;
 				}
-				else if(e.type = SDL_KEYDOWN) {//keys pressed
+				else if(e.type == SDL_KEYDOWN) {//keys pressed
 					switch (e.key.keysym.sym) {
 						case SDLK_ESCAPE: //escape makes the program quit for now
 						quit = true;

@@ -4,6 +4,8 @@
     <compoundname>src</compoundname>
     <innerfile refid="_drawable_8cpp">Drawable.cpp</innerfile>
     <innerfile refid="_drawable_8h">Drawable.h</innerfile>
+    <innerfile refid="_gvector_8cpp">Gvector.cpp</innerfile>
+    <innerfile refid="_gvector_8h">Gvector.h</innerfile>
     <innerfile refid="main_8cpp">main.cpp</innerfile>
     <innerfile refid="_scene_8cpp">Scene.cpp</innerfile>
     <innerfile refid="_scene_8h">Scene.h</innerfile>

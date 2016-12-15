@@ -11,6 +11,16 @@
     <member refid="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" kind="function"><name>SetPos</name></member>
     <member refid="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" kind="function"><name>OverlapDetect</name></member>
   </compound>
+  <compound refid="class_gvector" kind="class"><name>Gvector</name>
+    <member refid="class_gvector_1a09acd3140c864867f71c0ff713446ba1" kind="variable"><name>x</name></member>
+    <member refid="class_gvector_1ad680c2e33cb57b4da0c5d79b27848e0f" kind="variable"><name>y</name></member>
+    <member refid="class_gvector_1aedfaa9735f1517e744f58229716da263" kind="function"><name>Gvector</name></member>
+    <member refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" kind="function"><name>Gvector</name></member>
+    <member refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kind="function"><name>xDir</name></member>
+    <member refid="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" kind="function"><name>yDir</name></member>
+    <member refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kind="function"><name>xSpeed</name></member>
+    <member refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kind="function"><name>ySpeed</name></member>
+  </compound>
   <compound refid="class_scene" kind="class"><name>Scene</name>
     <member refid="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" kind="variable"><name>window</name></member>
     <member refid="class_scene_1a5940585c9ed6cf5b92fff54a966551ab" kind="variable"><name>screenRenderer</name></member>
@@ -34,6 +44,11 @@
     <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kind="enumvalue"><name>OL_NO_COLLISION</name></member>
     <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kind="enumvalue"><name>OL_COLLISION</name></member>
     <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kind="enumvalue"><name>OL_SPECIAL</name></member>
+    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652" kind="enumvalue"><name>OL_DEADLY</name></member>
+  </compound>
+  <compound refid="_gvector_8cpp" kind="file"><name>Gvector.cpp</name>
+  </compound>
+  <compound refid="_gvector_8h" kind="file"><name>Gvector.h</name>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>

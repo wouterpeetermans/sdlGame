@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/UnMovable.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/UnMovable.cpp" bodystart="45" bodyend="47"/>
+        <location file="/home/wouter/Documents/sdlGame/src/UnMovable.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/UnMovable.cpp" bodystart="45" bodyend="52"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -137,25 +137,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="14">
+      <node id="18">
         <label>UnMovable</label>
         <link refid="class_un_movable"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="19">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="16">
+      <node id="20">
         <label>UnMovable</label>
         <link refid="class_un_movable"/>
-        <childnode refid="17" relation="public-inheritance">
+        <childnode refid="21" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
+      <node id="21">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>

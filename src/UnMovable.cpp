@@ -33,7 +33,7 @@ UnMovable::~UnMovable(){
 
 void UnMovable::SetColidable(SDL_Rect* rect){
   if ((rect->w <= destRect->w)&&(rect->h <= destRect->h)) {
-    colideRect == rect;
+    colideRect = rect;
     colideRect->x = destRect->x;
     colideRect->y = destRect->y;
   }
@@ -42,11 +42,12 @@ void UnMovable::SetColidable(SDL_Rect* rect){
   }
 }
 
-OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){
+OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){//todo:finish
   if (colideRect == NULL) {
     return OL_NO_COLLISION;
   }
   else if (false) {
-    /* code */
+    return OL_COLLISION;
   }
+  return OL_COLLISION;
 }

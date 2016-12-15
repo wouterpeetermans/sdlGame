@@ -29,6 +29,9 @@ public:
   int yDir();
   int xSpeed(){return x;};
   int ySpeed(){return y;};
+  void xZero() {x = 0;};
+  void yZero() {y = 0;};
+  void operator+= (const Gvector&);
 };
 
 #endif

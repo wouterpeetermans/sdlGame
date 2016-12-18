@@ -43,11 +43,5 @@ void UnMovable::SetColidable(SDL_Rect* rect){
 }
 
 OverlapType UnMovable::OverlapDetect(SDL_Rect* rect){//todo:finish
-  if (colideRect == NULL) {
-    return OL_NO_COLLISION;
-  }
-  else if (false) {
-    return OL_COLLISION;
-  }
-  return OL_COLLISION;
+  return OL_NO_COLLISION;
 }

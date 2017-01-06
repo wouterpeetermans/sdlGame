@@ -24,8 +24,8 @@ protected:
   SDL_Rect* colideRect = NULL;
 
 public:
-  UnMovable(SDL_Renderer*, SDL_Texture*, SDL_Rect*);
-  UnMovable(SDL_Renderer*, SDL_Texture*, int, int, int, int);
+  UnMovable(SDL_Texture*, SDL_Rect*);
+  UnMovable(SDL_Texture*, int, int, int, int);
   ~UnMovable();
   void SetColidable(SDL_Rect*);
   virtual OverlapType OverlapDetect(SDL_Rect*);

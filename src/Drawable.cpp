@@ -18,7 +18,7 @@
 #include "Drawable.h"
 
 //constructor 1
-Drawable::Drawable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect){
+Drawable::Drawable(SDL_Texture* texture ,SDL_Rect* rect){
   file = texture;
   posRect = rect;
   destRect = new SDL_Rect;
@@ -28,7 +28,7 @@ Drawable::Drawable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect)
   destRect->y = 0;
 }
 //constructor 2
-Drawable::Drawable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h ,int x ,int y){
+Drawable::Drawable(SDL_Texture* texture ,int w ,int h ,int x ,int y){
   file = texture;
   posRect = new SDL_Rect;
   posRect->w = w;

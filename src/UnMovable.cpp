@@ -18,11 +18,11 @@
 #include "UnMovable.h"
 
 
-UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,SDL_Rect* rect):Drawable(renderer, texture, rect){
+UnMovable::UnMovable(SDL_Texture* texture ,SDL_Rect* rect):Drawable(texture, rect){
 
 }
 
-UnMovable::UnMovable(SDL_Renderer* renderer, SDL_Texture* texture ,int w ,int h ,int x ,int y):Drawable(renderer, texture , w , h , x , y){
+UnMovable::UnMovable(SDL_Texture* texture ,int w ,int h ,int x ,int y):Drawable(texture , w , h , x , y){
 
 }
 

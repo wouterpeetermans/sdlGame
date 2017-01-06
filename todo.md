@@ -7,6 +7,7 @@
 - make deadly class
 - make movable class
 - make door class
+- make fence class
 - make lever class
 - make sprite class
 - make hero class

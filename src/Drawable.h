@@ -36,8 +36,8 @@ protected:
   SDL_Rect* destRect;//the rectangle where it ends when Draw is called
 
 public:
-  Drawable(SDL_Renderer*, SDL_Texture*, SDL_Rect*);
-  Drawable(SDL_Renderer*, SDL_Texture*, int, int, int, int);
+  Drawable(SDL_Texture*, SDL_Rect*);
+  Drawable(SDL_Texture*, int, int, int, int);
   ~Drawable();
   virtual void Draw(SDL_Renderer*);
   virtual void SetPos(int,int);

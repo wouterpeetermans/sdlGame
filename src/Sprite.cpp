@@ -16,11 +16,3 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-#ifndef _movable
-#define _movable 1 
-
-
-
-
-#endif

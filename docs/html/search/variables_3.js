@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['posrect',['posRect',['../class_drawable.html#a3ea2d565c0084e747b8b1e1321f96c59',1,'Drawable']]]
+  ['rightarray',['rightArray',['../class_sprite.html#a232f054ea1232499c6a82b678916db3e',1,'Sprite']]],
+  ['rightarraylength',['rightArrayLength',['../class_sprite.html#a3f8216c649e21312fe7b838c8b72203e',1,'Sprite']]]
 ];

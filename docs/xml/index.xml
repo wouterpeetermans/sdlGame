@@ -1,15 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.8">
   <compound refid="class_drawable" kind="class"><name>Drawable</name>
-    <member refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kind="variable"><name>file</name></member>
-    <member refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kind="variable"><name>posRect</name></member>
-    <member refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kind="variable"><name>destRect</name></member>
-    <member refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" kind="function"><name>Drawable</name></member>
-    <member refid="class_drawable_1a31b158222ec48b27ffc5b9af16f5870a" kind="function"><name>Drawable</name></member>
-    <member refid="class_drawable_1a5db44942658aab760a7418e338582e0a" kind="function"><name>~Drawable</name></member>
-    <member refid="class_drawable_1a096acb81829742f6578556ca0128e838" kind="function"><name>Draw</name></member>
-    <member refid="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" kind="function"><name>SetPos</name></member>
-    <member refid="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" kind="function"><name>OverlapDetect</name></member>
+    <member refid="class_drawable_1abdc2e2d82c51c1703656a2dfba0feabd" kind="function"><name>~Drawable</name></member>
+    <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="class_gvector" kind="class"><name>Gvector</name>
     <member refid="class_gvector_1a09acd3140c864867f71c0ff713446ba1" kind="variable"><name>x</name></member>
@@ -20,6 +13,9 @@
     <member refid="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" kind="function"><name>yDir</name></member>
     <member refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kind="function"><name>xSpeed</name></member>
     <member refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kind="function"><name>ySpeed</name></member>
+    <member refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kind="function"><name>xZero</name></member>
+    <member refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kind="function"><name>yZero</name></member>
+    <member refid="class_gvector_1ab6965c34e152b637453e901a5498741f" kind="function"><name>operator+=</name></member>
   </compound>
   <compound refid="class_scene" kind="class"><name>Scene</name>
     <member refid="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" kind="variable"><name>window</name></member>
@@ -29,15 +25,17 @@
     <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kind="function"><name>~Scene</name></member>
     <member refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kind="function"><name>Run</name></member>
   </compound>
-  <compound refid="class_un_movable" kind="class"><name>UnMovable</name>
-    <member refid="class_un_movable_1aa3986135bfd14eba5f0d575eb05f529e" kind="variable"><name>colideRect</name></member>
-    <member refid="class_un_movable_1a87504be12939f92e094a8642648560b5" kind="function"><name>UnMovable</name></member>
-    <member refid="class_un_movable_1a8f273d433d88e38ae5e6c9bf2d0e924c" kind="function"><name>UnMovable</name></member>
-    <member refid="class_un_movable_1a92b8aaedae48b7f459e0379e724f24de" kind="function"><name>~UnMovable</name></member>
-    <member refid="class_un_movable_1ad26a7001aa816ce00805871a98d4a953" kind="function"><name>SetColidable</name></member>
-    <member refid="class_un_movable_1abf6321ffd2bc2bd42c7d706247fa0df2" kind="function"><name>OverlapDetect</name></member>
-  </compound>
-  <compound refid="_drawable_8cpp" kind="file"><name>Drawable.cpp</name>
+  <compound refid="class_sprite" kind="class"><name>Sprite</name>
+    <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kind="variable"><name>leftArray</name></member>
+    <member refid="class_sprite_1a8d13842909c5867a5405a76299375d49" kind="variable"><name>leftArrayLength</name></member>
+    <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kind="variable"><name>rightArray</name></member>
+    <member refid="class_sprite_1a3f8216c649e21312fe7b838c8b72203e" kind="variable"><name>rightArrayLength</name></member>
+    <member refid="class_sprite_1a8686a48cc2c20a88cfb3c132e2f43d83" kind="variable"><name>backtArray</name></member>
+    <member refid="class_sprite_1aff5256d11a479f46328dafddb9a26645" kind="variable"><name>backtArrayLength</name></member>
+    <member refid="class_sprite_1af44a63fa96ac4f7b23827a91b3d6f6e7" kind="variable"><name>fronttArray</name></member>
+    <member refid="class_sprite_1a6d1c3c9348ec931cf4391fbac325051d" kind="variable"><name>frontArrayLength</name></member>
+    <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1a8d3dc60129200dbbd43060f49d17f2c1" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="_drawable_8h" kind="file"><name>Drawable.h</name>
     <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kind="enum"><name>OverlapType</name></member>
@@ -60,9 +58,9 @@
     <member refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" kind="define"><name>window_Width</name></member>
     <member refid="_scene_8h_1af0c7864c138c3ffcc98c0d7ffb3a1482" kind="define"><name>fps</name></member>
   </compound>
-  <compound refid="_un_movable_8cpp" kind="file"><name>UnMovable.cpp</name>
+  <compound refid="_sprite_8cpp" kind="file"><name>Sprite.cpp</name>
   </compound>
-  <compound refid="_un_movable_8h" kind="file"><name>UnMovable.h</name>
+  <compound refid="_sprite_8h" kind="file"><name>Sprite.h</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

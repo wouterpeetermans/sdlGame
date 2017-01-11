@@ -1,4 +1,4 @@
-.TH "Gvector" 3 "Thu Dec 15 2016" "sdlGame" \" -*- nroff -*-
+.TH "Gvector" 3 "Wed Jan 11 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,6 +29,15 @@ Gvector \-
 .ti -1c
 .RI "int \fBySpeed\fP ()"
 .br
+.ti -1c
+.RI "void \fBxZero\fP ()"
+.br
+.ti -1c
+.RI "void \fByZero\fP ()"
+.br
+.ti -1c
+.RI "void \fBoperator+=\fP (const \fBGvector\fP &)"
+.br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -38,13 +47,19 @@ Gvector \-
 
 .SH "Member Function Documentation"
 .PP 
+.SS "void Gvector::operator+= (const \fBGvector\fP &other)"
+
 .SS "int Gvector::xDir ()"
 
 .SS "int Gvector::xSpeed ()\fC [inline]\fP"
 
+.SS "void Gvector::xZero ()\fC [inline]\fP"
+
 .SS "int Gvector::yDir ()"
 
 .SS "int Gvector::ySpeed ()\fC [inline]\fP"
+
+.SS "void Gvector::yZero ()\fC [inline]\fP"
 
 
 .SH "Author"

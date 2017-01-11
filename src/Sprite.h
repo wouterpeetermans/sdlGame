@@ -35,6 +35,7 @@ protected:
 
 public:
 	Sprite();
+	~Sprite();
 	virtual void Update(int);
 };
 

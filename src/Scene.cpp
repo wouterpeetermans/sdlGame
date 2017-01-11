@@ -80,12 +80,11 @@ void Scene::Run(){ // the place where all the magic happens
 		//scrn_rect.h = 48;
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
-		SDL_Texture* image = loadTexture("game/castle.png"); // use the above created surface
+
+		SDL_Texture* image = loadTexture("game/castle.png");
 		if (image == NULL) { // errors ...
 			std::cout << "de afbeelding is niet geladen" << std::endl;
 		}
-		UnMovable bla(image,64,64,0,64);
-		Drawable blabla(image,64,64,64,128);
 		int pos = 0;
 		unsigned int startTime=0 , currentTime;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
@@ -111,9 +110,6 @@ void Scene::Run(){ // the place where all the magic happens
 				}
 			}
 			SDL_RenderClear(screenRenderer);
-			bla.SetPos(pos, 0);
-			blabla.Draw(screenRenderer);
-			bla.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();
 			if (currentTime<(startTime+10)) {//cap the framerate at about 100 fps not used when vsync is working

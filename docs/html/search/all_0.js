@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['coliderect',['colideRect',['../class_un_movable.html#aa3986135bfd14eba5f0d575eb05f529e',1,'UnMovable']]]
+  ['backtarray',['backtArray',['../class_sprite.html#a8686a48cc2c20a88cfb3c132e2f43d83',1,'Sprite']]],
+  ['backtarraylength',['backtArrayLength',['../class_sprite.html#aff5256d11a479f46328dafddb9a26645',1,'Sprite']]]
 ];

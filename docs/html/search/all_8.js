@@ -3,6 +3,7 @@ var searchData=
   ['scene',['Scene',['../class_scene.html',1,'Scene'],['../class_scene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene::Scene()']]],
   ['scene_2ecpp',['Scene.cpp',['../_scene_8cpp.html',1,'']]],
   ['scene_2eh',['Scene.h',['../_scene_8h.html',1,'']]],
-  ['setcolidable',['SetColidable',['../class_un_movable.html#ad26a7001aa816ce00805871a98d4a953',1,'UnMovable']]],
-  ['setpos',['SetPos',['../class_drawable.html#aabeff5eb347480f67b6f044236ae5eea',1,'Drawable']]]
+  ['sprite',['Sprite',['../class_sprite.html',1,'Sprite'],['../class_sprite.html#a12cba3ac1868418add3c4d95ce87e615',1,'Sprite::Sprite()']]],
+  ['sprite_2ecpp',['Sprite.cpp',['../_sprite_8cpp.html',1,'']]],
+  ['sprite_2eh',['Sprite.h',['../_sprite_8h.html',1,'']]]
 ];

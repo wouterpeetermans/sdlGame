@@ -22,6 +22,10 @@ Sprite::Sprite(){
 
 }
 
-void Sprite::Update(){
+Sprite::~Sprite(){
+  
+}
+
+void Sprite::Update(int timePast){
 
 }

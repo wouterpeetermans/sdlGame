@@ -22,16 +22,10 @@
 #include <iostream> //give me some c++ powers like string support and cout
 #include "Gvector.h"
 
-enum OverlapType {
-  OL_NO_COLLISION=0,
-  OL_COLLISION,
-  OL_SPECIAL,
-  OL_DEADLY
-};
+
 
 class Drawable {
 public:
-  virtual ~Drawable();
   virtual void Draw(SDL_Renderer*)=0;
 };
 

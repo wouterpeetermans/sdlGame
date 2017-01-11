@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['file',['file',['../class_drawable.html#a4d285cd95e08cc55de7235d85b05cbdb',1,'Drawable']]]
+  ['leftarray',['leftArray',['../class_sprite.html#a59f5ebe152863a252d5d97f5882820b7',1,'Sprite']]],
+  ['leftarraylength',['leftArrayLength',['../class_sprite.html#a8d13842909c5867a5405a76299375d49',1,'Sprite']]]
 ];

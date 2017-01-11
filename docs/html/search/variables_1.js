@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['destrect',['destRect',['../class_drawable.html#a38f8357dfc584338752cf7840b994494',1,'Drawable']]]
+  ['frontarraylength',['frontArrayLength',['../class_sprite.html#a6d1c3c9348ec931cf4391fbac325051d',1,'Sprite']]],
+  ['fronttarray',['fronttArray',['../class_sprite.html#af44a63fa96ac4f7b23827a91b3d6f6e7',1,'Sprite']]]
 ];

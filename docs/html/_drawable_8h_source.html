@@ -136,44 +136,29 @@ $(document).ready(function(){initNavTree('_drawable_8h_source.html','');});
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_drawable.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drawable.html">Drawable</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_drawable.html#a4d285cd95e08cc55de7235d85b05cbdb">   34</a></span>&#160;  SDL_Texture* <a class="code" href="class_drawable.html#a4d285cd95e08cc55de7235d85b05cbdb">file</a>;<span class="comment">//the actual texture this class is all about</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_drawable.html#a3ea2d565c0084e747b8b1e1321f96c59">   35</a></span>&#160;  SDL_Rect* <a class="code" href="class_drawable.html#a3ea2d565c0084e747b8b1e1321f96c59">posRect</a>;<span class="comment">//the rectangle around the object in the file</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_drawable.html#a38f8357dfc584338752cf7840b994494">   36</a></span>&#160;  SDL_Rect* <a class="code" href="class_drawable.html#a38f8357dfc584338752cf7840b994494">destRect</a>;<span class="comment">//the rectangle where it ends when Draw is called</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_drawable.html#abdc2e2d82c51c1703656a2dfba0feabd">~Drawable</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_drawable.html#a3a063894185ac869766edd4ebc4ba51a">Draw</a>(SDL_Renderer*)=0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_drawable.html#ae9689ef07462b8cbc8a4aa42bf70e531">Drawable</a>(SDL_Renderer*, SDL_Texture*, SDL_Rect*);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_drawable.html#ae9689ef07462b8cbc8a4aa42bf70e531">Drawable</a>(SDL_Renderer*, SDL_Texture*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="class_drawable.html#a5db44942658aab760a7418e338582e0a">~Drawable</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_drawable.html#a096acb81829742f6578556ca0128e838">Draw</a>(SDL_Renderer*);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_drawable.html#aabeff5eb347480f67b6f044236ae5eea">SetPos</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> <a class="code" href="class_drawable.html#aa78abda5a95f0e8c1fd4135b196ae4e7">OverlapDetect</a>(SDL_Rect*);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:28</div></div>
-<div class="ttc" id="class_drawable_html_a4d285cd95e08cc55de7235d85b05cbdb"><div class="ttname"><a href="class_drawable.html#a4d285cd95e08cc55de7235d85b05cbdb">Drawable::file</a></div><div class="ttdeci">SDL_Texture * file</div><div class="ttdef"><b>Definition:</b> Drawable.h:34</div></div>
-<div class="ttc" id="class_drawable_html_aa78abda5a95f0e8c1fd4135b196ae4e7"><div class="ttname"><a href="class_drawable.html#aa78abda5a95f0e8c1fd4135b196ae4e7">Drawable::OverlapDetect</a></div><div class="ttdeci">virtual OverlapType OverlapDetect(SDL_Rect *)</div><div class="ttdef"><b>Definition:</b> Drawable.cpp:61</div></div>
 <div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:26</div></div>
-<div class="ttc" id="class_drawable_html_ae9689ef07462b8cbc8a4aa42bf70e531"><div class="ttname"><a href="class_drawable.html#ae9689ef07462b8cbc8a4aa42bf70e531">Drawable::Drawable</a></div><div class="ttdeci">Drawable(SDL_Renderer *, SDL_Texture *, SDL_Rect *)</div><div class="ttdef"><b>Definition:</b> Drawable.cpp:21</div></div>
-<div class="ttc" id="class_drawable_html_a5db44942658aab760a7418e338582e0a"><div class="ttname"><a href="class_drawable.html#a5db44942658aab760a7418e338582e0a">Drawable::~Drawable</a></div><div class="ttdeci">~Drawable()</div><div class="ttdef"><b>Definition:</b> Drawable.cpp:46</div></div>
+<div class="ttc" id="class_drawable_html_a3a063894185ac869766edd4ebc4ba51a"><div class="ttname"><a href="class_drawable.html#a3a063894185ac869766edd4ebc4ba51a">Drawable::Draw</a></div><div class="ttdeci">virtual void Draw(SDL_Renderer *)=0</div></div>
 <div class="ttc" id="_gvector_8h_html"><div class="ttname"><a href="_gvector_8h.html">Gvector.h</a></div></div>
 <div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:29</div></div>
-<div class="ttc" id="class_drawable_html_a3ea2d565c0084e747b8b1e1321f96c59"><div class="ttname"><a href="class_drawable.html#a3ea2d565c0084e747b8b1e1321f96c59">Drawable::posRect</a></div><div class="ttdeci">SDL_Rect * posRect</div><div class="ttdef"><b>Definition:</b> Drawable.h:35</div></div>
 <div class="ttc" id="class_drawable_html"><div class="ttname"><a href="class_drawable.html">Drawable</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:32</div></div>
 <div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a></div><div class="ttdeci">OverlapType</div><div class="ttdef"><b>Definition:</b> Drawable.h:25</div></div>
-<div class="ttc" id="class_drawable_html_aabeff5eb347480f67b6f044236ae5eea"><div class="ttname"><a href="class_drawable.html#aabeff5eb347480f67b6f044236ae5eea">Drawable::SetPos</a></div><div class="ttdeci">virtual void SetPos(int, int)</div><div class="ttdef"><b>Definition:</b> Drawable.cpp:56</div></div>
 <div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:27</div></div>
-<div class="ttc" id="class_drawable_html_a096acb81829742f6578556ca0128e838"><div class="ttname"><a href="class_drawable.html#a096acb81829742f6578556ca0128e838">Drawable::Draw</a></div><div class="ttdeci">virtual void Draw(SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> Drawable.cpp:52</div></div>
-<div class="ttc" id="class_drawable_html_a38f8357dfc584338752cf7840b994494"><div class="ttname"><a href="class_drawable.html#a38f8357dfc584338752cf7840b994494">Drawable::destRect</a></div><div class="ttdeci">SDL_Rect * destRect</div><div class="ttdef"><b>Definition:</b> Drawable.h:36</div></div>
+<div class="ttc" id="class_drawable_html_abdc2e2d82c51c1703656a2dfba0feabd"><div class="ttname"><a href="class_drawable.html#abdc2e2d82c51c1703656a2dfba0feabd">Drawable::~Drawable</a></div><div class="ttdeci">virtual ~Drawable()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_drawable_8h.html">Drawable.h</a></li>
-    <li class="footer">Generated on Thu Dec 15 2016 14:59:43 for sdlGame by
+    <li class="footer">Generated on Wed Jan 11 2017 15:13:14 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

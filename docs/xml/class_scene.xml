@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="58" bodyend="72"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="59" bodyend="73"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="48" bodyend="56"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="48" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="45" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="74" bodyend="124"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="45" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.cpp" bodystart="75" bodyend="125"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

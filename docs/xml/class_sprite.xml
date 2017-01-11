@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_sprite" kind="class" prot="public">
+    <compoundname>Sprite</compoundname>
+    <basecompoundref refid="class_drawable" prot="private" virt="non-virtual">Drawable</basecompoundref>
+    <includes refid="_sprite_8h" local="no">Sprite.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Sprite::leftArray</definition>
+        <argsstring></argsstring>
+        <name>leftArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a8d13842909c5867a5405a76299375d49" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sprite::leftArrayLength</definition>
+        <argsstring></argsstring>
+        <name>leftArrayLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Sprite::rightArray</definition>
+        <argsstring></argsstring>
+        <name>rightArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a3f8216c649e21312fe7b838c8b72203e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sprite::rightArrayLength</definition>
+        <argsstring></argsstring>
+        <name>rightArrayLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a8686a48cc2c20a88cfb3c132e2f43d83" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Sprite::backtArray</definition>
+        <argsstring></argsstring>
+        <name>backtArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1aff5256d11a479f46328dafddb9a26645" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sprite::backtArrayLength</definition>
+        <argsstring></argsstring>
+        <name>backtArrayLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1af44a63fa96ac4f7b23827a91b3d6f6e7" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Sprite::fronttArray</definition>
+        <argsstring></argsstring>
+        <name>fronttArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a6d1c3c9348ec931cf4391fbac325051d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sprite::frontArrayLength</definition>
+        <argsstring></argsstring>
+        <name>frontArrayLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sprite::Sprite</definition>
+        <argsstring>()</argsstring>
+        <name>Sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a8d3dc60129200dbbd43060f49d17f2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Sprite::Update</definition>
+        <argsstring>(int)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="38" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="19" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="21" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="22" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="22" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_sprite_1a8686a48cc2c20a88cfb3c132e2f43d83" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>backtArray</name></member>
+      <member refid="class_sprite_1aff5256d11a479f46328dafddb9a26645" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>backtArrayLength</name></member>
+      <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" prot="private" virt="pure-virtual"><scope>Sprite</scope><name>Draw</name></member>
+      <member refid="class_sprite_1a6d1c3c9348ec931cf4391fbac325051d" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>frontArrayLength</name></member>
+      <member refid="class_sprite_1af44a63fa96ac4f7b23827a91b3d6f6e7" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>fronttArray</name></member>
+      <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>leftArray</name></member>
+      <member refid="class_sprite_1a8d13842909c5867a5405a76299375d49" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>leftArrayLength</name></member>
+      <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>rightArray</name></member>
+      <member refid="class_sprite_1a3f8216c649e21312fe7b838c8b72203e" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>rightArrayLength</name></member>
+      <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" prot="public" virt="non-virtual"><scope>Sprite</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1a8d3dc60129200dbbd43060f49d17f2c1" prot="public" virt="virtual"><scope>Sprite</scope><name>Update</name></member>
+      <member refid="class_drawable_1abdc2e2d82c51c1703656a2dfba0feabd" prot="private" virt="virtual"><scope>Sprite</scope><name>~Drawable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

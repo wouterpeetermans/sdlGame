@@ -30,18 +30,9 @@ enum OverlapType {
 };
 
 class Drawable {
-protected:
-  SDL_Texture* file;//the actual texture this class is all about
-  SDL_Rect* posRect;//the rectangle around the object in the file
-  SDL_Rect* destRect;//the rectangle where it ends when Draw is called
-
 public:
-  Drawable(SDL_Texture*, SDL_Rect*);
-  Drawable(SDL_Texture*, int, int, int, int);
-  ~Drawable();
-  virtual void Draw(SDL_Renderer*);
-  virtual void SetPos(int,int);
-  virtual OverlapType OverlapDetect(SDL_Rect*);
+  virtual ~Drawable();
+  virtual void Draw(SDL_Renderer*)=0;
 };
 
 

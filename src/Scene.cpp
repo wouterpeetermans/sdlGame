@@ -53,6 +53,7 @@ Scene::~Scene(){
 		IMG_Quit();
 		SDL_Quit(); // quit SDL
 		std::cout << "quited properly" << std::endl;
+		std::cout << '\a';
 }
 // fuction does what it tells you it does
 SDL_Texture* Scene::loadTexture(std::string path){

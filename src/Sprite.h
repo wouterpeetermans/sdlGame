@@ -20,8 +20,23 @@
 #include "Drawable.h"
 
 class Sprite:Drawable {
-	
-}
+protected:
+	SDL_Rect* leftArray;
+	int leftArrayLength;
+
+	SDL_Rect* rightArray;
+	int rightArrayLength;
+
+	SDL_Rect* backtArray;
+	int backtArrayLength;
+
+	SDL_Rect* fronttArray;
+	int frontArrayLength;
+
+public:
+	Sprite();
+	virtual void Update(int);
+};
 
 
 

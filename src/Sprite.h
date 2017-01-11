@@ -18,25 +18,27 @@
 #ifndef _Sprite
 #define _Sprite 1
 #include "Drawable.h"
+#include "Scene.h"
 
 class Sprite:Drawable {
 protected:
+	SDL_Texture* spriteSheet;
 	SDL_Rect* leftArray;
 	int leftArrayLength;
 
 	SDL_Rect* rightArray;
 	int rightArrayLength;
 
-	SDL_Rect* backtArray;
+	SDL_Rect* backArray;
 	int backtArrayLength;
 
-	SDL_Rect* fronttArray;
+	SDL_Rect* frontArray;
 	int frontArrayLength;
 
 public:
-	Sprite();
+	Sprite(std::string,Scene*);
 	~Sprite();
-	virtual void Update(int);
+	virtual void Update(int)=0;
 };
 
 

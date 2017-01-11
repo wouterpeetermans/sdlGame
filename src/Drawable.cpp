@@ -16,16 +16,4 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- #ifndef _Background
- #define _Background 1
- #include "Colidable.h"
  #include "Drawable.h"
-
-
- class Background:Drawable , Colidable {
-   
- };
-
-
-
- #endif

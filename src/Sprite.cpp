@@ -18,14 +18,14 @@
 
 #include "Sprite.h"
 
-Sprite::Sprite(){
-
+Sprite::Sprite(std::string file ,Scene* context){
+  spriteSheet = context->loadTexture(file);
 }
 
 Sprite::~Sprite(){
-  
-}
-
-void Sprite::Update(int timePast){
-
+  SDL_DestroyTexture(spriteSheet);
+  delete(leftArray);
+  delete(rightArray);
+  delete(backArray);
+  delete(frontArray);
 }

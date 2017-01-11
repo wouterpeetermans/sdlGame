@@ -16,15 +16,25 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- #ifndef _Background
- #define _Background 1
- #include "Colidable.h"
- #include "Drawable.h"
+ #ifndef _Hero
+ #define _Hero 1
+ #include "Sprite.h"
 
 
- class Background:Drawable , Colidable {
-   
- };
+
+class Hero:Sprite {
+private:
+
+
+public:
+  Hero(Scene*);
+  ~Hero();
+  void Update(int);
+  void Draw(SDL_Renderer*);
+};
+
+
+
 
 
 

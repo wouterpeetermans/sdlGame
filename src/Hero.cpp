@@ -16,16 +16,20 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- #ifndef _Background
- #define _Background 1
- #include "Colidable.h"
- #include "Drawable.h"
+ #include "Hero.h"
 
+ Hero::Hero(Scene* context):Sprite("game/hero.png", context){
 
- class Background:Drawable , Colidable {
-   
- };
+ }
 
+ Hero::~Hero(){
 
+ }
 
- #endif
+ void Hero::Update(int pastTime){
+
+ }
+
+ void Hero::Draw(SDL_Renderer * renderer){
+
+ }

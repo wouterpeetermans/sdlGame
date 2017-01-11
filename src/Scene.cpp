@@ -81,10 +81,6 @@ void Scene::Run(){ // the place where all the magic happens
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
 
-		SDL_Texture* image = loadTexture("game/castle.png");
-		if (image == NULL) { // errors ...
-			std::cout << "de afbeelding is niet geladen" << std::endl;
-		}
 		int pos = 0;
 		unsigned int startTime=0 , currentTime;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
@@ -116,6 +112,4 @@ void Scene::Run(){ // the place where all the magic happens
 				SDL_Delay((startTime+10)-currentTime);
 			}
 		}
-		SDL_DestroyTexture(image);
-		image = NULL;
 }

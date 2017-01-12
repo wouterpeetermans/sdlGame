@@ -21,7 +21,7 @@
  Background::Background(Scene* context ,std::string file){
    blockSheet = context->loadTexture(file);
  }
-
+ 
  Background::Background(SDL_Texture* texture){
    blockSheet = texture;
  }

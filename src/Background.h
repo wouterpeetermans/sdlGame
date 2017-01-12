@@ -26,8 +26,8 @@
  class Background:Drawable , Colidable {
  protected:
    SDL_Texture* blockSheet;
-   SDL_Rect* srcRect;
-   SDL_Rect* posRect;
+   SDL_Rect srcRect;
+   SDL_Rect posRect;
 
  public:
    Background(Scene*,std::string);

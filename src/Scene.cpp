@@ -18,6 +18,7 @@
 
 #include "Scene.h"
 #include "Hero.h"
+#include "Brick.h"
 //constructor
 Scene::Scene(){
 	SDL_Init(SDL_INIT_EVERYTHING); // everything because why not
@@ -83,6 +84,7 @@ void Scene::Run(){ // the place where all the magic happens
 		SDL_Event e;// a place to store an event of some type
 
 		Hero held(this);
+		Brick blok(this,4,17);
 
 		unsigned int startTime=0 , currentTime , timeTook=0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
@@ -96,6 +98,7 @@ void Scene::Run(){ // the place where all the magic happens
 			held.Update(timeTook);
 			SDL_RenderClear(screenRenderer);
 			held.Draw(screenRenderer);
+			blok.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();
 			if (currentTime<(startTime+10)) {//cap the framerate at about 100 fps not used when vsync is working

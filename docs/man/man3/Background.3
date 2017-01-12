@@ -1,0 +1,69 @@
+.TH "Background" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Background \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Background\&.h>\fP
+.PP
+Inherits \fBDrawable\fP, and \fBColidable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBackground\fP (\fBScene\fP *, std::string)"
+.br
+.ti -1c
+.RI "\fBBackground\fP (SDL_Texture *)"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP (SDL_Renderer *)=0"
+.br
+.ti -1c
+.RI "virtual \fBOverlapType\fP \fBOverlapDetect\fP (const SDL_Rect &, const \fBGvector\fP &)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "SDL_Texture * \fBblockSheet\fP"
+.br
+.ti -1c
+.RI "SDL_Rect * \fBsrcRect\fP"
+.br
+.ti -1c
+.RI "SDL_Rect * \fBposRect\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Background::Background (\fBScene\fP *context, std::stringfile)"
+
+.SS "Background::Background (SDL_Texture *texture)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Background::Draw (SDL_Renderer *)\fC [pure virtual]\fP"
+
+.PP
+Implements \fBDrawable\fP\&.
+.SS "\fBOverlapType\fP Background::OverlapDetect (const SDL_Rect &rect, const \fBGvector\fP &vector)\fC [virtual]\fP"
+
+.PP
+Implements \fBColidable\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "SDL_Texture* Background::blockSheet\fC [protected]\fP"
+
+.SS "SDL_Rect* Background::posRect\fC [protected]\fP"
+
+.SS "SDL_Rect* Background::srcRect\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for sdlGame from the source code\&.

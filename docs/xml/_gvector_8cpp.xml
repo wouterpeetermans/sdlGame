@@ -4,13 +4,13 @@
     <compoundname>Gvector.cpp</compoundname>
     <includes refid="_gvector_8h" local="yes">Gvector.h</includes>
     <incdepgraph>
-      <node id="78">
+      <node id="195">
         <label>src/Gvector.cpp</label>
         <link refid="Gvector.cpp"/>
-        <childnode refid="79" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
-      <node id="79">
+      <node id="196">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
@@ -69,6 +69,13 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/>x<sp/>+=<sp/>other.x;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/>y<sp/>+=<sp/>other.y;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/><ref refid="class_gvector_1ad78df5d8611c432443c72c8886fc8296" kindref="member">Gvector::operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>result;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>result.x<sp/>=<sp/>number*x;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>result.y<sp/>=<sp/>number*y;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Gvector.cpp"/>
   </compounddef>

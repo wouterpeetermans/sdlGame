@@ -1,4 +1,4 @@
-.TH "Sprite" 3 "Wed Jan 11 2017" "sdlGame" \" -*- nroff -*-
+.TH "Sprite" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,69 +10,83 @@ Sprite \-
 \fC#include <Sprite\&.h>\fP
 .PP
 Inherits \fBDrawable\fP\&.
+.PP
+Inherited by \fBHero\fP\fC [private]\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBSprite\fP ()"
+.RI "\fBSprite\fP (std::string, \fBScene\fP *)"
 .br
 .ti -1c
-.RI "virtual void \fBUpdate\fP (int)"
+.RI "\fB~Sprite\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (unsigned int)=0"
 .br
 .in -1c
 .SS "Protected Attributes"
 
 .in +1c
 .ti -1c
-.RI "SDL_Rect * \fBleftArray\fP"
+.RI "SDL_Texture * \fBspriteSheet\fP"
 .br
 .ti -1c
-.RI "int \fBleftArrayLength\fP"
+.RI "SDL_Rect * \fBleftArray\fP"
 .br
 .ti -1c
 .RI "SDL_Rect * \fBrightArray\fP"
 .br
 .ti -1c
-.RI "int \fBrightArrayLength\fP"
+.RI "SDL_Rect * \fBbackArray\fP"
 .br
 .ti -1c
-.RI "SDL_Rect * \fBbacktArray\fP"
+.RI "SDL_Rect * \fBfrontArray\fP"
 .br
 .ti -1c
-.RI "int \fBbacktArrayLength\fP"
+.RI "SDL_Rect * \fBsrcRect\fP"
 .br
 .ti -1c
-.RI "SDL_Rect * \fBfronttArray\fP"
+.RI "SDL_Rect * \fBposRect\fP"
 .br
 .ti -1c
-.RI "int \fBfrontArrayLength\fP"
+.RI "bool \fBhasJumped\fP"
+.br
+.ti -1c
+.RI "\fBGvector\fP \fBspeedVector\fP"
 .br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Sprite::Sprite ()"
+.SS "Sprite::Sprite (std::stringfile, \fBScene\fP *context)"
+
+.SS "Sprite::~Sprite ()"
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void Sprite::Update (int)\fC [virtual]\fP"
+.SS "virtual void Sprite::Update (unsignedint)\fC [pure virtual]\fP"
 
+.PP
+Implemented in \fBHero\fP\&.
 .SH "Member Data Documentation"
 .PP 
-.SS "SDL_Rect* Sprite::backtArray\fC [protected]\fP"
+.SS "SDL_Rect* Sprite::backArray\fC [protected]\fP"
 
-.SS "int Sprite::backtArrayLength\fC [protected]\fP"
+.SS "SDL_Rect* Sprite::frontArray\fC [protected]\fP"
 
-.SS "int Sprite::frontArrayLength\fC [protected]\fP"
-
-.SS "SDL_Rect* Sprite::fronttArray\fC [protected]\fP"
+.SS "bool Sprite::hasJumped\fC [protected]\fP"
 
 .SS "SDL_Rect* Sprite::leftArray\fC [protected]\fP"
 
-.SS "int Sprite::leftArrayLength\fC [protected]\fP"
+.SS "SDL_Rect* Sprite::posRect\fC [protected]\fP"
 
 .SS "SDL_Rect* Sprite::rightArray\fC [protected]\fP"
 
-.SS "int Sprite::rightArrayLength\fC [protected]\fP"
+.SS "\fBGvector\fP Sprite::speedVector\fC [protected]\fP"
+
+.SS "SDL_Texture* Sprite::spriteSheet\fC [protected]\fP"
+
+.SS "SDL_Rect* Sprite::srcRect\fC [protected]\fP"
 
 
 .SH "Author"

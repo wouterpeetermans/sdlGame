@@ -53,8 +53,8 @@
  }
 
  void Hero::GetKeys(SDL_Event* e){
-   Gvector leftVector(-5,0);
-   Gvector rightVector(5,0);
+   Gvector leftVector(-3,0);
+   Gvector rightVector(3,0);
    Gvector jumpVector(0,10);
    if(e->type == SDL_KEYDOWN) {//keys pressed
      switch (e->key.keysym.sym) {
@@ -67,8 +67,12 @@
        speedVector = leftVector;
        break;
        case SDLK_UP:
-       if (!hasJumped) {
-         hasJumped = true;
+       if (jumpKeyPressed) {
+         break;
+       }
+       if (hasJumped<2) {
+         jumpKeyPressed = true;
+         hasJumped ++;
          speedVector += jumpVector;
        }
        break;
@@ -86,6 +90,8 @@
          //pos--;
          speedVector.xZero();
          break;
+         case SDLK_UP:
+         jumpKeyPressed = false;
          default:
          //speedVector.xZero();
          break;
@@ -120,7 +126,7 @@
    if (posRect->y > 512) {
      speedVector.yZero();
      posRect->y = 512;
-     hasJumped = false;
+     hasJumped = 0;
    }
    //speedVector.xZero();
  }

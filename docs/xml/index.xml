@@ -1,7 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.8">
+  <compound refid="class_background" kind="class"><name>Background</name>
+    <member refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" kind="variable"><name>blockSheet</name></member>
+    <member refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" kind="variable"><name>srcRect</name></member>
+    <member refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" kind="variable"><name>posRect</name></member>
+    <member refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kind="function"><name>Background</name></member>
+    <member refid="class_background_1a5385891dafdc857eb5d29915f5163ebe" kind="function"><name>Background</name></member>
+    <member refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" kind="function"><name>Draw</name></member>
+    <member refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" kind="function"><name>OverlapDetect</name></member>
+  </compound>
+  <compound refid="class_colidable" kind="class"><name>Colidable</name>
+    <member refid="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1" kind="function"><name>OverlapDetect</name></member>
+  </compound>
   <compound refid="class_drawable" kind="class"><name>Drawable</name>
-    <member refid="class_drawable_1abdc2e2d82c51c1703656a2dfba0feabd" kind="function"><name>~Drawable</name></member>
     <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="class_gvector" kind="class"><name>Gvector</name>
@@ -16,40 +27,72 @@
     <member refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kind="function"><name>xZero</name></member>
     <member refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kind="function"><name>yZero</name></member>
     <member refid="class_gvector_1ab6965c34e152b637453e901a5498741f" kind="function"><name>operator+=</name></member>
+    <member refid="class_gvector_1ad78df5d8611c432443c72c8886fc8296" kind="function"><name>operator*</name></member>
+  </compound>
+  <compound refid="class_hero" kind="class"><name>Hero</name>
+    <member refid="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" kind="variable"><name>seqb</name></member>
+    <member refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" kind="function"><name>Hero</name></member>
+    <member refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" kind="function"><name>~Hero</name></member>
+    <member refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kind="function"><name>GetKeys</name></member>
+    <member refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" kind="function"><name>Update</name></member>
+    <member refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_level" kind="class"><name>Level</name>
+    <member refid="class_level_1ae6a51f3a856804131b198f5af1719091" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="class_scene" kind="class"><name>Scene</name>
     <member refid="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" kind="variable"><name>window</name></member>
     <member refid="class_scene_1a5940585c9ed6cf5b92fff54a966551ab" kind="variable"><name>screenRenderer</name></member>
-    <member refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kind="function"><name>loadTexture</name></member>
     <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kind="function"><name>Scene</name></member>
     <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kind="function"><name>~Scene</name></member>
     <member refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kind="function"><name>Run</name></member>
+    <member refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kind="function"><name>loadTexture</name></member>
   </compound>
   <compound refid="class_sprite" kind="class"><name>Sprite</name>
+    <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kind="variable"><name>spriteSheet</name></member>
     <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kind="variable"><name>leftArray</name></member>
-    <member refid="class_sprite_1a8d13842909c5867a5405a76299375d49" kind="variable"><name>leftArrayLength</name></member>
     <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kind="variable"><name>rightArray</name></member>
-    <member refid="class_sprite_1a3f8216c649e21312fe7b838c8b72203e" kind="variable"><name>rightArrayLength</name></member>
-    <member refid="class_sprite_1a8686a48cc2c20a88cfb3c132e2f43d83" kind="variable"><name>backtArray</name></member>
-    <member refid="class_sprite_1aff5256d11a479f46328dafddb9a26645" kind="variable"><name>backtArrayLength</name></member>
-    <member refid="class_sprite_1af44a63fa96ac4f7b23827a91b3d6f6e7" kind="variable"><name>fronttArray</name></member>
-    <member refid="class_sprite_1a6d1c3c9348ec931cf4391fbac325051d" kind="variable"><name>frontArrayLength</name></member>
-    <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kind="function"><name>Sprite</name></member>
-    <member refid="class_sprite_1a8d3dc60129200dbbd43060f49d17f2c1" kind="function"><name>Update</name></member>
+    <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" kind="variable"><name>backArray</name></member>
+    <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kind="variable"><name>frontArray</name></member>
+    <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kind="variable"><name>srcRect</name></member>
+    <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kind="variable"><name>posRect</name></member>
+    <member refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kind="variable"><name>hasJumped</name></member>
+    <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kind="variable"><name>speedVector</name></member>
+    <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kind="function"><name>~Sprite</name></member>
+    <member refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="_background_8cpp" kind="file"><name>Background.cpp</name>
+  </compound>
+  <compound refid="_background_8h" kind="file"><name>Background.h</name>
+  </compound>
+  <compound refid="_colidable_8cpp" kind="file"><name>Colidable.cpp</name>
+  </compound>
+  <compound refid="_colidable_8h" kind="file"><name>Colidable.h</name>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kind="enum"><name>OverlapType</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kind="enumvalue"><name>OL_NO_COLLISION</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kind="enumvalue"><name>OL_COLLISION</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kind="enumvalue"><name>OL_SPECIAL</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652" kind="enumvalue"><name>OL_DEADLY</name></member>
+  </compound>
+  <compound refid="_drawable_8cpp" kind="file"><name>Drawable.cpp</name>
   </compound>
   <compound refid="_drawable_8h" kind="file"><name>Drawable.h</name>
-    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kind="enum"><name>OverlapType</name></member>
-    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kind="enumvalue"><name>OL_NO_COLLISION</name></member>
-    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kind="enumvalue"><name>OL_COLLISION</name></member>
-    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kind="enumvalue"><name>OL_SPECIAL</name></member>
-    <member refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652" kind="enumvalue"><name>OL_DEADLY</name></member>
   </compound>
   <compound refid="_gvector_8cpp" kind="file"><name>Gvector.cpp</name>
   </compound>
   <compound refid="_gvector_8h" kind="file"><name>Gvector.h</name>
   </compound>
+  <compound refid="_hero_8cpp" kind="file"><name>Hero.cpp</name>
+  </compound>
+  <compound refid="_hero_8h" kind="file"><name>Hero.h</name>
+  </compound>
+  <compound refid="_level_8h" kind="file"><name>Level.h</name>
+  </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main_8h" kind="file"><name>main.h</name>
   </compound>
   <compound refid="_scene_8cpp" kind="file"><name>Scene.cpp</name>
   </compound>

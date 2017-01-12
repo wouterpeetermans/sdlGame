@@ -121,17 +121,17 @@ $(document).ready(function(){initNavTree('_scene_8h_source.html','');});
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef Scene_Included //include guard this makes shure the file is not included more then once</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define Scene_Included</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef _Scene //include guard this makes shure the file is not included more then once</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define _Scene 1</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>  <span class="comment">//import the main SDL library</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span>  <span class="comment">// import the image convorting part of SDL</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">//give me some c++ powers like string support and cout</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_drawable_8h.html">Drawable.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;UnMovable.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_scene_8h.html#a854e2c54b966212d598afc2d1288f411">   27</a></span>&#160;<span class="preprocessor">#define window_Height 480 //set the height of the window (this wil go out in a later stage)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_scene_8h.html#a51ad4e0aa01aae093b93150fcbf90652">   28</a></span>&#160;<span class="preprocessor">#define window_Width 640 // set the width</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//#include &quot;Drawable.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//#include &quot;Hero.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_scene_8h.html#a854e2c54b966212d598afc2d1288f411">   27</a></span>&#160;<span class="preprocessor">#define window_Height 576 //set the height of the window (this wil go out in a later stage)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_scene_8h.html#a51ad4e0aa01aae093b93150fcbf90652">   28</a></span>&#160;<span class="preprocessor">#define window_Width 1024 // set the width</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_scene_8h.html#af0c7864c138c3ffcc98c0d7ffb3a1482">   29</a></span>&#160;<span class="preprocessor">#define fps 60 // set the disired frames per second (not implemented yet)</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_scene.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a> {  <span class="comment">//all screen related activitys go in here</span></div>
@@ -140,31 +140,30 @@ $(document).ready(function(){initNavTree('_scene_8h_source.html','');});
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        SDL_Window* window; <span class="comment">// this wil be the pointer to the SDL window we are using</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        SDL_Renderer* screenRenderer; <span class="comment">// pointer to the renderer of the window above</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//functions</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        SDL_Texture* loadTexture(std::string);<span class="comment">//function to load an image to a surface and optimize it</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//constructor and deconstructor</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//functions</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Run</a>();<span class="comment">// this is the main function of Scene and it wil go on till the program ends</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // end of includeGuard</span></div>
-<div class="ttc" id="class_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:48</div></div>
-<div class="ttc" id="class_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:21</div></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//constructor and deconstructor</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//functions</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Run</a>();<span class="comment">// this is the main function of Scene and it wil go on till the program ends</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SDL_Texture* <a class="code" href="class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f">loadTexture</a>(std::string);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // end of includeGuard</span></div>
+<div class="ttc" id="class_scene_html_ab52e5e4e39ea9788f8f2e2cd38beab7f"><div class="ttname"><a href="class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f">Scene::loadTexture</a></div><div class="ttdeci">SDL_Texture * loadTexture(std::string)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:60</div></div>
+<div class="ttc" id="class_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:49</div></div>
+<div class="ttc" id="class_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:22</div></div>
 <div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:31</div></div>
-<div class="ttc" id="_drawable_8h_html"><div class="ttname"><a href="_drawable_8h.html">Drawable.h</a></div></div>
-<div class="ttc" id="class_scene_html_a093259fe8ed34be3da9cbf16aa84af60"><div class="ttname"><a href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Scene::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:75</div></div>
+<div class="ttc" id="class_scene_html_a093259fe8ed34be3da9cbf16aa84af60"><div class="ttname"><a href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Scene::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_scene_8h.html">Scene.h</a></li>
-    <li class="footer">Generated on Wed Jan 11 2017 15:13:14 for sdlGame by
+    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

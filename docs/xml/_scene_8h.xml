@@ -5,69 +5,90 @@
     <includes local="no">SDL2/SDL.h</includes>
     <includes local="no">SDL2/SDL_image.h</includes>
     <includes local="no">iostream</includes>
-    <includes refid="_drawable_8h" local="yes">Drawable.h</includes>
-    <includes local="yes">UnMovable.h</includes>
-    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="_background_8h" local="yes">src/Background.h</includedby>
+    <includedby refid="_sprite_8h" local="yes">src/Sprite.h</includedby>
+    <includedby refid="main_8h" local="yes">src/main.h</includedby>
     <includedby refid="_scene_8cpp" local="yes">src/Scene.cpp</includedby>
     <incdepgraph>
-      <node id="114">
-        <label>UnMovable.h</label>
-      </node>
-      <node id="110">
+      <node id="259">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="109">
+      <node id="258">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="112">
-        <label>Drawable.h</label>
-        <link refid="_drawable_8h"/>
-        <childnode refid="109" relation="include">
-        </childnode>
-        <childnode refid="110" relation="include">
-        </childnode>
-        <childnode refid="111" relation="include">
-        </childnode>
-        <childnode refid="113" relation="include">
-        </childnode>
-      </node>
-      <node id="111">
+      <node id="260">
         <label>iostream</label>
       </node>
-      <node id="113">
-        <label>Gvector.h</label>
-        <link refid="_gvector_8h"/>
-      </node>
-      <node id="108">
+      <node id="257">
         <label>src/Scene.h</label>
         <link refid="Scene.h"/>
-        <childnode refid="109" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="110" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="111" relation="include">
-        </childnode>
-        <childnode refid="112" relation="include">
-        </childnode>
-        <childnode refid="114" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="116">
+      <node id="270">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="117">
+      <node id="262">
+        <label>src/Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>src/Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>src/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>src/Background.cpp</label>
+        <link refid="_background_8cpp"/>
+      </node>
+      <node id="266">
+        <label>src/Hero.cpp</label>
+        <link refid="_hero_8cpp"/>
+      </node>
+      <node id="267">
         <label>src/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
       </node>
-      <node id="115">
+      <node id="268">
+        <label>src/Sprite.cpp</label>
+        <link refid="_sprite_8cpp"/>
+      </node>
+      <node id="261">
         <label>src/Scene.h</label>
         <link refid="Scene.h"/>
-        <childnode refid="116" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
-        <childnode refid="117" relation="include">
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>src/Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -75,18 +96,18 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="_scene_8h_1a854e2c54b966212d598afc2d1288f411" prot="public" static="no">
         <name>window_Height</name>
-        <initializer>480</initializer>
+        <initializer>576</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="27" column="11" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Scene.h" line="27" column="9" bodyfile="/home/wouter/Documents/sdlGame/src/Scene.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" prot="public" static="no">
         <name>window_Width</name>
-        <initializer>640</initializer>
+        <initializer>1024</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -129,17 +150,17 @@
 <codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
 <codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Scene_Included<sp/>//include<sp/>guard<sp/>this<sp/>makes<sp/>shure<sp/>the<sp/>file<sp/>is<sp/>not<sp/>included<sp/>more<sp/>then<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Scene_Included</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_Scene<sp/>//include<sp/>guard<sp/>this<sp/>makes<sp/>shure<sp/>the<sp/>file<sp/>is<sp/>not<sp/>included<sp/>more<sp/>then<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Scene<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL2/SDL.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//import<sp/>the<sp/>main<sp/>SDL<sp/>library</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL2/SDL_image.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>import<sp/>the<sp/>image<sp/>convorting<sp/>part<sp/>of<sp/>SDL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//give<sp/>me<sp/>some<sp/>c++<sp/>powers<sp/>like<sp/>string<sp/>support<sp/>and<sp/>cout</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_drawable_8h" kindref="compound">Drawable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;UnMovable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="_scene_8h_1a854e2c54b966212d598afc2d1288f411" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>window_Height<sp/>480<sp/>//set<sp/>the<sp/>height<sp/>of<sp/>the<sp/>window<sp/>(this<sp/>wil<sp/>go<sp/>out<sp/>in<sp/>a<sp/>later<sp/>stage)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>window_Width<sp/>640<sp/>//<sp/>set<sp/>the<sp/>width</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;Drawable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;Hero.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_scene_8h_1a854e2c54b966212d598afc2d1288f411" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>window_Height<sp/>576<sp/>//set<sp/>the<sp/>height<sp/>of<sp/>the<sp/>window<sp/>(this<sp/>wil<sp/>go<sp/>out<sp/>in<sp/>a<sp/>later<sp/>stage)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>window_Width<sp/>1024<sp/>//<sp/>set<sp/>the<sp/>width</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="_scene_8h_1af0c7864c138c3ffcc98c0d7ffb3a1482" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fps<sp/>60<sp/>//<sp/>set<sp/>the<sp/>disired<sp/>frames<sp/>per<sp/>second<sp/>(not<sp/>implemented<sp/>yet)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31" refid="class_scene" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_scene" kindref="compound">Scene</ref><sp/>{<sp/><sp/></highlight><highlight class="comment">//all<sp/>screen<sp/>related<sp/>activitys<sp/>go<sp/>in<sp/>here</highlight><highlight class="normal"></highlight></codeline>
@@ -148,19 +169,18 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Window*<sp/>window;<sp/></highlight><highlight class="comment">//<sp/>this<sp/>wil<sp/>be<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>SDL<sp/>window<sp/>we<sp/>are<sp/>using</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Renderer*<sp/>screenRenderer;<sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>the<sp/>renderer<sp/>of<sp/>the<sp/>window<sp/>above</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//functions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Texture*<sp/>loadTexture(std::string);</highlight><highlight class="comment">//function<sp/>to<sp/>load<sp/>an<sp/>image<sp/>to<sp/>a<sp/>surface<sp/>and<sp/>optimize<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//constructor<sp/>and<sp/>deconstructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kindref="member">Scene</ref>();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kindref="member">~Scene</ref>();</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//functions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kindref="member">Run</ref>();</highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>main<sp/>function<sp/>of<sp/>Scene<sp/>and<sp/>it<sp/>wil<sp/>go<sp/>on<sp/>till<sp/>the<sp/>program<sp/>ends</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>end<sp/>of<sp/>includeGuard</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//constructor<sp/>and<sp/>deconstructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kindref="member">Scene</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kindref="member">~Scene</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kindref="member">Run</ref>();</highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>main<sp/>function<sp/>of<sp/>Scene<sp/>and<sp/>it<sp/>wil<sp/>go<sp/>on<sp/>till<sp/>the<sp/>program<sp/>ends</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kindref="member">loadTexture</ref>(std::string);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>end<sp/>of<sp/>includeGuard</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Scene.h"/>
   </compounddef>

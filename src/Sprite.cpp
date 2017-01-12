@@ -29,4 +29,7 @@ Sprite::~Sprite(){
   delete(rightArray);
   delete(backArray);
   delete(frontArray);
+  //delete(srcRect); ==> is not nessisary because always a pointer to one of the above arrays
+  //causes double free error ==> memory leaking ==> not good remember
+  delete(posRect);
 }

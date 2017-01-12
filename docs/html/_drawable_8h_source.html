@@ -123,42 +123,33 @@ $(document).ready(function(){initNavTree('_drawable_8h_source.html','');});
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef _Drawable</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define _Drawable 1</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>  <span class="comment">//import the main SDL library</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span>  <span class="comment">// import the image convorting part of SDL</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">//give me some c++ powers like string support and cout</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_gvector_8h.html">Gvector.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3">   25</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">   26</a></span>&#160;  <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a>=0,</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">   27</a></span>&#160;  <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a>,</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">   28</a></span>&#160;  <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">   29</a></span>&#160;  <a class="code" href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_drawable.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drawable.html">Drawable</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_drawable.html#abdc2e2d82c51c1703656a2dfba0feabd">~Drawable</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_drawable.html#a3a063894185ac869766edd4ebc4ba51a">Draw</a>(SDL_Renderer*)=0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:28</div></div>
-<div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:26</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>  <span class="comment">//import the main SDL library</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//#include &lt;SDL2/SDL_image.h&gt;  // import the image convorting part of SDL</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">//give me some c++ powers like string support and cout</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//#include &quot;Scene.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//#include &quot;Gvector.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_drawable.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drawable.html">Drawable</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_drawable.html#a3a063894185ac869766edd4ebc4ba51a">Draw</a>(SDL_Renderer*)=0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_drawable_html_a3a063894185ac869766edd4ebc4ba51a"><div class="ttname"><a href="class_drawable.html#a3a063894185ac869766edd4ebc4ba51a">Drawable::Draw</a></div><div class="ttdeci">virtual void Draw(SDL_Renderer *)=0</div></div>
-<div class="ttc" id="_gvector_8h_html"><div class="ttname"><a href="_gvector_8h.html">Gvector.h</a></div></div>
-<div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:29</div></div>
-<div class="ttc" id="class_drawable_html"><div class="ttname"><a href="class_drawable.html">Drawable</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:32</div></div>
-<div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a></div><div class="ttdeci">OverlapType</div><div class="ttdef"><b>Definition:</b> Drawable.h:25</div></div>
-<div class="ttc" id="_drawable_8h_html_aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b"><div class="ttname"><a href="_drawable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:27</div></div>
-<div class="ttc" id="class_drawable_html_abdc2e2d82c51c1703656a2dfba0feabd"><div class="ttname"><a href="class_drawable.html#abdc2e2d82c51c1703656a2dfba0feabd">Drawable::~Drawable</a></div><div class="ttdeci">virtual ~Drawable()</div></div>
+<div class="ttc" id="class_drawable_html"><div class="ttname"><a href="class_drawable.html">Drawable</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_drawable_8h.html">Drawable.h</a></li>
-    <li class="footer">Generated on Wed Jan 11 2017 15:13:14 for sdlGame by
+    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

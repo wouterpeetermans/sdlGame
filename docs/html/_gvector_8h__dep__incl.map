@@ -1,9 +1,12 @@
 <map id="src/Gvector.h" name="src/Gvector.h">
-<area shape="rect" id="node2" href="$_drawable_8h.html" title="src/Drawable.h" alt="" coords="185,80,296,107"/>
-<area shape="rect" id="node8" href="$_gvector_8cpp.html" title="src/Gvector.cpp" alt="" coords="321,80,435,107"/>
-<area shape="rect" id="node3" href="$_scene_8h.html" title="src/Scene.h" alt="" coords="135,155,227,181"/>
-<area shape="rect" id="node6" href="$_sprite_8h.html" title="src/Sprite.h" alt="" coords="257,155,347,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,229,103,256"/>
-<area shape="rect" id="node5" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="127,229,234,256"/>
-<area shape="rect" id="node7" href="$_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="259,229,361,256"/>
+<area shape="rect" id="node2" href="$_colidable_8h.html" title="src/Colidable.h" alt="" coords="133,80,243,107"/>
+<area shape="rect" id="node6" href="$_gvector_8cpp.html" title="src/Gvector.cpp" alt="" coords="267,80,381,107"/>
+<area shape="rect" id="node7" href="$_sprite_8h.html" title="src/Sprite.h" alt="" coords="406,80,495,107"/>
+<area shape="rect" id="node3" href="$_background_8h.html" title="src/Background.h" alt="" coords="13,155,137,181"/>
+<area shape="rect" id="node5" href="$_colidable_8cpp.html" title="src/Colidable.cpp" alt="" coords="161,155,284,181"/>
+<area shape="rect" id="node4" href="$_background_8cpp.html" title="src/Background.cpp" alt="" coords="5,229,144,256"/>
+<area shape="rect" id="node8" href="$_hero_8h.html" title="src/Hero.h" alt="" coords="376,155,459,181"/>
+<area shape="rect" id="node11" href="$_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="483,155,586,181"/>
+<area shape="rect" id="node9" href="$_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="305,229,402,256"/>
+<area shape="rect" id="node10" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="427,229,533,256"/>
 </map>

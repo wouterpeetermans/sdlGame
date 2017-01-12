@@ -25,6 +25,8 @@
 class Hero:Sprite {
 private:
   int seqb;
+  int hasJumped;
+  bool jumpKeyPressed;
 public:
   Hero(Scene*);
   ~Hero();

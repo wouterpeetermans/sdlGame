@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_hero_8cpp" kind="file">
+    <compoundname>Hero.cpp</compoundname>
+    <includes refid="_hero_8h" local="yes">Hero.h</includes>
+    <incdepgraph>
+      <node id="217">
+        <label>SDL2/SDL_image.h</label>
+      </node>
+      <node id="211">
+        <label>Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="210">
+        <label>src/Hero.cpp</label>
+        <link refid="Hero.cpp"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>Drawable.h</label>
+        <link refid="_drawable_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>iostream</label>
+      </node>
+      <node id="218">
+        <label>Gvector.h</label>
+        <link refid="_gvector_8h"/>
+      </node>
+      <node id="216">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>a<sp/>simple<sp/>platformer<sp/>game<sp/>written<sp/>for<sp/>a<sp/>shool<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/><sp/>Wouter<sp/>Peetermans</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="_hero_8h" kindref="compound">Hero.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><ref refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" kindref="member">Hero::Hero</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context):<ref refid="class_sprite" kindref="compound">Sprite</ref>(</highlight><highlight class="stringliteral">&quot;game/hero.png&quot;</highlight><highlight class="normal">,<sp/>context){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lenght<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>leftArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>rightArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>backArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/>frontArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lenght;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>rect;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.h<sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.w<sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.x<sp/>=<sp/>i*32;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>frontArray[i]<sp/>=<sp/>rect;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.y<sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>backArray[i]<sp/>=<sp/>rect;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.y<sp/>=<sp/>128;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rightArray[i]<sp/>=<sp/>rect;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rect.y<sp/>=<sp/>192;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>leftArray[i]<sp/>=<sp/>rect;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>posRect<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;h<sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;w<sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;y<sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>srcRect<sp/>=<sp/>frontArray;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>speedVector.xZero();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>speedVector.yZero();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><ref refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" kindref="member">Hero::~Hero</ref>(){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kindref="member">Hero::GetKeys</ref>(SDL_Event*<sp/>e){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>leftVector(-3,0);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>rightVector(3,0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>jumpVector(0,10);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e-&gt;type<sp/>==<sp/>SDL_KEYDOWN)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e-&gt;key.keysym.sym)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>=<sp/>rightVector;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>=<sp/>leftVector;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_UP:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>jumpVector;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e-&gt;type<sp/>==<sp/>SDL_KEYUP)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e-&gt;key.keysym.sym)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" kindref="member">Hero::Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timePast){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>gravityVector(0,-1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(seqb&lt;36){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seq<sp/>=<sp/>seqb/6;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>-1:</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>+seq;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>+seq;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;x<sp/>+=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kindref="member">xSpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>-=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>(gravityVector<sp/>*<sp/>(timePast/10.0));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>&gt;<sp/>512)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Hero::Draw</ref>(SDL_Renderer<sp/>*<sp/>renderer){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/>SDL_RenderCopy(renderer,<sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>,<sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>,<sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="/home/wouter/Documents/sdlGame/src/Hero.cpp"/>
+  </compounddef>
+</doxygen>

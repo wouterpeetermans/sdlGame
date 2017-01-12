@@ -1,4 +1,4 @@
-.TH "Gvector" 3 "Wed Jan 11 2017" "sdlGame" \" -*- nroff -*-
+.TH "Gvector" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -38,6 +38,9 @@ Gvector \-
 .ti -1c
 .RI "void \fBoperator+=\fP (const \fBGvector\fP &)"
 .br
+.ti -1c
+.RI "\fBGvector\fP \fBoperator*\fP (const double)"
+.br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -47,6 +50,8 @@ Gvector \-
 
 .SH "Member Function Documentation"
 .PP 
+.SS "\fBGvector\fP Gvector::operator* (const doublenumber)"
+
 .SS "void Gvector::operator+= (const \fBGvector\fP &other)"
 
 .SS "int Gvector::xDir ()"

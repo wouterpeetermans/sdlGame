@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_hero" kind="class" prot="public">
+    <compoundname>Hero</compoundname>
+    <basecompoundref refid="class_sprite" prot="private" virt="non-virtual">Sprite</basecompoundref>
+    <includes refid="_hero_8h" local="no">Hero.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hero::seqb</definition>
+        <argsstring></argsstring>
+        <name>seqb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hero::Hero</definition>
+        <argsstring>(Scene *)</argsstring>
+        <name>Hero</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="21" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hero::~Hero</definition>
+        <argsstring>()</argsstring>
+        <name>~Hero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hero::GetKeys</definition>
+        <argsstring>(SDL_Event *)</argsstring>
+        <name>GetKeys</name>
+        <param>
+          <type>SDL_Event *</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="55" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hero::Update</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0">Update</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+          <defname>timePast</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="96" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hero::Draw</definition>
+        <argsstring>(SDL_Renderer *)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a">Draw</reimplements>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="50">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="51" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="49">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="50" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="53">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="54" relation="private-inheritance">
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>speedVector</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Gvector</label>
+        <link refid="class_gvector"/>
+      </node>
+      <node id="54">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="52">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="53" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="25" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="private" virt="non-virtual"><scope>Hero</scope><name>backArray</name></member>
+      <member refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" prot="public" virt="virtual"><scope>Hero</scope><name>Draw</name></member>
+      <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="private" virt="non-virtual"><scope>Hero</scope><name>frontArray</name></member>
+      <member refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" prot="public" virt="non-virtual"><scope>Hero</scope><name>GetKeys</name></member>
+      <member refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" prot="private" virt="non-virtual"><scope>Hero</scope><name>hasJumped</name></member>
+      <member refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" prot="public" virt="non-virtual"><scope>Hero</scope><name>Hero</name></member>
+      <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="private" virt="non-virtual"><scope>Hero</scope><name>leftArray</name></member>
+      <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="private" virt="non-virtual"><scope>Hero</scope><name>posRect</name></member>
+      <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="private" virt="non-virtual"><scope>Hero</scope><name>rightArray</name></member>
+      <member refid="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" prot="private" virt="non-virtual"><scope>Hero</scope><name>seqb</name></member>
+      <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" prot="private" virt="non-virtual"><scope>Hero</scope><name>speedVector</name></member>
+      <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" prot="private" virt="non-virtual"><scope>Hero</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="private" virt="non-virtual"><scope>Hero</scope><name>spriteSheet</name></member>
+      <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="private" virt="non-virtual"><scope>Hero</scope><name>srcRect</name></member>
+      <member refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" prot="public" virt="virtual"><scope>Hero</scope><name>Update</name></member>
+      <member refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" prot="public" virt="non-virtual"><scope>Hero</scope><name>~Hero</name></member>
+      <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="private" virt="non-virtual"><scope>Hero</scope><name>~Sprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

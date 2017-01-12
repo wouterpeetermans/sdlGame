@@ -1,4 +1,5 @@
 <map id="src/Sprite.h" name="src/Sprite.h">
-<area shape="rect" id="node2" href="$_drawable_8h.html" title="Drawable.h" alt="" coords="215,80,303,107"/>
-<area shape="rect" id="node6" href="$_gvector_8h.html" title="Gvector.h" alt="" coords="385,155,463,181"/>
+<area shape="rect" id="node2" href="$_drawable_8h.html" title="Drawable.h" alt="" coords="5,80,93,107"/>
+<area shape="rect" id="node5" href="$_scene_8h.html" title="Scene.h" alt="" coords="118,80,189,107"/>
+<area shape="rect" id="node7" href="$_gvector_8h.html" title="Gvector.h" alt="" coords="213,80,291,107"/>
 </map>

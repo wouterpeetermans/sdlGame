@@ -3,53 +3,61 @@
   <compounddef id="_scene_8cpp" kind="file">
     <compoundname>Scene.cpp</compoundname>
     <includes refid="_scene_8h" local="yes">Scene.h</includes>
+    <includes refid="_hero_8h" local="yes">Hero.h</includes>
     <incdepgraph>
-      <node id="106">
-        <label>UnMovable.h</label>
-      </node>
-      <node id="102">
+      <node id="250">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="101">
+      <node id="252">
+        <label>Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="249">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="99">
+      <node id="247">
         <label>src/Scene.cpp</label>
         <link refid="Scene.cpp"/>
-        <childnode refid="100" relation="include">
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
         </childnode>
       </node>
-      <node id="104">
+      <node id="254">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="101" relation="include">
+        <childnode refid="249" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
-        </childnode>
-        <childnode refid="103" relation="include">
-        </childnode>
-        <childnode refid="105" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
       </node>
-      <node id="103">
+      <node id="251">
         <label>iostream</label>
       </node>
-      <node id="105">
+      <node id="255">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="100">
+      <node id="248">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="101" relation="include">
+        <childnode refid="249" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
+        <childnode refid="250" relation="include">
         </childnode>
-        <childnode refid="103" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
-        <childnode refid="104" relation="include">
+      </node>
+      <node id="253">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="254" relation="include">
         </childnode>
-        <childnode refid="106" relation="include">
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -77,112 +85,93 @@
 <codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//constructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><ref refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kindref="member">Scene::Scene</ref>(){</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Init(SDL_INIT_EVERYTHING);<sp/></highlight><highlight class="comment">//<sp/>everything<sp/>because<sp/>why<sp/>not</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>=<sp/>SDL_CreateWindow(</highlight><highlight class="stringliteral">&quot;sdlGame&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">//<sp/>give<sp/>the<sp/>window<sp/>a<sp/>name</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOWPOS_UNDEFINED,<sp/></highlight><highlight class="comment">//<sp/>put<sp/>it<sp/>where<sp/>you<sp/>want</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOWPOS_UNDEFINED,</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" kindref="member">window_Width</ref>,<sp/></highlight><highlight class="comment">//window<sp/>width<sp/>defined<sp/>in<sp/>the<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_scene_8h_1a854e2c54b966212d598afc2d1288f411" kindref="member">window_Height</ref>,<sp/></highlight><highlight class="comment">//same<sp/>here</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOW_RESIZABLE);</highlight><highlight class="comment">//<sp/>I<sp/>like<sp/>resizable<sp/>windows<sp/>so<sp/>why<sp/>not</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(window<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;window<sp/>could<sp/>not<sp/>be<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>screenRenderer<sp/>=<sp/>SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED<sp/>|<sp/>SDL_RENDERER_PRESENTVSYNC);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(screenRenderer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;screen<sp/>render<sp/>could<sp/>not<sp/>be<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(0!=SDL_SetRenderDrawColor(screenRenderer,<sp/>0x12,<sp/>0xFF,<sp/>0xFF,<sp/>0xFF)){</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;something<sp/>wrong<sp/>with<sp/>renerDrawCollor&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!IMG_Init(IMG_INIT_PNG)){</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;image<sp/>library<sp/>could<sp/>not<sp/>be<sp/>loaded&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>IMG_GetError()<sp/>&lt;&lt;std::endl;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//destructor<sp/>because<sp/>I<sp/>dont<sp/>like<sp/>memory<sp/>leaks</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><ref refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kindref="member">Scene::~Scene</ref>(){</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyRenderer(screenRenderer);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyWindow(window);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>screenRenderer<sp/>=<sp/>NULL;<sp/></highlight><highlight class="comment">//<sp/>destroy<sp/>the<sp/>pointers<sp/>to</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IMG_Quit();</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Quit();<sp/></highlight><highlight class="comment">//<sp/>quit<sp/>SDL</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;quited<sp/>properly&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\a&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fuction<sp/>does<sp/>what<sp/>it<sp/>tells<sp/>you<sp/>it<sp/>does</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">SDL_Texture*<sp/>Scene::loadTexture(std::string<sp/>path){</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Texture*<sp/>newTexture<sp/>=<sp/>NULL;<sp/></highlight><highlight class="comment">//here<sp/>I<sp/>store<sp/>the<sp/>newly<sp/>generated<sp/>surface</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/>loadedSurface<sp/>=<sp/>IMG_Load(path.c_str());</highlight><highlight class="comment">//load<sp/>a<sp/>surface<sp/>from<sp/>a<sp/>file</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loadedSurface<sp/>==<sp/>NULL)<sp/>{</highlight><highlight class="comment">//detect<sp/>if<sp/>there<sp/>is<sp/>something<sp/>in<sp/>is<sp/>and<sp/>if<sp/>not<sp/>give<sp/>some<sp/>error</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;image<sp/>could<sp/>not<sp/>be<sp/>loaded&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="comment">//optimize<sp/>the<sp/>surface<sp/>for<sp/>the<sp/>screen<sp/>we<sp/>are<sp/>using</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newTexture<sp/>=<sp/>SDL_CreateTextureFromSurface(screenRenderer,<sp/>loadedSurface);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newTexture<sp/>==<sp/>NULL){</highlight><highlight class="comment">//same<sp/>as<sp/>above</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;texture<sp/>not<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_FreeSurface(loadedSurface);</highlight><highlight class="comment">//prevent<sp/>memory<sp/>leaks<sp/>because<sp/>they<sp/>are<sp/>anoying</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newTexture;<sp/></highlight><highlight class="comment">//return<sp/>something</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kindref="member">Scene::Run</ref>(){<sp/></highlight><highlight class="comment">//<sp/>the<sp/>place<sp/>where<sp/>all<sp/>the<sp/>magic<sp/>happens</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SDL_Rect<sp/>scrn_rect;<sp/>//this<sp/>will<sp/>go<sp/>in<sp/>to<sp/>some<sp/>class<sp/>later<sp/>on</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.x<sp/>=<sp/>576;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.y<sp/>=<sp/>432;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.w<sp/>=<sp/>64;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.h<sp/>=<sp/>48;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>quit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//this<sp/>bool<sp/>tels<sp/>if<sp/>the<sp/>user<sp/>has<sp/>quited<sp/>the<sp/>hard<sp/>game<sp/>already</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Event<sp/>e;</highlight><highlight class="comment">//<sp/>a<sp/>place<sp/>to<sp/>store<sp/>an<sp/>event<sp/>of<sp/>some<sp/>type</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Texture*<sp/>image<sp/>=<sp/>loadTexture(</highlight><highlight class="stringliteral">&quot;game/castle.png&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>above<sp/>created<sp/>surface</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(image<sp/>==<sp/>NULL)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>errors<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;de<sp/>afbeelding<sp/>is<sp/>niet<sp/>geladen&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UnMovable<sp/>bla(image,64,64,0,64);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>blabla(image,64,64,64,128);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startTime=0<sp/>,<sp/>currentTime;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!quit<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>the<sp/>main<sp/>loop<sp/>that<sp/>goes<sp/>on<sp/>until<sp/>the<sp/>user<sp/>is<sp/>done<sp/>with<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>startTime<sp/>=<sp/>SDL_GetTicks();</highlight><highlight class="comment">//get<sp/>wath<sp/>time<sp/>we<sp/>started<sp/>to<sp/>cap<sp/>the<sp/>framerate</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>SDL_PollEvent(<sp/>&amp;e<sp/>)<sp/>!=0<sp/>)<sp/>{</highlight><highlight class="comment">//a<sp/>loop<sp/>to<sp/>go<sp/>over<sp/>all<sp/>the<sp/>events<sp/>the<sp/>user<sp/>managed<sp/>to<sp/>create<sp/>in<sp/>a<sp/>fraction<sp/>of<sp/>a<sp/>second</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e.type<sp/>==<sp/>SDL_QUIT)<sp/>{<sp/></highlight><highlight class="comment">//now<sp/>I<sp/>am<sp/>able<sp/>to<sp/>use<sp/>the<sp/>litle<sp/>cross<sp/>on<sp/>top<sp/>of<sp/>the<sp/>window</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quit<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e.type<sp/>==<sp/>SDL_KEYDOWN)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e.key.keysym.sym)<sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_ESCAPE:<sp/></highlight><highlight class="comment">//escape<sp/>makes<sp/>the<sp/>program<sp/>quit<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quit<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos++;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos--;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderClear(screenRenderer);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bla.SetPos(pos,<sp/>0);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blabla.Draw(screenRenderer);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bla.Draw(screenRenderer);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderPresent(screenRenderer);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentTime<sp/>=<sp/>SDL_GetTicks();</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentTime&lt;(startTime+10))<sp/>{</highlight><highlight class="comment">//cap<sp/>the<sp/>framerate<sp/>at<sp/>about<sp/>100<sp/>fps<sp/>not<sp/>used<sp/>when<sp/>vsync<sp/>is<sp/>working</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Delay((startTime+10)-currentTime);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyTexture(image);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hero_8h" kindref="compound">Hero.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kindref="member">Scene::Scene</ref>(){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Init(SDL_INIT_EVERYTHING);<sp/></highlight><highlight class="comment">//<sp/>everything<sp/>because<sp/>why<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>=<sp/>SDL_CreateWindow(</highlight><highlight class="stringliteral">&quot;sdlGame&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">//<sp/>give<sp/>the<sp/>window<sp/>a<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOWPOS_UNDEFINED,<sp/></highlight><highlight class="comment">//<sp/>put<sp/>it<sp/>where<sp/>you<sp/>want</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOWPOS_UNDEFINED,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" kindref="member">window_Width</ref>,<sp/></highlight><highlight class="comment">//window<sp/>width<sp/>defined<sp/>in<sp/>the<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_scene_8h_1a854e2c54b966212d598afc2d1288f411" kindref="member">window_Height</ref>,<sp/></highlight><highlight class="comment">//same<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOW_RESIZABLE);</highlight><highlight class="comment">//<sp/>I<sp/>like<sp/>resizable<sp/>windows<sp/>so<sp/>why<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(window<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;window<sp/>could<sp/>not<sp/>be<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>screenRenderer<sp/>=<sp/>SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED<sp/>|<sp/>SDL_RENDERER_PRESENTVSYNC);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(screenRenderer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;screen<sp/>render<sp/>could<sp/>not<sp/>be<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(0!=SDL_SetRenderDrawColor(screenRenderer,<sp/>0x12,<sp/>0xFF,<sp/>0xFF,<sp/>0xFF)){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;something<sp/>wrong<sp/>with<sp/>renerDrawCollor&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!IMG_Init(IMG_INIT_PNG)){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;image<sp/>library<sp/>could<sp/>not<sp/>be<sp/>loaded&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>IMG_GetError()<sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//destructor<sp/>because<sp/>I<sp/>dont<sp/>like<sp/>memory<sp/>leaks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kindref="member">Scene::~Scene</ref>(){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyRenderer(screenRenderer);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyWindow(window);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>screenRenderer<sp/>=<sp/>NULL;<sp/></highlight><highlight class="comment">//<sp/>destroy<sp/>the<sp/>pointers<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IMG_Quit();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Quit();<sp/></highlight><highlight class="comment">//<sp/>quit<sp/>SDL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;quited<sp/>properly&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\a&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fuction<sp/>does<sp/>what<sp/>it<sp/>tells<sp/>you<sp/>it<sp/>does</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">SDL_Texture*<sp/><ref refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kindref="member">Scene::loadTexture</ref>(std::string<sp/>path){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Texture*<sp/>newTexture<sp/>=<sp/>NULL;<sp/></highlight><highlight class="comment">//here<sp/>I<sp/>store<sp/>the<sp/>newly<sp/>generated<sp/>surface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/>loadedSurface<sp/>=<sp/>IMG_Load(path.c_str());</highlight><highlight class="comment">//load<sp/>a<sp/>surface<sp/>from<sp/>a<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loadedSurface<sp/>==<sp/>NULL)<sp/>{</highlight><highlight class="comment">//detect<sp/>if<sp/>there<sp/>is<sp/>something<sp/>in<sp/>is<sp/>and<sp/>if<sp/>not<sp/>give<sp/>some<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;image<sp/>could<sp/>not<sp/>be<sp/>loaded&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="comment">//optimize<sp/>the<sp/>surface<sp/>for<sp/>the<sp/>screen<sp/>we<sp/>are<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newTexture<sp/>=<sp/>SDL_CreateTextureFromSurface(screenRenderer,<sp/>loadedSurface);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newTexture<sp/>==<sp/>NULL){</highlight><highlight class="comment">//same<sp/>as<sp/>above</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;texture<sp/>not<sp/>created&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SDL_GetError()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_FreeSurface(loadedSurface);</highlight><highlight class="comment">//prevent<sp/>memory<sp/>leaks<sp/>because<sp/>they<sp/>are<sp/>anoying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newTexture;<sp/></highlight><highlight class="comment">//return<sp/>something</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kindref="member">Scene::Run</ref>(){<sp/></highlight><highlight class="comment">//<sp/>the<sp/>place<sp/>where<sp/>all<sp/>the<sp/>magic<sp/>happens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SDL_Rect<sp/>scrn_rect;<sp/>//this<sp/>will<sp/>go<sp/>in<sp/>to<sp/>some<sp/>class<sp/>later<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.x<sp/>=<sp/>576;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.y<sp/>=<sp/>432;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.w<sp/>=<sp/>64;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scrn_rect.h<sp/>=<sp/>48;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>quit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//this<sp/>bool<sp/>tels<sp/>if<sp/>the<sp/>user<sp/>has<sp/>quited<sp/>the<sp/>hard<sp/>game<sp/>already</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Event<sp/>e;</highlight><highlight class="comment">//<sp/>a<sp/>place<sp/>to<sp/>store<sp/>an<sp/>event<sp/>of<sp/>some<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hero" kindref="compound">Hero</ref><sp/>held(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startTime=0<sp/>,<sp/>currentTime<sp/>,<sp/>timeTook=0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!quit<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>the<sp/>main<sp/>loop<sp/>that<sp/>goes<sp/>on<sp/>until<sp/>the<sp/>user<sp/>is<sp/>done<sp/>with<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>startTime<sp/>=<sp/>SDL_GetTicks();</highlight><highlight class="comment">//get<sp/>wath<sp/>time<sp/>we<sp/>started<sp/>to<sp/>cap<sp/>the<sp/>framerate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>SDL_PollEvent(<sp/>&amp;e<sp/>)<sp/>!=0<sp/>)<sp/>{</highlight><highlight class="comment">//a<sp/>loop<sp/>to<sp/>go<sp/>over<sp/>all<sp/>the<sp/>events<sp/>the<sp/>user<sp/>managed<sp/>to<sp/>create<sp/>in<sp/>a<sp/>fraction<sp/>of<sp/>a<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e.type<sp/>==<sp/>SDL_QUIT)<sp/>{<sp/></highlight><highlight class="comment">//now<sp/>I<sp/>am<sp/>able<sp/>to<sp/>use<sp/>the<sp/>litle<sp/>cross<sp/>on<sp/>top<sp/>of<sp/>the<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quit<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>held.GetKeys(&amp;e);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>held.Update(timeTook);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderClear(screenRenderer);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>held.Draw(screenRenderer);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderPresent(screenRenderer);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentTime<sp/>=<sp/>SDL_GetTicks();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentTime&lt;(startTime+10))<sp/>{</highlight><highlight class="comment">//cap<sp/>the<sp/>framerate<sp/>at<sp/>about<sp/>100<sp/>fps<sp/>not<sp/>used<sp/>when<sp/>vsync<sp/>is<sp/>working</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Delay((startTime+10)-currentTime);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeTook<sp/>=<sp/>SDL_GetTicks()<sp/>-<sp/>startTime;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Scene.cpp"/>
   </compounddef>

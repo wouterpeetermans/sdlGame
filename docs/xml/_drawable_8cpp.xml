@@ -4,35 +4,24 @@
     <compoundname>Drawable.cpp</compoundname>
     <includes refid="_drawable_8h" local="yes">Drawable.h</includes>
     <incdepgraph>
-      <node id="82">
-        <label>SDL2/SDL_image.h</label>
-      </node>
-      <node id="81">
+      <node id="180">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="80">
+      <node id="179">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="81" relation="include">
+        <childnode refid="180" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
-        </childnode>
-        <childnode refid="83" relation="include">
-        </childnode>
-        <childnode refid="84" relation="include">
+        <childnode refid="181" relation="include">
         </childnode>
       </node>
-      <node id="83">
+      <node id="181">
         <label>iostream</label>
       </node>
-      <node id="84">
-        <label>Gvector.h</label>
-        <link refid="_gvector_8h"/>
-      </node>
-      <node id="79">
+      <node id="178">
         <label>src/Drawable.cpp</label>
         <link refid="Drawable.cpp"/>
-        <childnode refid="80" relation="include">
+        <childnode refid="179" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -42,68 +31,24 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>a<sp/>simple<sp/>platformer<sp/>game<sp/>written<sp/>for<sp/>a<sp/>shool<sp/>project</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/><sp/>Wouter<sp/>Peetermans</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>a<sp/>simple<sp/>platformer<sp/>game<sp/>written<sp/>for<sp/>a<sp/>shool<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/><sp/>Wouter<sp/>Peetermans</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"></highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
-<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
-<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
-<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
 <codeline lineno="9"><highlight class="comment"></highlight></codeline>
-<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"></highlight></codeline>
-<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
-<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
-<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_drawable_8h" kindref="compound">Drawable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//constructor<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><ref refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" kindref="member">Drawable::Drawable</ref>(SDL_Renderer*<sp/>renderer,<sp/>SDL_Texture*<sp/>texture<sp/>,SDL_Rect*<sp/>rect){</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kindref="member">file</ref><sp/>=<sp/>texture;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref><sp/>=<sp/>rect;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;w<sp/>=<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;w;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;h<sp/>=<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;h;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;x<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;y<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//constructor<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="class_drawable_1ae9689ef07462b8cbc8a4aa42bf70e531" kindref="member">Drawable::Drawable</ref>(SDL_Renderer*<sp/>renderer,<sp/>SDL_Texture*<sp/>texture<sp/>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h<sp/>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y){</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kindref="member">file</ref><sp/>=<sp/>texture;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;w<sp/>=<sp/>w;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;h<sp/>=<sp/>h;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;x<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;y<sp/>=<sp/>y;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;w<sp/>=<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;w;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;h<sp/>=<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>-&gt;h;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;x<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;y<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><ref refid="class_drawable_1a5db44942658aab760a7418e338582e0a" kindref="member">Drawable::~Drawable</ref>(){</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kindref="member">file</ref><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1a096acb81829742f6578556ca0128e838" kindref="member">Drawable::Draw</ref>(SDL_Renderer*<sp/>renderer)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/>SDL_RenderCopy(renderer,<sp/><ref refid="class_drawable_1a4d285cd95e08cc55de7235d85b05cbdb" kindref="member">file</ref>,<sp/><ref refid="class_drawable_1a3ea2d565c0084e747b8b1e1321f96c59" kindref="member">posRect</ref>,<sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_drawable_1aabeff5eb347480f67b6f044236ae5eea" kindref="member">Drawable::SetPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y){</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;x<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="class_drawable_1a38f8357dfc584338752cf7840b994494" kindref="member">destRect</ref>-&gt;y<sp/>=<sp/>y;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_drawable_1aa78abda5a95f0e8c1fd4135b196ae4e7" kindref="member">Drawable::OverlapDetect</ref>(SDL_Rect<sp/>*<sp/>rect){</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_drawable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kindref="member">OL_NO_COLLISION</ref>;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="_drawable_8h" kindref="compound">Drawable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Drawable.cpp"/>
   </compounddef>

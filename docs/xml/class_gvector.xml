@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_gvector_1ad680c2e33cb57b4da0c5d79b27848e0f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="26" bodyend="26"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="27" bodyend="27"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="28" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1acec4e482418f78afb153a7b3efd3144f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="21" bodyend="31"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="21" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="34" bodyend="44"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="34" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a7a463463cf7582041476c50ad8578566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="30" bodyend="30"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="31" bodyend="31"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="32" bodyend="32"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="33" bodyend="33"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_gvector_1ab6965c34e152b637453e901a5498741f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -159,17 +159,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="46" bodyend="49"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="35" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gvector_1ad78df5d8611c432443c72c8886fc8296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_gvector" kindref="compound">Gvector</ref></type>
+        <definition>Gvector Gvector::operator*</definition>
+        <argsstring>(const double)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const double</type>
+          <defname>number</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.cpp" bodystart="51" bodyend="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="22" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="22" bodyend="35"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Gvector.h" line="23" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Gvector.h" bodystart="23" bodyend="37"/>
     <listofallmembers>
       <member refid="class_gvector_1aedfaa9735f1517e744f58229716da263" prot="public" virt="non-virtual"><scope>Gvector</scope><name>Gvector</name></member>
       <member refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" prot="public" virt="non-virtual"><scope>Gvector</scope><name>Gvector</name></member>
+      <member refid="class_gvector_1ad78df5d8611c432443c72c8886fc8296" prot="public" virt="non-virtual"><scope>Gvector</scope><name>operator*</name></member>
       <member refid="class_gvector_1ab6965c34e152b637453e901a5498741f" prot="public" virt="non-virtual"><scope>Gvector</scope><name>operator+=</name></member>
       <member refid="class_gvector_1a09acd3140c864867f71c0ff713446ba1" prot="private" virt="non-virtual"><scope>Gvector</scope><name>x</name></member>
       <member refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" prot="public" virt="non-virtual"><scope>Gvector</scope><name>xDir</name></member>

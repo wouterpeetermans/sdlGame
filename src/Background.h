@@ -20,10 +20,20 @@
  #define _Background 1
  #include "Colidable.h"
  #include "Drawable.h"
+ #include "Scene.h"
 
 
  class Background:Drawable , Colidable {
-   
+ protected:
+   SDL_Texture* blockSheet;
+   SDL_Rect* srcRect;
+   SDL_Rect* posRect;
+
+ public:
+   Background(Scene*,std::string);
+   Background(SDL_Texture*);
+   virtual void Draw(SDL_Renderer*)=0;
+   virtual OverlapType OverlapDetect(const SDL_Rect& , const Gvector& ,int*,int*);
  };
 
 

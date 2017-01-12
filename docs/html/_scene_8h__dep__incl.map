@@ -1,4 +1,11 @@
 <map id="src/Scene.h" name="src/Scene.h">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="127,80,234,107"/>
+<area shape="rect" id="node2" href="$_background_8h.html" title="src/Background.h" alt="" coords="74,80,198,107"/>
+<area shape="rect" id="node4" href="$_sprite_8h.html" title="src/Sprite.h" alt="" coords="282,80,371,107"/>
+<area shape="rect" id="node7" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="323,229,429,256"/>
+<area shape="rect" id="node9" href="$main_8h.html" title="src/main.h" alt="" coords="457,80,540,107"/>
+<area shape="rect" id="node3" href="$_background_8cpp.html" title="src/Background.cpp" alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node5" href="$_hero_8h.html" title="src/Hero.h" alt="" coords="168,155,251,181"/>
+<area shape="rect" id="node8" href="$_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="275,155,378,181"/>
+<area shape="rect" id="node6" href="$_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="161,229,258,256"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="454,155,551,181"/>
 </map>

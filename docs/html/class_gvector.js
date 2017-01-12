@@ -2,6 +2,7 @@ var class_gvector =
 [
     [ "Gvector", "class_gvector.html#aedfaa9735f1517e744f58229716da263", null ],
     [ "Gvector", "class_gvector.html#a1989c82b46be888dcfb356d5ab285f3a", null ],
+    [ "operator*", "class_gvector.html#ad78df5d8611c432443c72c8886fc8296", null ],
     [ "operator+=", "class_gvector.html#ab6965c34e152b637453e901a5498741f", null ],
     [ "xDir", "class_gvector.html#acec4e482418f78afb153a7b3efd3144f", null ],
     [ "xSpeed", "class_gvector.html#a7a463463cf7582041476c50ad8578566", null ],

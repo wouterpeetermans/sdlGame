@@ -2,27 +2,17 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="class_drawable" kind="class" prot="public" abstract="yes">
     <compoundname>Drawable</compoundname>
+    <derivedcompoundref refid="class_background" prot="private" virt="non-virtual">Background</derivedcompoundref>
     <derivedcompoundref refid="class_sprite" prot="private" virt="non-virtual">Sprite</derivedcompoundref>
     <includes refid="_drawable_8h" local="no">Drawable.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_drawable_1abdc2e2d82c51c1703656a2dfba0feabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type></type>
-        <definition>virtual Drawable::~Drawable</definition>
-        <argsstring>()</argsstring>
-        <name>~Drawable</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="34" column="1"/>
-      </memberdef>
       <memberdef kind="function" id="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Drawable::Draw</definition>
         <argsstring>(SDL_Renderer *)=0</argsstring>
         <name>Draw</name>
+        <reimplementedby refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0">Draw</reimplementedby>
+        <reimplementedby refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45">Draw</reimplementedby>
         <param>
           <type>SDL_Renderer *</type>
         </param>
@@ -32,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="35" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="31" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -40,21 +30,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="12">
-        <label>Sprite</label>
-        <link refid="class_sprite"/>
-        <childnode refid="11" relation="private-inheritance">
+      <node id="43">
+        <label>Background</label>
+        <link refid="class_background"/>
+        <childnode refid="42" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="44">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="42" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
+      <node id="45">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="44" relation="private-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="32" bodyend="36"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Drawable.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Drawable.h" bodystart="29" bodyend="32"/>
     <listofallmembers>
       <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" prot="public" virt="pure-virtual"><scope>Drawable</scope><name>Draw</name></member>
-      <member refid="class_drawable_1abdc2e2d82c51c1703656a2dfba0feabd" prot="public" virt="virtual"><scope>Drawable</scope><name>~Drawable</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

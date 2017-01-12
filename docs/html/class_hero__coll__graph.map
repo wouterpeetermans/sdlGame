@@ -1,0 +1,5 @@
+<map id="Hero" name="Hero">
+<area shape="rect" id="node2" href="$class_sprite.html" title="Sprite" alt="" coords="64,95,120,121"/>
+<area shape="rect" id="node3" href="$class_drawable.html" title="Drawable" alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node4" href="$class_gvector.html" title="Gvector" alt="" coords="107,5,175,32"/>
+</map>

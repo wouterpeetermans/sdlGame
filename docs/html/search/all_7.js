@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rightarray',['rightArray',['../class_sprite.html#a232f054ea1232499c6a82b678916db3e',1,'Sprite']]],
-  ['rightarraylength',['rightArrayLength',['../class_sprite.html#a3f8216c649e21312fe7b838c8b72203e',1,'Sprite']]],
-  ['run',['Run',['../class_scene.html#a093259fe8ed34be3da9cbf16aa84af60',1,'Scene']]]
+  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['main_2eh',['main.h',['../main_8h.html',1,'']]]
 ];

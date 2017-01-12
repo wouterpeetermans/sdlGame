@@ -110,21 +110,19 @@ $(document).ready(function(){initNavTree('_scene_8h.html','');});
 <div class="textblock"><code>#include &lt;SDL2/SDL.h&gt;</code><br />
 <code>#include &lt;SDL2/SDL_image.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="_drawable_8h_source.html">Drawable.h</a>&quot;</code><br />
-<code>#include &quot;UnMovable.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Scene.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_scene_8h__incl.png" border="0" usemap="#src_2_scene_8h" alt=""/></div>
 <map name="src_2_scene_8h" id="src_2_scene_8h">
-<area shape="rect" id="node5" href="_drawable_8h.html" title="Drawable.h" alt="" coords="232,80,320,107"/><area shape="rect" id="node6" href="_gvector_8h.html" title="Gvector.h" alt="" coords="289,155,367,181"/></map>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_scene_8h__dep__incl.png" border="0" usemap="#src_2_scene_8hdep" alt=""/></div>
 <map name="src_2_scene_8hdep" id="src_2_scene_8hdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="5,80,103,107"/><area shape="rect" id="node3" href="_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="127,80,234,107"/></map>
+<area shape="rect" id="node2" href="_background_8h.html" title="src/Background.h" alt="" coords="74,80,198,107"/><area shape="rect" id="node4" href="_sprite_8h.html" title="src/Sprite.h" alt="" coords="282,80,371,107"/><area shape="rect" id="node7" href="_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="323,229,429,256"/><area shape="rect" id="node9" href="main_8h.html" title="src/main.h" alt="" coords="457,80,540,107"/><area shape="rect" id="node3" href="_background_8cpp.html" title="src/Background.cpp" alt="" coords="5,155,144,181"/><area shape="rect" id="node5" href="_hero_8h.html" title="src/Hero.h" alt="" coords="168,155,251,181"/><area shape="rect" id="node8" href="_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="275,155,378,181"/><area shape="rect" id="node6" href="_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="161,229,258,256"/><area shape="rect" id="node10" href="main_8cpp.html" title="src/main.cpp" alt="" coords="454,155,551,181"/></map>
 </div>
 </div>
 <p><a href="_scene_8h_source.html">Go to the source code of this file.</a></p>
@@ -136,9 +134,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a854e2c54b966212d598afc2d1288f411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_8h.html#a854e2c54b966212d598afc2d1288f411">window_Height</a>&#160;&#160;&#160;480</td></tr>
+<tr class="memitem:a854e2c54b966212d598afc2d1288f411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_8h.html#a854e2c54b966212d598afc2d1288f411">window_Height</a>&#160;&#160;&#160;576</td></tr>
 <tr class="separator:a854e2c54b966212d598afc2d1288f411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51ad4e0aa01aae093b93150fcbf90652"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_8h.html#a51ad4e0aa01aae093b93150fcbf90652">window_Width</a>&#160;&#160;&#160;640</td></tr>
+<tr class="memitem:a51ad4e0aa01aae093b93150fcbf90652"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_8h.html#a51ad4e0aa01aae093b93150fcbf90652">window_Width</a>&#160;&#160;&#160;1024</td></tr>
 <tr class="separator:a51ad4e0aa01aae093b93150fcbf90652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c7864c138c3ffcc98c0d7ffb3a1482"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_8h.html#af0c7864c138c3ffcc98c0d7ffb3a1482">fps</a>&#160;&#160;&#160;60</td></tr>
 <tr class="separator:af0c7864c138c3ffcc98c0d7ffb3a1482"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +159,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define window_Height&#160;&#160;&#160;480</td>
+          <td class="memname">#define window_Height&#160;&#160;&#160;576</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -173,7 +171,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define window_Width&#160;&#160;&#160;640</td>
+          <td class="memname">#define window_Width&#160;&#160;&#160;1024</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -186,7 +184,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_scene_8h.html">Scene.h</a></li>
-    <li class="footer">Generated on Wed Jan 11 2017 15:13:14 for sdlGame by
+    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7edrawable',['~Drawable',['../class_drawable.html#abdc2e2d82c51c1703656a2dfba0feabd',1,'Drawable']]],
-  ['_7escene',['~Scene',['../class_scene.html#a3b8cec2e32546713915f8c6303c951f1',1,'Scene']]]
+  ['update',['Update',['../class_hero.html#ad3d2a6b036aff466d6711ca28ee52956',1,'Hero::Update()'],['../class_level.html#ae6a51f3a856804131b198f5af1719091',1,'Level::Update()'],['../class_sprite.html#a59b6ee43b4c9a38b65f6f73e02a163a0',1,'Sprite::Update()']]]
 ];

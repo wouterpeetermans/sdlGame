@@ -2,53 +2,72 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="_gvector_8h" kind="file">
     <compoundname>Gvector.h</compoundname>
-    <includedby refid="_drawable_8h" local="yes">src/Drawable.h</includedby>
+    <includedby refid="_colidable_8h" local="yes">src/Colidable.h</includedby>
     <includedby refid="_gvector_8cpp" local="yes">src/Gvector.cpp</includedby>
+    <includedby refid="_sprite_8h" local="yes">src/Sprite.h</includedby>
     <invincdepgraph>
-      <node id="85">
-        <label>src/main.cpp</label>
-        <link refid="main_8cpp"/>
+      <node id="201">
+        <label>src/Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
       </node>
-      <node id="86">
+      <node id="206">
+        <label>src/Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>src/Background.cpp</label>
+        <link refid="_background_8cpp"/>
+      </node>
+      <node id="207">
+        <label>src/Hero.cpp</label>
+        <link refid="_hero_8cpp"/>
+      </node>
+      <node id="208">
         <label>src/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
       </node>
-      <node id="83">
-        <label>src/Drawable.h</label>
-        <link refid="_drawable_8h"/>
-        <childnode refid="84" relation="include">
+      <node id="203">
+        <label>src/Colidable.cpp</label>
+        <link refid="_colidable_8cpp"/>
+      </node>
+      <node id="200">
+        <label>src/Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
       </node>
-      <node id="88">
+      <node id="209">
         <label>src/Sprite.cpp</label>
         <link refid="_sprite_8cpp"/>
       </node>
-      <node id="89">
+      <node id="204">
         <label>src/Gvector.cpp</label>
         <link refid="_gvector_8cpp"/>
       </node>
-      <node id="82">
+      <node id="199">
         <label>src/Gvector.h</label>
         <link refid="Gvector.h"/>
-        <childnode refid="83" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
-        <childnode refid="89" relation="include">
+        <childnode refid="204" relation="include">
         </childnode>
-      </node>
-      <node id="84">
-        <label>src/Scene.h</label>
-        <link refid="_scene_8h"/>
-        <childnode refid="85" relation="include">
-        </childnode>
-        <childnode refid="86" relation="include">
+        <childnode refid="205" relation="include">
         </childnode>
       </node>
-      <node id="87">
+      <node id="205">
         <label>src/Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="88" relation="include">
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -79,22 +98,24 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_Gvector</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Gvector<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="class_gvector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>,<sp/>y;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26" refid="class_gvector_1aedfaa9735f1517e744f58229716da263" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_gvector_1aedfaa9735f1517e744f58229716da263" kindref="member">Gvector</ref>()<sp/>:<sp/>x(0)<sp/>,<sp/>y(0)<sp/>{};</highlight></codeline>
-<codeline lineno="27" refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" kindref="member">Gvector</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>:<sp/>x(a)<sp/>,<sp/>y(b)<sp/>{};</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" kindref="member">yDir</ref>();</highlight></codeline>
-<codeline lineno="30" refid="class_gvector_1a7a463463cf7582041476c50ad8578566" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kindref="member">xSpeed</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;};</highlight></codeline>
-<codeline lineno="31" refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;};</highlight></codeline>
-<codeline lineno="32" refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>()<sp/>{x<sp/>=<sp/>0;};</highlight></codeline>
-<codeline lineno="33" refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>()<sp/>{y<sp/>=<sp/>0;};</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1ab6965c34e152b637453e901a5498741f" kindref="member">operator+= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref>&amp;);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_gvector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>,<sp/>y;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="class_gvector_1aedfaa9735f1517e744f58229716da263" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_gvector_1aedfaa9735f1517e744f58229716da263" kindref="member">Gvector</ref>()<sp/>:<sp/>x(0)<sp/>,<sp/>y(0)<sp/>{};</highlight></codeline>
+<codeline lineno="28" refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_gvector_1a1989c82b46be888dcfb356d5ab285f3a" kindref="member">Gvector</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>:<sp/>x(a)<sp/>,<sp/>y(b)<sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" kindref="member">yDir</ref>();</highlight></codeline>
+<codeline lineno="31" refid="class_gvector_1a7a463463cf7582041476c50ad8578566" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kindref="member">xSpeed</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;};</highlight></codeline>
+<codeline lineno="32" refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;};</highlight></codeline>
+<codeline lineno="33" refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>()<sp/>{x<sp/>=<sp/>0;};</highlight></codeline>
+<codeline lineno="34" refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>()<sp/>{y<sp/>=<sp/>0;};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gvector_1ab6965c34e152b637453e901a5498741f" kindref="member">operator+= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref>&amp;);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/><ref refid="class_gvector_1ad78df5d8611c432443c72c8886fc8296" kindref="member">operator* </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Gvector.h"/>
   </compounddef>

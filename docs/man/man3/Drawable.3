@@ -1,4 +1,4 @@
-.TH "Drawable" 3 "Wed Jan 11 2017" "sdlGame" \" -*- nroff -*-
+.TH "Drawable" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,25 +9,20 @@ Drawable \-
 .PP
 \fC#include <Drawable\&.h>\fP
 .PP
-Inherited by \fBSprite\fP\fC [private]\fP\&.
+Inherited by \fBBackground\fP\fC [private]\fP, and \fBSprite\fP\fC [private]\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual \fB~Drawable\fP ()"
-.br
-.ti -1c
 .RI "virtual void \fBDraw\fP (SDL_Renderer *)=0"
 .br
 .in -1c
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "virtual Drawable::~Drawable ()\fC [virtual]\fP"
-
 .SH "Member Function Documentation"
 .PP 
 .SS "virtual void Drawable::Draw (SDL_Renderer *)\fC [pure virtual]\fP"
 
+.PP
+Implemented in \fBBackground\fP, and \fBHero\fP\&.
 
 .SH "Author"
 .PP 

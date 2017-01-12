@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gvector',['Gvector',['../class_gvector.html#aedfaa9735f1517e744f58229716da263',1,'Gvector::Gvector()'],['../class_gvector.html#a1989c82b46be888dcfb356d5ab285f3a',1,'Gvector::Gvector(int a, int b)']]]
+  ['draw',['Draw',['../class_background.html#ab47321940f5ac53dfe87315ba2ca7a45',1,'Background::Draw()'],['../class_drawable.html#a3a063894185ac869766edd4ebc4ba51a',1,'Drawable::Draw()'],['../class_hero.html#af11ab514ade4144d5764fc8e6bc2fbc0',1,'Hero::Draw()']]]
 ];

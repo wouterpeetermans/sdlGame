@@ -2,10 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
+    <innerfile refid="_background_8cpp">Background.cpp</innerfile>
+    <innerfile refid="_background_8h">Background.h</innerfile>
+    <innerfile refid="_colidable_8cpp">Colidable.cpp</innerfile>
+    <innerfile refid="_colidable_8h">Colidable.h</innerfile>
+    <innerfile refid="_drawable_8cpp">Drawable.cpp</innerfile>
     <innerfile refid="_drawable_8h">Drawable.h</innerfile>
     <innerfile refid="_gvector_8cpp">Gvector.cpp</innerfile>
     <innerfile refid="_gvector_8h">Gvector.h</innerfile>
+    <innerfile refid="_hero_8cpp">Hero.cpp</innerfile>
+    <innerfile refid="_hero_8h">Hero.h</innerfile>
+    <innerfile refid="_level_8h">Level.h</innerfile>
     <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="main_8h">main.h</innerfile>
     <innerfile refid="_scene_8cpp">Scene.cpp</innerfile>
     <innerfile refid="_scene_8h">Scene.h</innerfile>
     <innerfile refid="_sprite_8cpp">Sprite.cpp</innerfile>

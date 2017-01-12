@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_background" kind="class" prot="public" abstract="yes">
+    <compoundname>Background</compoundname>
+    <basecompoundref refid="class_drawable" prot="private" virt="non-virtual">Drawable</basecompoundref>
+    <basecompoundref refid="class_colidable" prot="private" virt="non-virtual">Colidable</basecompoundref>
+    <includes refid="_background_8h" local="no">Background.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" prot="protected" static="no" mutable="no">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture* Background::blockSheet</definition>
+        <argsstring></argsstring>
+        <name>blockSheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Background::srcRect</definition>
+        <argsstring></argsstring>
+        <name>srcRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Background::posRect</definition>
+        <argsstring></argsstring>
+        <name>posRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Background::Background</definition>
+        <argsstring>(Scene *, std::string)</argsstring>
+        <name>Background</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>file</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1a5385891dafdc857eb5d29915f5163ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Background::Background</definition>
+        <argsstring>(SDL_Texture *)</argsstring>
+        <name>Background</name>
+        <param>
+          <type>SDL_Texture *</type>
+          <defname>texture</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Background::Draw</definition>
+        <argsstring>(SDL_Renderer *)=0</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a">Draw</reimplements>
+        <param>
+          <type>SDL_Renderer *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1af1206ce342dd773755f60e9f995bbbb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
+        <definition>OverlapType Background::OverlapDetect</definition>
+        <argsstring>(const SDL_Rect &amp;, const Gvector &amp;)</argsstring>
+        <name>OverlapDetect</name>
+        <reimplements refid="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1">OverlapDetect</reimplements>
+        <param>
+          <type>const SDL_Rect &amp;</type>
+          <defname>rect</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_gvector" kindref="compound">Gvector</ref> &amp;</type>
+          <defname>vector</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="35">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="33">
+        <label>Background</label>
+        <link refid="class_background"/>
+        <childnode refid="34" relation="private-inheritance">
+        </childnode>
+        <childnode refid="35" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="36">
+        <label>Background</label>
+        <link refid="class_background"/>
+        <childnode refid="37" relation="private-inheritance">
+        </childnode>
+        <childnode refid="38" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="26" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" prot="public" virt="non-virtual"><scope>Background</scope><name>Background</name></member>
+      <member refid="class_background_1a5385891dafdc857eb5d29915f5163ebe" prot="public" virt="non-virtual"><scope>Background</scope><name>Background</name></member>
+      <member refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" prot="protected" virt="non-virtual"><scope>Background</scope><name>blockSheet</name></member>
+      <member refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" prot="public" virt="pure-virtual"><scope>Background</scope><name>Draw</name></member>
+      <member refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" prot="public" virt="virtual"><scope>Background</scope><name>OverlapDetect</name></member>
+      <member refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" prot="protected" virt="non-virtual"><scope>Background</scope><name>posRect</name></member>
+      <member refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" prot="protected" virt="non-virtual"><scope>Background</scope><name>srcRect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

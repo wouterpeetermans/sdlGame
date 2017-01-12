@@ -159,7 +159,7 @@
        colided = true;
        break;
      } else if (o == OL_COLLISION_Y) {
-       //speedVector.yZero();
+       speedVector.yZero();
        posRect->y -=yToFar;
        hasJumped = 0;
        colided = true;

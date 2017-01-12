@@ -55,7 +55,7 @@
  void Hero::GetKeys(SDL_Event* e){
    Gvector leftVector(-5,0);
    Gvector rightVector(5,0);
-   Gvector jumpVector(0,20);
+   Gvector jumpVector(0,10);
    if(e->type == SDL_KEYDOWN) {//keys pressed
      switch (e->key.keysym.sym) {
        case SDLK_RIGHT:

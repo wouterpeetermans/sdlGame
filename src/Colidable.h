@@ -28,7 +28,7 @@
 
 class Colidable {
 public:
-  virtual Gvector OverlapDetect(SDL_Rect*)=0;
+  virtual bool OverlapDetect(SDL_Rect*,Gvector*)=0;
 };
 
 

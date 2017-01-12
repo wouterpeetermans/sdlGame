@@ -21,8 +21,8 @@
 
 class Level {
 public:
-  void Update(unsigned int)
-}
+  void Update(unsigned int);
+};
 
 
 

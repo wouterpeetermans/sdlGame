@@ -19,26 +19,25 @@
 #define _Sprite 1
 #include "Drawable.h"
 #include "Scene.h"
+#include "Gvector.h"
+
 
 class Sprite:Drawable {
 protected:
 	SDL_Texture* spriteSheet;
+
 	SDL_Rect* leftArray;
-	int leftArrayLength;
-
 	SDL_Rect* rightArray;
-	int rightArrayLength;
-
 	SDL_Rect* backArray;
-	int backtArrayLength;
-
 	SDL_Rect* frontArray;
-	int frontArrayLength;
+	SDL_Rect* srcRect;
+	SDL_Rect* posRect;
+	Gvector speedVector;
 
 public:
-	Sprite(std::string,Scene*);
+	Sprite(std::string, Scene*);
 	~Sprite();
-	virtual void Update(int)=0;
+	virtual void Update(unsigned int)=0;
 };
 
 

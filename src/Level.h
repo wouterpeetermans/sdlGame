@@ -16,23 +16,19 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef _Gvector
-#define _Gvector 1
+#ifndef _Level
+#define _Level 1
 
-
-class Gvector {
-private:
-  int x , y;
+class Level {
 public:
-  Gvector() : x(0) , y(0) {};
-  Gvector(int a,int b) : x(a) , y(b) {};
-  int xDir();
-  int yDir();
-  int xSpeed(){return x;};
-  int ySpeed(){return y;};
-  void xZero() {x = 0;};
-  void yZero() {y = 0;};
-  void operator+= (const Gvector&);
-};
+  void Update(unsigned int)
+}
+
+
+
+
+
+
+
 
 #endif

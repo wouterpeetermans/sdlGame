@@ -15,16 +15,17 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef Scene_Included //include guard this makes shure the file is not included more then once
-#define Scene_Included
+#ifndef _Scene //include guard this makes shure the file is not included more then once
+#define _Scene 1
 
 
 #include <SDL2/SDL.h>  //import the main SDL library
 #include <SDL2/SDL_image.h>  // import the image convorting part of SDL
 #include <iostream> //give me some c++ powers like string support and cout
-#include "Drawable.h"
-#define window_Height 480 //set the height of the window (this wil go out in a later stage)
-#define window_Width 640 // set the width
+//#include "Drawable.h"
+//#include "Hero.h"
+#define window_Height 576 //set the height of the window (this wil go out in a later stage)
+#define window_Width 1024 // set the width
 #define fps 60 // set the disired frames per second (not implemented yet)
 
 class Scene {  //all screen related activitys go in here
@@ -33,8 +34,6 @@ class Scene {  //all screen related activitys go in here
 		SDL_Window* window; // this wil be the pointer to the SDL window we are using
 		SDL_Renderer* screenRenderer; // pointer to the renderer of the window above
 		//functions
-
-
 
 	public:
 		//constructor and deconstructor

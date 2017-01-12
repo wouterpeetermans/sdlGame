@@ -18,6 +18,7 @@
 
 #include "Sprite.h"
 
+
 Sprite::Sprite(std::string file ,Scene* context){
   spriteSheet = context->loadTexture(file);
 }

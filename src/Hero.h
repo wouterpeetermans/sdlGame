@@ -24,12 +24,12 @@
 
 class Hero:Sprite {
 private:
-
-
+  int seq;
 public:
   Hero(Scene*);
   ~Hero();
-  void Update(int);
+  void GetKeys(SDL_Event *);
+  void Update(unsigned int);
   void Draw(SDL_Renderer*);
 };
 

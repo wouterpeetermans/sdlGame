@@ -19,7 +19,7 @@
 
 
 #include <iostream>
-#include "Scene.h"
+#include "main.h"
 
 int main(int argc, char* argv[]){ // main program
 

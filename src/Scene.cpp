@@ -17,6 +17,7 @@
 */
 
 #include "Scene.h"
+#include "Hero.h"
 //constructor
 Scene::Scene(){
 	SDL_Init(SDL_INIT_EVERYTHING); // everything because why not
@@ -81,35 +82,25 @@ void Scene::Run(){ // the place where all the magic happens
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
 
-		int pos = 0;
-		unsigned int startTime=0 , currentTime;
+		Hero held(this);
+
+		unsigned int startTime=0 , currentTime , timeTook=0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
 			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
 			while ( SDL_PollEvent( &e ) !=0 ) {//a loop to go over all the events the user managed to create in a fraction of a second
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
 					quit = true;
 				}
-				else if(e.type == SDL_KEYDOWN) {//keys pressed
-					switch (e.key.keysym.sym) {
-						case SDLK_ESCAPE: //escape makes the program quit for now
-						quit = true;
-						break;
-						case SDLK_RIGHT:
-						pos++;
-						break;
-						case SDLK_LEFT:
-						pos--;
-						break;
-						default:
-						break;
-					}
-				}
+				held.GetKeys(&e);
 			}
+			held.Update(timeTook);
 			SDL_RenderClear(screenRenderer);
+			held.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();
 			if (currentTime<(startTime+10)) {//cap the framerate at about 100 fps not used when vsync is working
 				SDL_Delay((startTime+10)-currentTime);
 			}
+			timeTook = SDL_GetTicks() - startTime;
 		}
 }

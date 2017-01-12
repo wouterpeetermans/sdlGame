@@ -17,10 +17,12 @@
 */
 #ifndef _Drawable
 #define _Drawable 1
+
 #include <SDL2/SDL.h>  //import the main SDL library
 #include <SDL2/SDL_image.h>  // import the image convorting part of SDL
 #include <iostream> //give me some c++ powers like string support and cout
-#include "Gvector.h"
+#include "Scene.h"
+//#include "Gvector.h"
 
 
 

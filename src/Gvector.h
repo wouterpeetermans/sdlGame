@@ -33,6 +33,7 @@ public:
   void xZero() {x = 0;};
   void yZero() {y = 0;};
   void operator+= (const Gvector&);
+  Gvector operator* (const double);
 };
 
 #endif

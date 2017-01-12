@@ -47,3 +47,10 @@ void Gvector::operator+=(const Gvector& other){
   x += other.x;
   y += other.y;
 }
+
+Gvector Gvector::operator*(const double number){
+  Gvector result;
+  result.x = number*x;
+  result.y = number*y;
+  return result;
+}

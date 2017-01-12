@@ -53,8 +53,9 @@
  }
 
  void Hero::GetKeys(SDL_Event* e){
-   Gvector leftVector(-10,0);
-   Gvector rightVector(10,0);
+   Gvector leftVector(-5,0);
+   Gvector rightVector(5,0);
+   Gvector jumpVector(0,20);
    if(e->type == SDL_KEYDOWN) {//keys pressed
      switch (e->key.keysym.sym) {
        case SDLK_RIGHT:
@@ -65,14 +66,35 @@
        //pos--;
        speedVector = leftVector;
        break;
-       default:
-       speedVector.xZero();
+       case SDLK_UP:
+       if (!hasJumped) {
+         hasJumped = true;
+         speedVector += jumpVector;
+       }
        break;
+       default:
+       //speedVector.xZero();
+       break;
+     }
+   } else if(e->type == SDL_KEYUP) {//keys pressed
+       switch (e->key.keysym.sym) {
+         case SDLK_RIGHT:
+         //pos++;
+         speedVector.xZero();
+         break;
+         case SDLK_LEFT:
+         //pos--;
+         speedVector.xZero();
+         break;
+         default:
+         //speedVector.xZero();
+         break;
      }
    }
  }
 
  void Hero::Update(unsigned int timePast){
+   Gvector gravityVector(0,-1);
    if(seqb<36){
      seqb++;
    }
@@ -93,6 +115,13 @@
 
    }
    posRect->x += speedVector.xSpeed() * (timePast/10.0);
+   posRect->y -= speedVector.ySpeed() * (timePast/10.0);
+   speedVector += (gravityVector * (timePast/10.0));
+   if (posRect->y > 512) {
+     speedVector.yZero();
+     posRect->y = 512;
+     hasJumped = false;
+   }
    //speedVector.xZero();
  }
 

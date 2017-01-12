@@ -32,7 +32,9 @@ protected:
 	SDL_Rect* frontArray;
 	SDL_Rect* srcRect;
 	SDL_Rect* posRect;
+	bool hasJumped;
 	Gvector speedVector;
+	
 
 public:
 	Sprite(std::string, Scene*);

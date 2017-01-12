@@ -93,7 +93,7 @@
 
    }
    posRect->x += speedVector.xSpeed() * (timePast/10.0);
-   speedVector.xZero();
+   //speedVector.xZero();
  }
 
  void Hero::Draw(SDL_Renderer * renderer){

@@ -25,10 +25,10 @@ Sprite::Sprite(std::string file ,Scene* context){
 
 Sprite::~Sprite(){
   SDL_DestroyTexture(spriteSheet);
-  delete(leftArray);
-  delete(rightArray);
-  delete(backArray);
-  delete(frontArray);
+  delete[](leftArray);
+  delete[](rightArray);
+  delete[](backArray);
+  delete[](frontArray);
   //delete(srcRect); ==> is not nessisary because always a pointer to one of the above arrays
   //causes double free error ==> memory leaking ==> not good remember
   delete(posRect);

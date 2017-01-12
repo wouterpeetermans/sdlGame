@@ -85,7 +85,11 @@ void Scene::Run(){ // the place where all the magic happens
 		SDL_Event e;// a place to store an event of some type
 
 		Hero held(this);
-		Brick blok(this,4,17);
+		Brick* blokjes[10];
+		Colidable* colidables[10];
+		for (size_t i = 0; i < 10; i++) {
+			colidables[i]= blokjes[i] = new Brick(this,4+i,12);
+		}
 
 		unsigned int startTime=0 , currentTime , timeTook=0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
@@ -96,10 +100,13 @@ void Scene::Run(){ // the place where all the magic happens
 				}
 				held.GetKeys(&e);
 			}
-			held.Update(timeTook,&blok,1);
+			held.Update(timeTook,colidables,10);
 			SDL_RenderClear(screenRenderer);
 			held.Draw(screenRenderer);
-			blok.Draw(screenRenderer);
+			for (size_t i = 0; i < 10; i++) {
+				blokjes[i]->Draw(screenRenderer);
+			}
+			//blok.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();
 			if (currentTime<(startTime+16)) {//cap the framerate at about 100 fps not used when vsync is working

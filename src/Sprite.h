@@ -39,7 +39,7 @@ protected:
 public:
 	Sprite(std::string, Scene*);
 	~Sprite();
-	virtual void Update(unsigned int,Colidable*,int)=0;
+	virtual void Update(unsigned int,Colidable**,int)=0;
 };
 
 

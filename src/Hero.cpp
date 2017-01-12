@@ -55,7 +55,7 @@
  void Hero::GetKeys(SDL_Event* e){
    Gvector leftVector(-3,0);
    Gvector rightVector(3,0);
-   Gvector jumpVector(0,10);
+   Gvector jumpVector(0,12);
    if(e->type == SDL_KEYDOWN) {//keys pressed
      switch (e->key.keysym.sym) {
        case SDLK_RIGHT:
@@ -99,7 +99,7 @@
    }
  }
 
- void Hero::Update(unsigned int timePast,Colidable* colideArray,int amountColidables){
+ void Hero::Update(unsigned int timePast,Colidable** colideArray,int amountColidables){
    Gvector gravityVector(0,-1);
    if(seqb<36){
      seqb++;
@@ -124,7 +124,7 @@
    posRect->x += changeX;
    int changeY = speedVector.ySpeed() * (timePast/10.0);
    posRect->y -= changeY;
-   if(speedVector.ySpeed()>(-10)){
+   if(speedVector.ySpeed()>(-7)){
      speedVector += (gravityVector * (timePast/10.0));
    }
    if (posRect->y >= 512) { //just dont drop trough the floor will maybe deleted in later stage
@@ -136,11 +136,11 @@
    //speedVector.xZero();
  }
 
- bool Hero::collisionDetect(Colidable* colArray , int colAmount, int xTravel , int yTravel){
+ bool Hero::collisionDetect(Colidable** colArray , int colAmount, int xTravel , int yTravel){
    bool colided=false;
    int xToFar=0 , yToFar=0;
    for (int i = 0; i < colAmount; i++) {
-     OverlapType o = colArray->OverlapDetect(posRect,&speedVector,&xToFar,&yToFar);
+     OverlapType o = colArray[i]->OverlapDetect(posRect,&speedVector,&xToFar,&yToFar);
      if (o == OL_COLLISION_XY) {
        if (abs(xToFar)<=abs(xTravel)) {
          posRect->x += xToFar;

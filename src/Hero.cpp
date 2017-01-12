@@ -73,12 +73,13 @@
  }
 
  void Hero::Update(unsigned int timePast){
-   if(seq<6){
-     seq++;
+   if(seqb<36){
+     seqb++;
    }
    else{
-     seq = 0;
+     seqb = 0;
    }
+   int seq = seqb/6;
    switch (speedVector.xDir()) {
     case -1:
       srcRect = leftArray+seq;

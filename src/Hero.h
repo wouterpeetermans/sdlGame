@@ -24,7 +24,7 @@
 
 class Hero:Sprite {
 private:
-  int seq;
+  int seqb;
 public:
   Hero(Scene*);
   ~Hero();

@@ -20,9 +20,10 @@
 #include "Drawable.h"
 #include "Scene.h"
 #include "Gvector.h"
+#include "Colidable.h"
 
 
-class Sprite:Drawable {
+class Sprite:public Drawable {
 protected:
 	SDL_Texture* spriteSheet;
 
@@ -38,7 +39,7 @@ protected:
 public:
 	Sprite(std::string, Scene*);
 	~Sprite();
-	virtual void Update(unsigned int)=0;
+	virtual void Update(unsigned int,Colidable*,int)=0;
 };
 
 

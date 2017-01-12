@@ -23,7 +23,7 @@
  #include "Scene.h"
 
 
- class Background:Drawable , Colidable {
+ class Background:public Drawable , public Colidable {
  protected:
    SDL_Texture* blockSheet;
    SDL_Rect srcRect;
@@ -33,7 +33,7 @@
    Background(Scene*,std::string);
    Background(SDL_Texture*);
    virtual void Draw(SDL_Renderer*)=0;
-   virtual OverlapType OverlapDetect(const SDL_Rect& , const Gvector& ,int*,int*);
+   virtual OverlapType OverlapDetect(SDL_Rect* , Gvector* ,int*,int*);
  };
 
 

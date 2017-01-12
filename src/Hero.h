@@ -22,16 +22,17 @@
 
 
 
-class Hero:Sprite {
+class Hero:public Sprite {
 private:
   int seqb;
   int hasJumped;
   bool jumpKeyPressed;
+  bool collisionDetect(Colidable*,int,int,int);
 public:
   Hero(Scene*);
   ~Hero();
   void GetKeys(SDL_Event *);
-  void Update(unsigned int);
+  void Update(unsigned int,Colidable*,int);
   void Draw(SDL_Renderer*);
 };
 

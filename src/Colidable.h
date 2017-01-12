@@ -22,6 +22,9 @@
  enum OverlapType {
    OL_NO_COLLISION=0,
    OL_COLLISION,
+   OL_COLLISION_X,
+   OL_COLLISION_Y,
+   OL_COLLISION_XY,
    OL_SPECIAL,
    OL_DEADLY
  };

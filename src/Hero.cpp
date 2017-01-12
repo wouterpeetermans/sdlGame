@@ -99,7 +99,7 @@
    }
  }
 
- void Hero::Update(unsigned int timePast){
+ void Hero::Update(unsigned int timePast,Colidable* colideArray,int amountColidables){
    Gvector gravityVector(0,-1);
    if(seqb<36){
      seqb++;
@@ -120,15 +120,53 @@
       break;
 
    }
-   posRect->x += speedVector.xSpeed() * (timePast/10.0);
-   posRect->y -= speedVector.ySpeed() * (timePast/10.0);
-   speedVector += (gravityVector * (timePast/10.0));
-   if (posRect->y > 512) {
+   int changeX = speedVector.xSpeed() * (timePast/10.0);
+   posRect->x += changeX;
+   int changeY = speedVector.ySpeed() * (timePast/10.0);
+   posRect->y -= changeY;
+   if(speedVector.ySpeed()>(-10)){
+     speedVector += (gravityVector * (timePast/10.0));
+   }
+   if (posRect->y >= 512) { //just dont drop trough the floor will maybe deleted in later stage
      speedVector.yZero();
      posRect->y = 512;
      hasJumped = 0;
    }
+   collisionDetect(colideArray,amountColidables,changeX,changeY);
    //speedVector.xZero();
+ }
+
+ bool Hero::collisionDetect(Colidable* colArray , int colAmount, int xTravel , int yTravel){
+   bool colided=false;
+   int xToFar=0 , yToFar=0;
+   for (int i = 0; i < colAmount; i++) {
+     OverlapType o = colArray->OverlapDetect(posRect,&speedVector,&xToFar,&yToFar);
+     if (o == OL_COLLISION_XY) {
+       if (abs(xToFar)<=abs(xTravel)) {
+         posRect->x += xToFar;
+       }
+       if (abs(yToFar)<=abs(yTravel)) {
+         posRect->y -=yToFar;
+         hasJumped = 0;
+       }
+       //speedVector.xZero();
+       //speedVector.yZero();
+       colided = true;
+       break;
+     } else if (o == OL_COLLISION_X) {
+       //speedVector.xZero();
+       posRect->x += xToFar;
+       colided = true;
+       break;
+     } else if (o == OL_COLLISION_Y) {
+       //speedVector.yZero();
+       posRect->y -=yToFar;
+       hasJumped = 0;
+       colided = true;
+       break;
+     }
+   }
+   return colided;
  }
 
  void Hero::Draw(SDL_Renderer * renderer){

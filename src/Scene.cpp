@@ -19,6 +19,7 @@
 #include "Scene.h"
 #include "Hero.h"
 #include "Brick.h"
+//#include "Colidable.h"
 //constructor
 Scene::Scene(){
 	SDL_Init(SDL_INIT_EVERYTHING); // everything because why not
@@ -95,14 +96,14 @@ void Scene::Run(){ // the place where all the magic happens
 				}
 				held.GetKeys(&e);
 			}
-			held.Update(timeTook);
+			held.Update(timeTook,&blok,1);
 			SDL_RenderClear(screenRenderer);
 			held.Draw(screenRenderer);
 			blok.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();
-			if (currentTime<(startTime+10)) {//cap the framerate at about 100 fps not used when vsync is working
-				SDL_Delay((startTime+10)-currentTime);
+			if (currentTime<(startTime+16)) {//cap the framerate at about 100 fps not used when vsync is working
+				SDL_Delay((startTime+16)-currentTime);
 			}
 			timeTook = SDL_GetTicks() - startTime;
 		}

@@ -19,7 +19,7 @@
 #define _Brick 1
 #include "Background.h"
 
-class Brick:Background {
+class Brick: public Background{
 private:
   SDL_Rect* colRect;
   void init(int,int);

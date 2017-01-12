@@ -21,13 +21,13 @@
  Background::Background(Scene* context ,std::string file){
    blockSheet = context->loadTexture(file);
  }
- 
+
  Background::Background(SDL_Texture* texture){
    blockSheet = texture;
  }
 
 
 
- OverlapType Background::OverlapDetect(const SDL_Rect & rect, const Gvector & vector,int* xBack, int* yBack){
+ OverlapType Background::OverlapDetect(SDL_Rect* rect,Gvector* vector,int* xBack, int* yBack){
    return OL_NO_COLLISION;
  }

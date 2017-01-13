@@ -28,6 +28,6 @@
 
 
 
- OverlapType Background::OverlapDetect(SDL_Rect* rect,Gvector* vector,int* xBack, int* yBack){
+ OverlapType Background::OverlapDetect(SDL_Rect* rect,SDL_Rect* result){
    return OL_NO_COLLISION;
  }

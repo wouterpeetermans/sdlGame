@@ -27,7 +27,7 @@ public:
   Brick(Scene*,int,int);
   Brick(SDL_Texture*,int,int);
   void Draw(SDL_Renderer*);
-  OverlapType OverlapDetect(SDL_Rect*,Gvector*,int* ,int*);
+  OverlapType OverlapDetect(SDL_Rect*,SDL_Rect*);
 };
 
 

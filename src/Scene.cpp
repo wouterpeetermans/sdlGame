@@ -87,8 +87,8 @@ void Scene::Run(){ // the place where all the magic happens
 		Hero held(this);
 		Brick* blokjes[10];
 		Colidable* colidables[10];
-		for (size_t i = 0; i < 10; i++) {
-			colidables[i]= blokjes[i] = new Brick(this,4+i,12);
+		for (int i = 0; i < 10; i++) {
+			colidables[i]= blokjes[i] = new Brick(this,10,17-i);
 		}
 
 		unsigned int startTime=0 , currentTime , timeTook=0;
@@ -103,7 +103,7 @@ void Scene::Run(){ // the place where all the magic happens
 			held.Update(timeTook,colidables,10);
 			SDL_RenderClear(screenRenderer);
 			held.Draw(screenRenderer);
-			for (size_t i = 0; i < 10; i++) {
+			for (int i = 0; i < 10; i++) {
 				blokjes[i]->Draw(screenRenderer);
 			}
 			//blok.Draw(screenRenderer);

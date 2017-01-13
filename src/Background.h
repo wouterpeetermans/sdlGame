@@ -33,7 +33,7 @@
    Background(Scene*,std::string);
    Background(SDL_Texture*);
    virtual void Draw(SDL_Renderer*)=0;
-   virtual OverlapType OverlapDetect(SDL_Rect* , Gvector* ,int*,int*);
+   virtual OverlapType OverlapDetect(SDL_Rect* ,SDL_Rect*);
  };
 
 

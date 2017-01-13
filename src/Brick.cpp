@@ -40,27 +40,10 @@ void Brick::init(int x , int y){
 void Brick::Draw(SDL_Renderer* renderer){
   SDL_RenderCopy(renderer, blockSheet, &srcRect, &posRect);
 }
-OverlapType Brick::OverlapDetect(SDL_Rect* rect,Gvector* v,int* x ,int* y){
-  SDL_Rect overlapRect;
-  bool xHit=false, yHit=false;
-  if(SDL_IntersectRect(rect,colRect,&overlapRect)) {
-    if (v->yDir()!=0) {
-      *y = overlapRect.h * v->yDir();
-      yHit = true;
-    } if (v->xDir()!=0) {
-      *x = overlapRect.w * v->xDir();
-      xHit = true;
-    }
-
-  }
-  if (xHit&&yHit) {
-    return OL_COLLISION_XY;
-  } else if (xHit) {
-    return OL_COLLISION_X;
-  } else if (yHit) {
-    return OL_COLLISION_Y;
-  }
-  else {
+OverlapType Brick::OverlapDetect(SDL_Rect* rect,SDL_Rect* resultRect){
+  if(SDL_IntersectRect(rect,colRect,resultRect)) {
+    return OL_COLLISION;
+  } else {
     return OL_NO_COLLISION;
   }
 }

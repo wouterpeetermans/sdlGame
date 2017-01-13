@@ -27,7 +27,8 @@ private:
   int seqb;
   int hasJumped;
   bool jumpKeyPressed;
-  bool collisionDetect(Colidable**,int,int,int);
+  bool collisionDetectX(Colidable**,int,int);
+  bool collisionDetectY(Colidable**,int,int);
 public:
   Hero(Scene*);
   ~Hero();

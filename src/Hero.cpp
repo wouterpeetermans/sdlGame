@@ -122,8 +122,10 @@
    }
    int changeX = speedVector.xSpeed() * (timePast/10.0);
    posRect->x += changeX;
+   collisionDetectX(colideArray,amountColidables,changeX);
    int changeY = speedVector.ySpeed() * (timePast/10.0);
    posRect->y -= changeY;
+   collisionDetectY(colideArray,amountColidables,changeY);
    if(speedVector.ySpeed()>(-7)){
      speedVector += (gravityVector * (timePast/10.0));
    }
@@ -132,41 +134,48 @@
      posRect->y = 512;
      hasJumped = 0;
    }
-   collisionDetect(colideArray,amountColidables,changeX,changeY);
    //speedVector.xZero();
  }
 
- bool Hero::collisionDetect(Colidable** colArray , int colAmount, int xTravel , int yTravel){
+ bool Hero::collisionDetectX(Colidable** colArray , int colAmount, int Travel){
    bool colided=false;
-   int xToFar=0 , yToFar=0;
+   int biggestCollision = 0;
+   SDL_Rect collisionRect;
    for (int i = 0; i < colAmount; i++) {
-     OverlapType o = colArray[i]->OverlapDetect(posRect,&speedVector,&xToFar,&yToFar);
-     if (o == OL_COLLISION_XY) {
-       if (abs(xToFar)<=abs(xTravel)) {
-         posRect->x += xToFar;
+     if(colArray[i]->OverlapDetect(posRect,&collisionRect)==OL_COLLISION){
+       if (collisionRect.w > biggestCollision) {
+         biggestCollision = collisionRect.w;
        }
-       if (abs(yToFar)<=abs(yTravel)) {
-         posRect->y -=yToFar;
-         hasJumped = 0;
-       }
-       //speedVector.xZero();
-       //speedVector.yZero();
        colided = true;
-       break;
-     } else if (o == OL_COLLISION_X) {
-       //speedVector.xZero();
-       posRect->x += xToFar;
-       colided = true;
-       break;
-     } else if (o == OL_COLLISION_Y) {
-       speedVector.yZero();
-       posRect->y -=yToFar;
-       hasJumped = 0;
-       colided = true;
-       break;
      }
    }
-   return colided;
+   if (colided) {
+     posRect->x += biggestCollision * speedVector.xDir();
+     return true;
+   } else {
+     return false;
+   }
+ }
+
+ bool Hero::collisionDetectY(Colidable** colArray , int colAmount, int Travel){
+   bool colided=false;
+   int biggestCollision = 0;
+   SDL_Rect collisionRect;
+   for (int i = 0; i < colAmount; i++) {
+     if(colArray[i]->OverlapDetect(posRect,&collisionRect)==OL_COLLISION){
+       if (collisionRect.h > biggestCollision) {
+         biggestCollision = collisionRect.h;
+       }
+       colided = true;
+     }
+   }
+   if (colided) {
+     posRect->y -= biggestCollision * speedVector.yDir();
+     speedVector.yZero();
+     return true;
+   } else {
+     return false;
+   }
  }
 
  void Hero::Draw(SDL_Renderer * renderer){

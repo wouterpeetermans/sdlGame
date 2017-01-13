@@ -88,7 +88,7 @@ void Scene::Run(){ // the place where all the magic happens
 		Brick* blokjes[10];
 		Colidable* colidables[10];
 		for (int i = 0; i < 10; i++) {
-			colidables[i]= blokjes[i] = new Brick(this,10,17-i);
+			colidables[i]= blokjes[i] = new Brick(this,10+i,17-i);
 		}
 
 		unsigned int startTime=0 , currentTime , timeTook=0;

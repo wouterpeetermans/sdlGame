@@ -60,11 +60,13 @@
      switch (e->key.keysym.sym) {
        case SDLK_RIGHT:
        //pos++;
-       speedVector = rightVector;
+       speedVector.xZero();
+       speedVector += rightVector;
        break;
        case SDLK_LEFT:
        //pos--;
-       speedVector = leftVector;
+       speedVector.xZero();
+       speedVector += leftVector;
        break;
        case SDLK_UP:
        if (jumpKeyPressed) {
@@ -172,6 +174,7 @@
    if (colided) {
      posRect->y -= biggestCollision * speedVector.yDir();
      speedVector.yZero();
+     hasJumped = 0;
      return true;
    } else {
      return false;

@@ -30,7 +30,7 @@ private:
   bool collisionDetectX(Colidable**,int,int);
   bool collisionDetectY(Colidable**,int,int);
 public:
-  Hero(Scene*);
+  Hero(Scene*,int,int);
   ~Hero();
   void GetKeys(SDL_Event *);
   void Update(unsigned int,Colidable**,int);

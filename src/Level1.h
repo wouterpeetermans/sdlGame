@@ -15,32 +15,24 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef _Sprite
-#define _Sprite 1
-#include "Drawable.h"
-#include "Scene.h"
-#include "Gvector.h"
-#include "Colidable.h"
+
+ #ifndef _Level1
+ #define _Level1 1
+#include "Level.h"
 
 
-class Sprite:public Drawable {
+
+class Level1:public Level {
 protected:
-	SDL_Texture* spriteSheet;
-
-	SDL_Rect* leftArray;
-	SDL_Rect* rightArray;
-	SDL_Rect* backArray;
-	SDL_Rect* frontArray;
-	SDL_Rect* srcRect;
-	SDL_Rect* posRect;
-	Gvector speedVector;
-
+  void CreateMap();
 public:
-	Sprite(std::string, Scene*);
-	~Sprite();
-	virtual void Update(unsigned int,Colidable**,int)=0;
+  Level1(Scene*);
 };
 
 
 
-#endif
+
+
+
+
+ #endif

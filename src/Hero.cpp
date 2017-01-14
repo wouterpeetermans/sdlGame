@@ -18,7 +18,7 @@
 
  #include "Hero.h"
 
- Hero::Hero(Scene* context):Sprite("game/hero.png", context){
+ Hero::Hero(Scene* context,int x, int y):Sprite("game/hero.png", context){
    int lenght = 6;
    leftArray = new SDL_Rect[lenght];
    rightArray = new SDL_Rect[lenght];
@@ -41,8 +41,8 @@
    posRect = new SDL_Rect;
    posRect->h = 64;
    posRect->w = 32;
-   posRect->x = 0;
-   posRect->y = 512;
+   posRect->x = x*32;
+   posRect->y = y*32;
    srcRect = frontArray;
    speedVector.xZero();
    speedVector.yZero();

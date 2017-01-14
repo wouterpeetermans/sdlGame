@@ -19,7 +19,7 @@
  #include "Background.h"
 
  Background::Background(Scene* context ,std::string file){
-   blockSheet = context->loadTexture(file);
+   blockSheet = context->LoadTexture(file);
  }
 
  Background::Background(SDL_Texture* texture){

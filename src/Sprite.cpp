@@ -20,7 +20,7 @@
 
 
 Sprite::Sprite(std::string file ,Scene* context){
-  spriteSheet = context->loadTexture(file);
+  spriteSheet = context->LoadTexture(file);
 }
 
 Sprite::~Sprite(){

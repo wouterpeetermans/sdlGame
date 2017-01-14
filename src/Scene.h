@@ -41,7 +41,9 @@ class Scene {  //all screen related activitys go in here
 	  ~Scene();
 		//functions
 		void Run();// this is the main function of Scene and it wil go on till the program ends
-		SDL_Texture* loadTexture(std::string);
+		SDL_Texture* LoadTexture(std::string);
+		SDL_Texture* CreateMapTexture(int,int);
+		SDL_Renderer* GetRenderer(){return screenRenderer;};
 
 };
 

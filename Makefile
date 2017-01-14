@@ -1,5 +1,5 @@
 #OBJS specifies wicht files to compile
-OBJS = src/main.cpp src/Scene.cpp src/Drawable.cpp src/Gvector.cpp src/Sprite.cpp src/Background.cpp src/Hero.cpp src/Colidable.cpp src/Brick.cpp
+OBJS = src/main.cpp src/Scene.cpp src/Drawable.cpp src/Gvector.cpp src/Sprite.cpp src/Background.cpp src/Hero.cpp src/Colidable.cpp src/Brick.cpp src/Level.cpp src/Level1.cpp
 
 #CC spesifies compiler
 CC = g++
@@ -7,7 +7,7 @@ CC = g++
 CW = i586-mingw32msvc-g++
 #COMPILER_FLAGS aditional options to use
 #-w suppress all warnings
-COMPILER_FLAGS = -Wall
+COMPILER_FLAGS = -Wall -std=c++11
 
 #LINKER_FLAGS linked libraries
 LINKER_FLAGS = -lSDL2 -lSDL2_image

@@ -18,10 +18,30 @@
 
 #ifndef _Level
 #define _Level 1
+#include "Hero.h"
+#include "Brick.h"
 
 class Level {
+protected:
+  SDL_Texture* mapTexture;
+  Colidable** colidables;
+  Sprite** enemies;
+  Hero* player;
+  int amountObjects;
+  int amountEnemies;
+  int* tileArray;
+  int mapWidth;
+  int mapHeight;
+  virtual void CreateMap()=0;
+  virtual void DrawMap(Scene*);
 public:
-  void Update(unsigned int);
+  Level(Scene*);
+  ~Level();
+  virtual void Update(unsigned int);
+  virtual void Draw(SDL_Renderer*);
+  virtual void GetKeys(SDL_Event*);
+  virtual Colidable** GetColidables(){return colidables;};
+  virtual int GetAmountColidables(){return amountObjects+amountEnemies;}
 };
 
 

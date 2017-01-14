@@ -17,7 +17,7 @@
 */
 
 #include "Scene.h"
-#include "Hero.h"
+#include "Level1.h"
 #include "Brick.h"
 //#include "Colidable.h"
 //constructor
@@ -59,7 +59,7 @@ Scene::~Scene(){
 		std::cout << '\a';
 }
 // fuction does what it tells you it does
-SDL_Texture* Scene::loadTexture(std::string path){
+SDL_Texture* Scene::LoadTexture(std::string path){
 		SDL_Texture* newTexture = NULL; //here I store the newly generated surface
 		SDL_Surface* loadedSurface = IMG_Load(path.c_str());//load a surface from a file
 		if (loadedSurface == NULL) {//detect if there is something in is and if not give some error
@@ -75,6 +75,10 @@ SDL_Texture* Scene::loadTexture(std::string path){
 		return newTexture; //return something
 }
 
+SDL_Texture* Scene::CreateMapTexture(int width, int height){
+	return SDL_CreateTexture(screenRenderer, SDL_GetWindowPixelFormat(window), SDL_TEXTUREACCESS_TARGET, width, height);
+}
+
 void Scene::Run(){ // the place where all the magic happens
 		//SDL_Rect scrn_rect; //this will go in to some class later on
 		//scrn_rect.x = 576;
@@ -84,28 +88,30 @@ void Scene::Run(){ // the place where all the magic happens
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
 
-		Hero held(this);
+		//Hero held(this,1,5);
+		/*
 		Brick* blokjes[10];
 		Colidable* colidables[10];
 		for (int i = 0; i < 10; i++) {
 			colidables[i]= blokjes[i] = new Brick(this,10+i,17-i);
-		}
+		}*/
+		Level1 l1(this);
 
-		unsigned int startTime=0 , currentTime , timeTook=0;
+		unsigned int startTime=0 , currentTime=0 , timeTook=0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
 			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
 			while ( SDL_PollEvent( &e ) !=0 ) {//a loop to go over all the events the user managed to create in a fraction of a second
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
 					quit = true;
 				}
-				held.GetKeys(&e);
+				//held.GetKeys(&e);
+				l1.GetKeys(&e);
 			}
-			held.Update(timeTook,colidables,10);
+			//held.Update(timeTook,l1.GetColidables(),l1.GetAmountColidables());
+			l1.Update(timeTook);
 			SDL_RenderClear(screenRenderer);
-			held.Draw(screenRenderer);
-			for (int i = 0; i < 10; i++) {
-				blokjes[i]->Draw(screenRenderer);
-			}
+			l1.Draw(screenRenderer);
+			//held.Draw(screenRenderer);
 			//blok.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);
 			currentTime = SDL_GetTicks();

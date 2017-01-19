@@ -48,6 +48,10 @@ void Gvector::operator+=(const Gvector& other){
   y += other.y;
 }
 
+void Gvector::xInvert(){
+  x*=-1;
+}
+
 Gvector Gvector::operator*(const double number){
   Gvector result;
   result.x = number*x;

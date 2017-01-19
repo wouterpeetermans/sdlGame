@@ -39,6 +39,7 @@ public:
 	Sprite(std::string, Scene*);
 	~Sprite();
 	virtual void Update(unsigned int,Colidable**,int)=0;
+	virtual void Draw(SDL_Renderer*)=0;
 };
 
 

@@ -17,6 +17,8 @@
 */
 
 #include "Level.h"
+#include "Brick.h"
+#include "Enemy.h"
 
 Level::Level(Scene* context){
   player = new Hero(context,1,5);
@@ -52,14 +54,18 @@ void Level::DrawMap(Scene* context){
         case 0:
           //do nothing
           break;
-        case 1:
-          //do nothing for the moment (stil working on this enemie thing)
+        case 1:{
+          Enemy* badGuy = new Enemy(context,j,i);
+          colidables[objectStep+enemieStep] = badGuy;
+          enemies[enemieStep] = badGuy;
+          enemieStep++;
           break;
+        }
         case 2:{
           //make a brick
           Brick* b = new Brick(blockSheet,j,i);
           colidables[objectStep+enemieStep] = b;
-          d[objectStep+enemieStep] = b;
+          d[objectStep] = b;
           objectStep++;
           break;
         }
@@ -85,7 +91,7 @@ void Level::GetKeys(SDL_Event *e){
 
 void Level::Update(unsigned int timePast){
   for (int i = 0; i < amountEnemies; i++) {
-    enemies[i]->Update(timePast, colidables, amountObjects);
+    enemies[i]->Update(timePast, colidables, (amountObjects+amountEnemies));
   }
   player->Update(timePast, colidables, (amountObjects+amountEnemies));
 }

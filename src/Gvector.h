@@ -32,6 +32,7 @@ public:
   int ySpeed(){return y;};
   void xZero() {x = 0;};
   void yZero() {y = 0;};
+  void xInvert();
   void operator+= (const Gvector&);
   Gvector operator* (const double);
 };

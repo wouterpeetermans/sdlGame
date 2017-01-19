@@ -15,21 +15,23 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- #ifndef _Colidable
- #define _Colidable 1
- #include <SDL2/SDL.h>
- #include "Gvector.h"
- enum OverlapType {
-   OL_NO_COLLISION=0,
-   OL_COLLISION,
-   OL_ENEMY,
-   OL_DEADLY
- };
+#ifndef _Enemy
+#define _Enemy 1
+#include "Sprite.h"
+#include "Colidable.h"
 
-class Colidable {
+class Enemy:public Sprite , public Colidable {
+private:
+  SDL_Rect* colRect;
+  int seqb;
 public:
-  virtual OverlapType OverlapDetect(SDL_Rect*,SDL_Rect*)=0;
+  Enemy(Scene*,int,int);
+  void Update(unsigned int,Colidable**,int);
+  void Draw(SDL_Renderer*);
+  OverlapType OverlapDetect(SDL_Rect*,SDL_Rect*);
 };
 
 
- #endif
+
+
+#endif

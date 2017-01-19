@@ -19,7 +19,6 @@
 #ifndef _Level
 #define _Level 1
 #include "Hero.h"
-#include "Brick.h"
 
 class Level {
 protected:

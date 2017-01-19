@@ -112,7 +112,16 @@ void Level::Draw(SDL_Renderer * renderer){
   SDL_Rect viewport;
   viewport.h = window_Height;
   viewport.w = window_Width;
-  viewport.x = 0;
   viewport.y = 0;
+  int playerPos = player->GetPos();
+  if (playerPos>(window_Width/2)) {
+    if (playerPos>(mapWidth*32)-(window_Width/2)) {
+      viewport.x = (mapWidth*32)-window_Width;
+    } else {
+      viewport.x = playerPos-(window_Width/2);
+    }
+  } else {
+    viewport.x = 0;
+  }
   SDL_RenderCopy(renderer, levelTexture, &viewport, NULL);
 }

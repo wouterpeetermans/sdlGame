@@ -174,3 +174,7 @@
  void Hero::Draw(SDL_Renderer * renderer){
    SDL_RenderCopy(renderer, spriteSheet, srcRect, posRect);
  }
+
+ int Hero::GetPos(){
+   return posRect->x;
+ }

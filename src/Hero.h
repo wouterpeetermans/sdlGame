@@ -35,6 +35,7 @@ public:
   void GetKeys(SDL_Event *);
   void Update(unsigned int,Colidable**,int);
   void Draw(SDL_Renderer*);
+  int GetPos();
 };
 
 

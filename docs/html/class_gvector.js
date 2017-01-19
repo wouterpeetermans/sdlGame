@@ -5,6 +5,7 @@ var class_gvector =
     [ "operator*", "class_gvector.html#ad78df5d8611c432443c72c8886fc8296", null ],
     [ "operator+=", "class_gvector.html#ab6965c34e152b637453e901a5498741f", null ],
     [ "xDir", "class_gvector.html#acec4e482418f78afb153a7b3efd3144f", null ],
+    [ "xInvert", "class_gvector.html#a8eb38295be4e95e5d244b1641953e72b", null ],
     [ "xSpeed", "class_gvector.html#a7a463463cf7582041476c50ad8578566", null ],
     [ "xZero", "class_gvector.html#a66ff8fd9477a29ed9d4cfd4e549545a8", null ],
     [ "yDir", "class_gvector.html#a8470e9a5cdd41b4f8b325a19c6364948", null ],

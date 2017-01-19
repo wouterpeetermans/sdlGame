@@ -1,0 +1,5 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="node2" href="$class_sprite.html" title="Sprite" alt="" coords="16,80,72,107"/>
+<area shape="rect" id="node3" href="$class_drawable.html" title="Drawable" alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node4" href="$class_colidable.html" title="Colidable" alt="" coords="97,80,173,107"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gvector',['Gvector',['../class_gvector.html',1,'']]]
+  ['enemy',['Enemy',['../class_enemy.html',1,'']]]
 ];

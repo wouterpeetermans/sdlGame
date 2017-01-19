@@ -2,6 +2,7 @@ var class_sprite =
 [
     [ "Sprite", "class_sprite.html#a93f7ad09babf69908163e10a5315f189", null ],
     [ "~Sprite", "class_sprite.html#a8accab430f9d90ae5117b57d67e32b84", null ],
+    [ "Draw", "class_sprite.html#a17870c1f973502e879b6d02e63aeb55a", null ],
     [ "Update", "class_sprite.html#a733136fecfb81865a2e42ccc329f4574", null ],
     [ "backArray", "class_sprite.html#a99d7c95bea6a12cf00b3bde6b939888c", null ],
     [ "frontArray", "class_sprite.html#a06d3e9cbf8881c2c20856bc594765c09", null ],

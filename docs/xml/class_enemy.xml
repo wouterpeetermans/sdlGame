@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_enemy" kind="class" prot="public">
+    <compoundname>Enemy</compoundname>
+    <basecompoundref refid="class_sprite" prot="public" virt="non-virtual">Sprite</basecompoundref>
+    <basecompoundref refid="class_colidable" prot="public" virt="non-virtual">Colidable</basecompoundref>
+    <includes refid="_enemy_8h" local="no">Enemy.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_enemy_1a73c411300598314074963d38f233a2fd" prot="private" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Enemy::colRect</definition>
+        <argsstring></argsstring>
+        <name>colRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a58b173e2808fe78f5708fb2f07a424e7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Enemy::seqb</definition>
+        <argsstring></argsstring>
+        <name>seqb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_enemy_1aabc39f41d6e01ba3fecac9f06cbfabf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Enemy::Enemy</definition>
+        <argsstring>(Scene *, int, int)</argsstring>
+        <name>Enemy</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>xPos</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>yPos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.cpp" bodystart="21" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1ace5d802a5b8026d63d2f2a26bfa2a1bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Enemy::Update</definition>
+        <argsstring>(unsigned int, Colidable **, int)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574">Update</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+          <defname>timePast</defname>
+        </param>
+        <param>
+          <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+          <defname>colidables</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>amountColidables</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.cpp" bodystart="55" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a0ab54ba9a44229d0aedcfdc2e985ea10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Enemy::Draw</definition>
+        <argsstring>(SDL_Renderer *)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_sprite_1a17870c1f973502e879b6d02e63aeb55a">Draw</reimplements>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.cpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1ab368d6b7daeaf28477be42668f9a4a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
+        <definition>OverlapType Enemy::OverlapDetect</definition>
+        <argsstring>(SDL_Rect *, SDL_Rect *)</argsstring>
+        <name>OverlapDetect</name>
+        <reimplements refid="class_colidable_1a082b047d6e7e66b85761ced37142fe70">OverlapDetect</reimplements>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>rect</defname>
+        </param>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>resultRect</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.cpp" bodystart="129" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="101">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="99">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="98">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+        <childnode refid="101" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="106">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="103">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+        <childnode refid="105" relation="usage">
+          <edgelabel>speedVector</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Gvector</label>
+        <link refid="class_gvector"/>
+      </node>
+      <node id="104">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="102">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Enemy.h" line="23" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Enemy.h" bodystart="23" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>backArray</name></member>
+      <member refid="class_enemy_1a73c411300598314074963d38f233a2fd" prot="private" virt="non-virtual"><scope>Enemy</scope><name>colRect</name></member>
+      <member refid="class_enemy_1a0ab54ba9a44229d0aedcfdc2e985ea10" prot="public" virt="virtual"><scope>Enemy</scope><name>Draw</name></member>
+      <member refid="class_enemy_1aabc39f41d6e01ba3fecac9f06cbfabf8" prot="public" virt="non-virtual"><scope>Enemy</scope><name>Enemy</name></member>
+      <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>frontArray</name></member>
+      <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>leftArray</name></member>
+      <member refid="class_enemy_1ab368d6b7daeaf28477be42668f9a4a62" prot="public" virt="virtual"><scope>Enemy</scope><name>OverlapDetect</name></member>
+      <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>posRect</name></member>
+      <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>rightArray</name></member>
+      <member refid="class_enemy_1a58b173e2808fe78f5708fb2f07a424e7" prot="private" virt="non-virtual"><scope>Enemy</scope><name>seqb</name></member>
+      <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>speedVector</name></member>
+      <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" prot="public" virt="non-virtual"><scope>Enemy</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>spriteSheet</name></member>
+      <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="protected" virt="non-virtual"><scope>Enemy</scope><name>srcRect</name></member>
+      <member refid="class_enemy_1ace5d802a5b8026d63d2f2a26bfa2a1bc" prot="public" virt="virtual"><scope>Enemy</scope><name>Update</name></member>
+      <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="public" virt="non-virtual"><scope>Enemy</scope><name>~Sprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

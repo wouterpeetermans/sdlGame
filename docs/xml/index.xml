@@ -24,6 +24,14 @@
   <compound refid="class_drawable" kind="class"><name>Drawable</name>
     <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kind="function"><name>Draw</name></member>
   </compound>
+  <compound refid="class_enemy" kind="class"><name>Enemy</name>
+    <member refid="class_enemy_1a73c411300598314074963d38f233a2fd" kind="variable"><name>colRect</name></member>
+    <member refid="class_enemy_1a58b173e2808fe78f5708fb2f07a424e7" kind="variable"><name>seqb</name></member>
+    <member refid="class_enemy_1aabc39f41d6e01ba3fecac9f06cbfabf8" kind="function"><name>Enemy</name></member>
+    <member refid="class_enemy_1ace5d802a5b8026d63d2f2a26bfa2a1bc" kind="function"><name>Update</name></member>
+    <member refid="class_enemy_1a0ab54ba9a44229d0aedcfdc2e985ea10" kind="function"><name>Draw</name></member>
+    <member refid="class_enemy_1ab368d6b7daeaf28477be42668f9a4a62" kind="function"><name>OverlapDetect</name></member>
+  </compound>
   <compound refid="class_gvector" kind="class"><name>Gvector</name>
     <member refid="class_gvector_1a09acd3140c864867f71c0ff713446ba1" kind="variable"><name>x</name></member>
     <member refid="class_gvector_1ad680c2e33cb57b4da0c5d79b27848e0f" kind="variable"><name>y</name></member>
@@ -35,6 +43,7 @@
     <member refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kind="function"><name>ySpeed</name></member>
     <member refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kind="function"><name>xZero</name></member>
     <member refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kind="function"><name>yZero</name></member>
+    <member refid="class_gvector_1a8eb38295be4e95e5d244b1641953e72b" kind="function"><name>xInvert</name></member>
     <member refid="class_gvector_1ab6965c34e152b637453e901a5498741f" kind="function"><name>operator+=</name></member>
     <member refid="class_gvector_1ad78df5d8611c432443c72c8886fc8296" kind="function"><name>operator*</name></member>
   </compound>
@@ -96,6 +105,7 @@
     <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kind="function"><name>Sprite</name></member>
     <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kind="function"><name>~Sprite</name></member>
     <member refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" kind="function"><name>Update</name></member>
+    <member refid="class_sprite_1a17870c1f973502e879b6d02e63aeb55a" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="_background_8cpp" kind="file"><name>Background.cpp</name>
   </compound>
@@ -111,15 +121,16 @@
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kind="enum"><name>OverlapType</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kind="enumvalue"><name>OL_NO_COLLISION</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kind="enumvalue"><name>OL_COLLISION</name></member>
-    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6" kind="enumvalue"><name>OL_COLLISION_X</name></member>
-    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8" kind="enumvalue"><name>OL_COLLISION_Y</name></member>
-    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053" kind="enumvalue"><name>OL_COLLISION_XY</name></member>
-    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kind="enumvalue"><name>OL_SPECIAL</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a8dd44b516932efa3a6e18c2cae48a64a" kind="enumvalue"><name>OL_ENEMY</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652" kind="enumvalue"><name>OL_DEADLY</name></member>
   </compound>
   <compound refid="_drawable_8cpp" kind="file"><name>Drawable.cpp</name>
   </compound>
   <compound refid="_drawable_8h" kind="file"><name>Drawable.h</name>
+  </compound>
+  <compound refid="_enemy_8cpp" kind="file"><name>Enemy.cpp</name>
+  </compound>
+  <compound refid="_enemy_8h" kind="file"><name>Enemy.h</name>
   </compound>
   <compound refid="_gvector_8cpp" kind="file"><name>Gvector.cpp</name>
   </compound>

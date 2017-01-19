@@ -1,8 +1,4 @@
 <map id="src/Brick.h" name="src/Brick.h">
 <area shape="rect" id="node2" href="$_brick_8cpp.html" title="src/Brick.cpp" alt="" coords="5,80,104,107"/>
-<area shape="rect" id="node3" href="$_level_8h.html" title="src/Level.h" alt="" coords="129,80,215,107"/>
-<area shape="rect" id="node4" href="$_level_8cpp.html" title="src/Level.cpp" alt="" coords="62,155,162,181"/>
-<area shape="rect" id="node5" href="$_level1_8h.html" title="src/Level1.h" alt="" coords="187,155,280,181"/>
-<area shape="rect" id="node6" href="$_level1_8cpp.html" title="src/Level1.cpp" alt="" coords="115,229,221,256"/>
-<area shape="rect" id="node7" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="245,229,352,256"/>
+<area shape="rect" id="node3" href="$_level_8cpp.html" title="src/Level.cpp" alt="" coords="129,80,229,107"/>
 </map>

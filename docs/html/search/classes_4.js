@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hero',['Hero',['../class_hero.html',1,'']]]
+  ['gvector',['Gvector',['../class_gvector.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hero_2ecpp',['Hero.cpp',['../_hero_8cpp.html',1,'']]],
-  ['hero_2eh',['Hero.h',['../_hero_8h.html',1,'']]]
+  ['gvector_2ecpp',['Gvector.cpp',['../_gvector_8cpp.html',1,'']]],
+  ['gvector_2eh',['Gvector.h',['../_gvector_8h.html',1,'']]]
 ];

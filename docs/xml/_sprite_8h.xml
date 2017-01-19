@@ -6,112 +6,127 @@
     <includes refid="_scene_8h" local="yes">Scene.h</includes>
     <includes refid="_gvector_8h" local="yes">Gvector.h</includes>
     <includes refid="_colidable_8h" local="yes">Colidable.h</includes>
+    <includedby refid="_enemy_8h" local="yes">src/Enemy.h</includedby>
     <includedby refid="_hero_8h" local="yes">src/Hero.h</includedby>
     <includedby refid="_sprite_8cpp" local="yes">src/Sprite.cpp</includedby>
     <incdepgraph>
-      <node id="542">
+      <node id="576">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="539">
+      <node id="573">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="538">
+      <node id="572">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="539" relation="include">
+        <childnode refid="573" relation="include">
         </childnode>
-        <childnode refid="540" relation="include">
+        <childnode refid="574" relation="include">
         </childnode>
       </node>
-      <node id="540">
+      <node id="574">
         <label>iostream</label>
       </node>
-      <node id="544">
+      <node id="578">
         <label>Colidable.h</label>
         <link refid="_colidable_8h"/>
-        <childnode refid="539" relation="include">
+        <childnode refid="573" relation="include">
         </childnode>
-        <childnode refid="543" relation="include">
+        <childnode refid="577" relation="include">
         </childnode>
       </node>
-      <node id="543">
+      <node id="577">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="541">
+      <node id="575">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="539" relation="include">
+        <childnode refid="573" relation="include">
         </childnode>
-        <childnode refid="542" relation="include">
+        <childnode refid="576" relation="include">
         </childnode>
-        <childnode refid="540" relation="include">
+        <childnode refid="574" relation="include">
         </childnode>
       </node>
-      <node id="537">
+      <node id="571">
         <label>src/Sprite.h</label>
         <link refid="Sprite.h"/>
-        <childnode refid="538" relation="include">
+        <childnode refid="572" relation="include">
         </childnode>
-        <childnode refid="541" relation="include">
+        <childnode refid="575" relation="include">
         </childnode>
-        <childnode refid="543" relation="include">
+        <childnode refid="577" relation="include">
         </childnode>
-        <childnode refid="544" relation="include">
+        <childnode refid="578" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="550">
+      <node id="586">
         <label>src/Level1.h</label>
         <link refid="_level1_8h"/>
-        <childnode refid="551" relation="include">
+        <childnode refid="587" relation="include">
         </childnode>
-        <childnode refid="552" relation="include">
+        <childnode refid="588" relation="include">
         </childnode>
       </node>
-      <node id="546">
+      <node id="583">
         <label>src/Hero.h</label>
         <link refid="_hero_8h"/>
-        <childnode refid="547" relation="include">
+        <childnode refid="584" relation="include">
         </childnode>
-        <childnode refid="548" relation="include">
+        <childnode refid="585" relation="include">
         </childnode>
       </node>
-      <node id="551">
+      <node id="587">
         <label>src/Level1.cpp</label>
         <link refid="_level1_8cpp"/>
       </node>
-      <node id="547">
+      <node id="584">
         <label>src/Hero.cpp</label>
         <link refid="_hero_8cpp"/>
       </node>
-      <node id="552">
+      <node id="580">
+        <label>src/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+      </node>
+      <node id="588">
         <label>src/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
       </node>
-      <node id="553">
+      <node id="581">
+        <label>src/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="589">
         <label>src/Sprite.cpp</label>
         <link refid="_sprite_8cpp"/>
       </node>
-      <node id="549">
+      <node id="582">
         <label>src/Level.cpp</label>
         <link refid="_level_8cpp"/>
       </node>
-      <node id="548">
+      <node id="585">
         <label>src/Level.h</label>
         <link refid="_level_8h"/>
-        <childnode refid="549" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
-        <childnode refid="550" relation="include">
+        <childnode refid="586" relation="include">
         </childnode>
       </node>
-      <node id="545">
+      <node id="579">
         <label>src/Sprite.h</label>
         <link refid="Sprite.h"/>
-        <childnode refid="546" relation="include">
+        <childnode refid="580" relation="include">
         </childnode>
-        <childnode refid="553" relation="include">
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -162,11 +177,12 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kindref="member">Sprite</ref>(std::string,<sp/><ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kindref="member">~Sprite</ref>();</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<ref refid="class_colidable" kindref="compound">Colidable</ref>**,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)=0;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a17870c1f973502e879b6d02e63aeb55a" kindref="member">Draw</ref>(SDL_Renderer*)=0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Sprite.h"/>
   </compounddef>

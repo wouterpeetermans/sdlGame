@@ -33,7 +33,8 @@ Level::~Level(){
 void Level::DrawMap(Scene* context){
   amountEnemies = 0;
   amountObjects = 0;
-  mapTexture = context->CreateMapTexture(mapWidth*32,mapHeight*32);
+  mapTexture = context->CreateTexture(mapWidth*32,mapHeight*32);
+  levelTexture = context->CreateTexture(mapWidth*32,mapHeight*32);
   for (int i = 0; i < (mapWidth*mapHeight); i++) {
     if (tileArray[i]>1) {
       amountObjects++;
@@ -97,13 +98,21 @@ void Level::Update(unsigned int timePast){
 }
 
 void Level::Draw(SDL_Renderer * renderer){
+  SDL_SetRenderTarget(renderer, levelTexture);
   SDL_Rect src, dest;
-  dest.h = src.h = window_Height;
-  dest.w = src.w = window_Width;
+  dest.h = src.h = mapHeight*32;
+  dest.w = src.w = mapWidth*32;
   dest.x = src.x = dest.y = src.y = 0;
   SDL_RenderCopy(renderer, mapTexture,&src,&dest);
   for (int i = 0; i < amountEnemies; i++) {
     enemies[i]->Draw(renderer);
   }
   player->Draw(renderer);
+  SDL_SetRenderTarget(renderer,NULL);
+  SDL_Rect viewport;
+  viewport.h = window_Height;
+  viewport.w = window_Width;
+  viewport.x = 0;
+  viewport.y = 0;
+  SDL_RenderCopy(renderer, levelTexture, &viewport, NULL);
 }

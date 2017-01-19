@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a492ea490f96e988a88c01d8432bae9b4" prot="protected" static="no" mutable="no">
         <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a4b153fae1dda32e793fac0b7e0f54863" prot="protected" static="no" mutable="no">
         <type><ref refid="class_sprite" kindref="compound">Sprite</ref> **</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a02a5bfe170913471f22ded61dec8efd3" prot="protected" static="no" mutable="no">
         <type><ref refid="class_hero" kindref="compound">Hero</ref> *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a4c873dd1faff072635e148ecbd07ea9b" prot="protected" static="no" mutable="no">
         <type>int *</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="35" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="34" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a971779b6738f1d566b1608b1f1b94f4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="31" bodyend="80"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="35" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="33" bodyend="86"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="38" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="21" bodyend="23"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="23" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a249eac1e8f19ff44134efa5e986feaca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="39" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="25" bodyend="28"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="38" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="27" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1ae6a51f3a856804131b198f5af1719091" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="86" bodyend="91"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="39" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="92" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a0b7d43491002eaabf22f3463485fd8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="41" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="93" bodyend="103"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="99" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="42" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="82" bodyend="84"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="41" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a486c2efd1403cdb5d51475b89ecb71be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="43" bodyend="43"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="42" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a5c79635195bf0aba535b537f016e019d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>int</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="44" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="44" bodyend="44"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="43" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -271,60 +271,60 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="94">
+      <node id="117">
         <label>Level1</label>
         <link refid="class_level1"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="93">
+      <node id="116">
         <label>Level</label>
         <link refid="class_level"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="100">
+      <node id="123">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="96">
+      <node id="119">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="97" relation="public-inheritance">
+        <childnode refid="120" relation="public-inheritance">
         </childnode>
-        <childnode refid="98" relation="usage">
+        <childnode refid="121" relation="usage">
           <edgelabel>speedVector</edgelabel>
         </childnode>
       </node>
-      <node id="98">
+      <node id="121">
         <label>Gvector</label>
         <link refid="class_gvector"/>
       </node>
-      <node id="97">
+      <node id="120">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="99">
+      <node id="122">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="96" relation="public-inheritance">
+        <childnode refid="119" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="95">
+      <node id="118">
         <label>Level</label>
         <link refid="class_level"/>
-        <childnode refid="96" relation="usage">
+        <childnode refid="119" relation="usage">
           <edgelabel>enemies</edgelabel>
         </childnode>
-        <childnode refid="99" relation="usage">
+        <childnode refid="122" relation="usage">
           <edgelabel>player</edgelabel>
         </childnode>
-        <childnode refid="100" relation="usage">
+        <childnode refid="123" relation="usage">
           <edgelabel>colidables</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="24" bodyend="45"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="23" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="23" bodyend="44"/>
     <listofallmembers>
       <member refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" prot="protected" virt="non-virtual"><scope>Level</scope><name>amountEnemies</name></member>
       <member refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" prot="protected" virt="non-virtual"><scope>Level</scope><name>amountObjects</name></member>

@@ -53,15 +53,12 @@
         <name>collisionDetectX</name>
         <param>
           <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
-          <defname>colArray</defname>
         </param>
         <param>
           <type>int</type>
-          <defname>colAmount</defname>
         </param>
         <param>
           <type>int</type>
-          <defname>Travel</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -69,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="142" bodyend="160"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="30" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_hero_1af7091bcb466b80e14c93da1177f2e77b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,15 +75,12 @@
         <name>collisionDetectY</name>
         <param>
           <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
-          <defname>colArray</defname>
         </param>
         <param>
           <type>int</type>
-          <defname>colAmount</defname>
         </param>
         <param>
           <type>int</type>
-          <defname>Travel</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -94,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="162" bodyend="182"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="31" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -178,14 +172,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="104" bodyend="140"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="104" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Hero::Draw</definition>
         <argsstring>(SDL_Renderer *)</argsstring>
         <name>Draw</name>
-        <reimplements refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a">Draw</reimplements>
+        <reimplements refid="class_sprite_1a17870c1f973502e879b6d02e63aeb55a">Draw</reimplements>
         <param>
           <type>SDL_Renderer *</type>
           <defname>renderer</defname>
@@ -196,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="184" bodyend="186"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="174" bodyend="176"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -204,45 +198,45 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="87">
+      <node id="110">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="88" relation="public-inheritance">
+        <childnode refid="111" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="88">
+      <node id="111">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="86">
+      <node id="109">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="87" relation="public-inheritance">
+        <childnode refid="110" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="90">
+      <node id="113">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="91" relation="public-inheritance">
+        <childnode refid="114" relation="public-inheritance">
         </childnode>
-        <childnode refid="92" relation="usage">
+        <childnode refid="115" relation="usage">
           <edgelabel>speedVector</edgelabel>
         </childnode>
       </node>
-      <node id="92">
+      <node id="115">
         <label>Gvector</label>
         <link refid="class_gvector"/>
       </node>
-      <node id="91">
+      <node id="114">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="89">
+      <node id="112">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="90" relation="public-inheritance">
+        <childnode refid="113" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

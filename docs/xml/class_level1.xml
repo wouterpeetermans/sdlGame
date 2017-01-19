@@ -44,61 +44,61 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="101">
+      <node id="124">
         <label>Level1</label>
         <link refid="class_level1"/>
-        <childnode refid="102" relation="public-inheritance">
+        <childnode refid="125" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="102">
+      <node id="125">
         <label>Level</label>
         <link refid="class_level"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="109">
+      <node id="132">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="105">
+      <node id="128">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="106" relation="public-inheritance">
+        <childnode refid="129" relation="public-inheritance">
         </childnode>
-        <childnode refid="107" relation="usage">
+        <childnode refid="130" relation="usage">
           <edgelabel>speedVector</edgelabel>
         </childnode>
       </node>
-      <node id="103">
+      <node id="126">
         <label>Level1</label>
         <link refid="class_level1"/>
-        <childnode refid="104" relation="public-inheritance">
+        <childnode refid="127" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="107">
+      <node id="130">
         <label>Gvector</label>
         <link refid="class_gvector"/>
       </node>
-      <node id="106">
+      <node id="129">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="108">
+      <node id="131">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="105" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="104">
+      <node id="127">
         <label>Level</label>
         <link refid="class_level"/>
-        <childnode refid="105" relation="usage">
+        <childnode refid="128" relation="usage">
           <edgelabel>enemies</edgelabel>
         </childnode>
-        <childnode refid="108" relation="usage">
+        <childnode refid="131" relation="usage">
           <edgelabel>player</edgelabel>
         </childnode>
-        <childnode refid="109" relation="usage">
+        <childnode refid="132" relation="usage">
           <edgelabel>colidables</edgelabel>
         </childnode>
       </node>

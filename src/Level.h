@@ -23,6 +23,7 @@
 class Level {
 protected:
   SDL_Texture* mapTexture;
+  SDL_Texture* levelTexture;
   Colidable** colidables;
   Sprite** enemies;
   Hero* player;

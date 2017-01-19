@@ -1,4 +1,4 @@
-.TH "Sprite" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
+.TH "Sprite" 3 "Thu Jan 19 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,7 +11,7 @@ Sprite \-
 .PP
 Inherits \fBDrawable\fP\&.
 .PP
-Inherited by \fBHero\fP\&.
+Inherited by \fBEnemy\fP, and \fBHero\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -23,6 +23,9 @@ Inherited by \fBHero\fP\&.
 .br
 .ti -1c
 .RI "virtual void \fBUpdate\fP (unsigned int, \fBColidable\fP **, int)=0"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP (SDL_Renderer *)=0"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -61,10 +64,16 @@ Inherited by \fBHero\fP\&.
 
 .SH "Member Function Documentation"
 .PP 
+.SS "virtual void Sprite::Draw (SDL_Renderer *)\fC [pure virtual]\fP"
+
+.PP
+Implements \fBDrawable\fP\&.
+.PP
+Implemented in \fBHero\fP, and \fBEnemy\fP\&.
 .SS "virtual void Sprite::Update (unsignedint, \fBColidable\fP **, int)\fC [pure virtual]\fP"
 
 .PP
-Implemented in \fBHero\fP\&.
+Implemented in \fBHero\fP, and \fBEnemy\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "SDL_Rect* Sprite::backArray\fC [protected]\fP"

@@ -1,10 +1,12 @@
 <map id="src/Sprite.h" name="src/Sprite.h">
-<area shape="rect" id="node2" href="$_hero_8h.html" title="src/Hero.h" alt="" coords="70,80,153,107"/>
-<area shape="rect" id="node9" href="$_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="177,80,280,107"/>
-<area shape="rect" id="node3" href="$_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node4" href="$_level_8h.html" title="src/Level.h" alt="" coords="127,155,213,181"/>
-<area shape="rect" id="node5" href="$_level_8cpp.html" title="src/Level.cpp" alt="" coords="60,229,160,256"/>
-<area shape="rect" id="node6" href="$_level1_8h.html" title="src/Level1.h" alt="" coords="185,229,278,256"/>
-<area shape="rect" id="node7" href="$_level1_8cpp.html" title="src/Level1.cpp" alt="" coords="113,304,219,331"/>
-<area shape="rect" id="node8" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="243,304,350,331"/>
+<area shape="rect" id="node2" href="$_enemy_8h.html" title="src/Enemy.h" alt="" coords="93,80,189,107"/>
+<area shape="rect" id="node5" href="$_hero_8h.html" title="src/Hero.h" alt="" coords="213,80,295,107"/>
+<area shape="rect" id="node11" href="$_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="320,80,423,107"/>
+<area shape="rect" id="node3" href="$_enemy_8cpp.html" title="src/Enemy.cpp" alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node4" href="$_level_8cpp.html" title="src/Level.cpp" alt="" coords="145,229,245,256"/>
+<area shape="rect" id="node6" href="$_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="192,155,289,181"/>
+<area shape="rect" id="node7" href="$_level_8h.html" title="src/Level.h" alt="" coords="313,155,400,181"/>
+<area shape="rect" id="node8" href="$_level1_8h.html" title="src/Level1.h" alt="" coords="310,229,403,256"/>
+<area shape="rect" id="node9" href="$_level1_8cpp.html" title="src/Level1.cpp" alt="" coords="238,304,345,331"/>
+<area shape="rect" id="node10" href="$_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="369,304,475,331"/>
 </map>

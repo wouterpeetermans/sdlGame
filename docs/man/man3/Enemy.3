@@ -1,0 +1,51 @@
+.TH "Enemy" 3 "Thu Jan 19 2017" "sdlGame" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Enemy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Enemy\&.h>\fP
+.PP
+Inherits \fBSprite\fP, and \fBColidable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEnemy\fP (\fBScene\fP *, int, int)"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP (unsigned int, \fBColidable\fP **, int)"
+.br
+.ti -1c
+.RI "void \fBDraw\fP (SDL_Renderer *)"
+.br
+.ti -1c
+.RI "\fBOverlapType\fP \fBOverlapDetect\fP (SDL_Rect *, SDL_Rect *)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Enemy::Enemy (\fBScene\fP *context, intxPos, intyPos)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Enemy::Draw (SDL_Renderer *renderer)\fC [virtual]\fP"
+
+.PP
+Implements \fBSprite\fP\&.
+.SS "\fBOverlapType\fP Enemy::OverlapDetect (SDL_Rect *rect, SDL_Rect *resultRect)\fC [virtual]\fP"
+
+.PP
+Implements \fBColidable\fP\&.
+.SS "void Enemy::Update (unsigned inttimePast, \fBColidable\fP **colidables, intamountColidables)\fC [virtual]\fP"
+
+.PP
+Implements \fBSprite\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for sdlGame from the source code\&.

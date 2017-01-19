@@ -5,99 +5,81 @@
     <includes refid="_scene_8h" local="yes">Scene.h</includes>
     <includes refid="_level1_8h" local="yes">Level1.h</includes>
     <incdepgraph>
-      <node id="498">
+      <node id="532">
         <label>Level1.h</label>
         <link refid="_level1_8h"/>
-        <childnode refid="499" relation="include">
+        <childnode refid="533" relation="include">
         </childnode>
       </node>
-      <node id="496">
+      <node id="530">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="506">
-        <label>Background.h</label>
-        <link refid="_background_8h"/>
-        <childnode refid="504" relation="include">
-        </childnode>
-        <childnode refid="502" relation="include">
-        </childnode>
-        <childnode refid="494" relation="include">
-        </childnode>
-      </node>
-      <node id="500">
+      <node id="534">
         <label>Hero.h</label>
         <link refid="_hero_8h"/>
-        <childnode refid="501" relation="include">
+        <childnode refid="535" relation="include">
         </childnode>
       </node>
-      <node id="495">
+      <node id="529">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="505">
-        <label>Brick.h</label>
-        <link refid="_brick_8h"/>
-        <childnode refid="506" relation="include">
-        </childnode>
-      </node>
-      <node id="493">
+      <node id="527">
         <label>src/Scene.cpp</label>
         <link refid="Scene.cpp"/>
-        <childnode refid="494" relation="include">
+        <childnode refid="528" relation="include">
         </childnode>
-        <childnode refid="498" relation="include">
+        <childnode refid="532" relation="include">
         </childnode>
       </node>
-      <node id="502">
+      <node id="536">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="495" relation="include">
+        <childnode refid="529" relation="include">
         </childnode>
-        <childnode refid="497" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
       </node>
-      <node id="497">
+      <node id="531">
         <label>iostream</label>
       </node>
-      <node id="504">
+      <node id="538">
         <label>Colidable.h</label>
         <link refid="_colidable_8h"/>
-        <childnode refid="495" relation="include">
+        <childnode refid="529" relation="include">
         </childnode>
-        <childnode refid="503" relation="include">
+        <childnode refid="537" relation="include">
         </childnode>
       </node>
-      <node id="503">
+      <node id="537">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="494">
+      <node id="528">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="495" relation="include">
+        <childnode refid="529" relation="include">
         </childnode>
-        <childnode refid="496" relation="include">
+        <childnode refid="530" relation="include">
         </childnode>
-        <childnode refid="497" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
       </node>
-      <node id="499">
+      <node id="533">
         <label>Level.h</label>
         <link refid="_level_8h"/>
-        <childnode refid="500" relation="include">
-        </childnode>
-        <childnode refid="505" relation="include">
+        <childnode refid="534" relation="include">
         </childnode>
       </node>
-      <node id="501">
+      <node id="535">
         <label>Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="502" relation="include">
+        <childnode refid="536" relation="include">
         </childnode>
-        <childnode refid="494" relation="include">
+        <childnode refid="528" relation="include">
         </childnode>
-        <childnode refid="503" relation="include">
+        <childnode refid="537" relation="include">
         </childnode>
-        <childnode refid="504" relation="include">
+        <childnode refid="538" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -227,8 +209,9 @@
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Delay((startTime+16)-currentTime);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeTook<sp/>=<sp/>SDL_GetTicks()<sp/>-<sp/>startTime;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SDL_Delay(100);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Scene.cpp"/>
   </compounddef>

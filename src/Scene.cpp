@@ -75,7 +75,7 @@ SDL_Texture* Scene::LoadTexture(std::string path){
 		return newTexture; //return something
 }
 
-SDL_Texture* Scene::CreateMapTexture(int width, int height){
+SDL_Texture* Scene::CreateTexture(int width, int height){
 	return SDL_CreateTexture(screenRenderer, SDL_GetWindowPixelFormat(window), SDL_TEXTUREACCESS_TARGET, width, height);
 }
 

@@ -10,6 +10,8 @@
     <innerfile refid="_colidable_8h">Colidable.h</innerfile>
     <innerfile refid="_drawable_8cpp">Drawable.cpp</innerfile>
     <innerfile refid="_drawable_8h">Drawable.h</innerfile>
+    <innerfile refid="_enemy_8cpp">Enemy.cpp</innerfile>
+    <innerfile refid="_enemy_8h">Enemy.h</innerfile>
     <innerfile refid="_gvector_8cpp">Gvector.cpp</innerfile>
     <innerfile refid="_gvector_8h">Gvector.h</innerfile>
     <innerfile refid="_hero_8cpp">Hero.cpp</innerfile>

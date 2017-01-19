@@ -8,110 +8,124 @@
     <includedby refid="_drawable_8cpp" local="yes">src/Drawable.cpp</includedby>
     <includedby refid="_sprite_8h" local="yes">src/Sprite.h</includedby>
     <incdepgraph>
-      <node id="360">
+      <node id="372">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="359">
-        <label>src/Drawable.h</label>
-        <link refid="Drawable.h"/>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="361" relation="include">
-        </childnode>
-      </node>
-      <node id="361">
-        <label>iostream</label>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="369">
-        <label>src/Level1.h</label>
-        <link refid="_level1_8h"/>
-        <childnode refid="370" relation="include">
-        </childnode>
-        <childnode refid="371" relation="include">
-        </childnode>
-      </node>
-      <node id="363">
-        <label>src/Background.h</label>
-        <link refid="_background_8h"/>
-        <childnode refid="364" relation="include">
-        </childnode>
-        <childnode refid="365" relation="include">
-        </childnode>
-      </node>
-      <node id="374">
-        <label>src/Hero.h</label>
-        <link refid="_hero_8h"/>
-        <childnode refid="375" relation="include">
-        </childnode>
-        <childnode refid="367" relation="include">
-        </childnode>
-      </node>
-      <node id="366">
-        <label>src/Brick.cpp</label>
-        <link refid="_brick_8cpp"/>
-      </node>
-      <node id="370">
-        <label>src/Level1.cpp</label>
-        <link refid="_level1_8cpp"/>
-      </node>
-      <node id="364">
-        <label>src/Background.cpp</label>
-        <link refid="_background_8cpp"/>
-      </node>
-      <node id="375">
-        <label>src/Hero.cpp</label>
-        <link refid="_hero_8cpp"/>
-      </node>
-      <node id="365">
-        <label>src/Brick.h</label>
-        <link refid="_brick_8h"/>
-        <childnode refid="366" relation="include">
-        </childnode>
-        <childnode refid="367" relation="include">
-        </childnode>
-      </node>
       <node id="371">
-        <label>src/Scene.cpp</label>
-        <link refid="_scene_8cpp"/>
-      </node>
-      <node id="362">
         <label>src/Drawable.h</label>
         <link refid="Drawable.h"/>
-        <childnode refid="363" relation="include">
-        </childnode>
         <childnode refid="372" relation="include">
         </childnode>
         <childnode refid="373" relation="include">
         </childnode>
       </node>
+      <node id="373">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="387">
+        <label>src/Level1.h</label>
+        <link refid="_level1_8h"/>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+      </node>
+      <node id="375">
+        <label>src/Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>src/Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>src/Brick.cpp</label>
+        <link refid="_brick_8cpp"/>
+      </node>
+      <node id="388">
+        <label>src/Level1.cpp</label>
+        <link refid="_level1_8cpp"/>
+      </node>
       <node id="376">
+        <label>src/Background.cpp</label>
+        <link refid="_background_8cpp"/>
+      </node>
+      <node id="385">
+        <label>src/Hero.cpp</label>
+        <link refid="_hero_8cpp"/>
+      </node>
+      <node id="377">
+        <label>src/Brick.h</label>
+        <link refid="_brick_8h"/>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+      </node>
+      <node id="382">
+        <label>src/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+      </node>
+      <node id="389">
+        <label>src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="383">
+        <label>src/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="374">
+        <label>src/Drawable.h</label>
+        <link refid="Drawable.h"/>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+      </node>
+      <node id="390">
         <label>src/Sprite.cpp</label>
         <link refid="_sprite_8cpp"/>
       </node>
-      <node id="368">
+      <node id="379">
         <label>src/Level.cpp</label>
         <link refid="_level_8cpp"/>
       </node>
-      <node id="367">
+      <node id="386">
         <label>src/Level.h</label>
         <link refid="_level_8h"/>
-        <childnode refid="368" relation="include">
+        <childnode refid="379" relation="include">
         </childnode>
-        <childnode refid="369" relation="include">
+        <childnode refid="387" relation="include">
         </childnode>
       </node>
-      <node id="372">
+      <node id="380">
         <label>src/Drawable.cpp</label>
         <link refid="_drawable_8cpp"/>
       </node>
-      <node id="373">
+      <node id="381">
         <label>src/Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="374" relation="include">
+        <childnode refid="382" relation="include">
         </childnode>
-        <childnode refid="376" relation="include">
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

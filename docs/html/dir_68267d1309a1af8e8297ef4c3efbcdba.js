@@ -14,6 +14,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Drawable.h", "_drawable_8h.html", [
       [ "Drawable", "class_drawable.html", "class_drawable" ]
     ] ],
+    [ "Enemy.cpp", "_enemy_8cpp.html", null ],
+    [ "Enemy.h", "_enemy_8h.html", [
+      [ "Enemy", "class_enemy.html", "class_enemy" ]
+    ] ],
     [ "Gvector.cpp", "_gvector_8cpp.html", null ],
     [ "Gvector.h", "_gvector_8h.html", [
       [ "Gvector", "class_gvector.html", "class_gvector" ]

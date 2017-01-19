@@ -11,9 +11,11 @@
         <definition>virtual void Drawable::Draw</definition>
         <argsstring>(SDL_Renderer *)=0</argsstring>
         <name>Draw</name>
+        <reimplementedby refid="class_enemy_1a0ab54ba9a44229d0aedcfdc2e985ea10">Draw</reimplementedby>
         <reimplementedby refid="class_brick_1a035a72f469abf3f1b50221825e9afb4e">Draw</reimplementedby>
         <reimplementedby refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45">Draw</reimplementedby>
         <reimplementedby refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0">Draw</reimplementedby>
+        <reimplementedby refid="class_sprite_1a17870c1f973502e879b6d02e63aeb55a">Draw</reimplementedby>
         <param>
           <type>SDL_Renderer *</type>
         </param>
@@ -31,32 +33,38 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="79">
+      <node id="92">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="78" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="81">
+      <node id="94">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="78" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="78">
+      <node id="91">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="82">
-        <label>Hero</label>
-        <link refid="class_hero"/>
-        <childnode refid="81" relation="public-inheritance">
+      <node id="95">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="94" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="80">
+      <node id="96">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
         <label>Brick</label>
         <link refid="class_brick"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="92" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

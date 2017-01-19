@@ -4,6 +4,7 @@ var annotated =
     [ "Brick", "class_brick.html", "class_brick" ],
     [ "Colidable", "class_colidable.html", "class_colidable" ],
     [ "Drawable", "class_drawable.html", "class_drawable" ],
+    [ "Enemy", "class_enemy.html", "class_enemy" ],
     [ "Gvector", "class_gvector.html", "class_gvector" ],
     [ "Hero", "class_hero.html", "class_hero" ],
     [ "Level", "class_level.html", "class_level" ],

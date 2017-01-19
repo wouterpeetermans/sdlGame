@@ -133,43 +133,43 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="61">
+      <node id="73">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="59">
+      <node id="71">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="60" relation="public-inheritance">
+        <childnode refid="72" relation="public-inheritance">
         </childnode>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="73" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="60">
+      <node id="72">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="62">
+      <node id="74">
         <label>Brick</label>
         <link refid="class_brick"/>
-        <childnode refid="59" relation="public-inheritance">
+        <childnode refid="71" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="65">
+      <node id="77">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="63">
+      <node id="75">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="64" relation="public-inheritance">
+        <childnode refid="76" relation="public-inheritance">
         </childnode>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="77" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="64">
+      <node id="76">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>

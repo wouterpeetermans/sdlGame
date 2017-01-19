@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7ebrick',['~Brick',['../class_brick.html#a0e27476ccaeaed1d61a06bddf247c8ee',1,'Brick']]],
-  ['_7ehero',['~Hero',['../class_hero.html#a5aeef41ede5a80dc29c5acd7b553c4da',1,'Hero']]],
-  ['_7elevel',['~Level',['../class_level.html#a249eac1e8f19ff44134efa5e986feaca',1,'Level']]],
-  ['_7escene',['~Scene',['../class_scene.html#a3b8cec2e32546713915f8c6303c951f1',1,'Scene']]],
-  ['_7esprite',['~Sprite',['../class_sprite.html#a8accab430f9d90ae5117b57d67e32b84',1,'Sprite']]]
+  ['ydir',['yDir',['../class_gvector.html#a8470e9a5cdd41b4f8b325a19c6364948',1,'Gvector']]],
+  ['yspeed',['ySpeed',['../class_gvector.html#a5871741c8ab7fbb290561cbbc9620b06',1,'Gvector']]],
+  ['yzero',['yZero',['../class_gvector.html#a966d98236a053f0e5f220ac6a0d944fc',1,'Gvector']]]
 ];

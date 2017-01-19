@@ -3,6 +3,7 @@
   <compounddef id="class_colidable" kind="class" prot="public" abstract="yes">
     <compoundname>Colidable</compoundname>
     <derivedcompoundref refid="class_background" prot="public" virt="non-virtual">Background</derivedcompoundref>
+    <derivedcompoundref refid="class_enemy" prot="public" virt="non-virtual">Enemy</derivedcompoundref>
     <includes refid="_colidable_8h" local="no">Colidable.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_colidable_1a082b047d6e7e66b85761ced37142fe70" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
@@ -10,6 +11,7 @@
         <definition>virtual OverlapType Colidable::OverlapDetect</definition>
         <argsstring>(SDL_Rect *, SDL_Rect *)=0</argsstring>
         <name>OverlapDetect</name>
+        <reimplementedby refid="class_enemy_1ab368d6b7daeaf28477be42668f9a4a62">OverlapDetect</reimplementedby>
         <reimplementedby refid="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a">OverlapDetect</reimplementedby>
         <reimplementedby refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116">OverlapDetect</reimplementedby>
         <param>
@@ -24,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="34" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="31" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -32,24 +34,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="74">
+      <node id="86">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="75">
+      <node id="87">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="74" relation="public-inheritance">
+        <childnode refid="86" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="76">
+      <node id="89">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
         <label>Brick</label>
         <link refid="class_brick"/>
-        <childnode refid="75" relation="public-inheritance">
+        <childnode refid="87" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Colidable.h" bodystart="32" bodyend="35"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Colidable.h" bodystart="29" bodyend="32"/>
     <listofallmembers>
       <member refid="class_colidable_1a082b047d6e7e66b85761ced37142fe70" prot="public" virt="pure-virtual"><scope>Colidable</scope><name>OverlapDetect</name></member>
     </listofallmembers>

@@ -119,5 +119,6 @@ void Scene::Run(){ // the place where all the magic happens
 				SDL_Delay((startTime+16)-currentTime);
 			}
 			timeTook = SDL_GetTicks() - startTime;
+			//SDL_Delay(100);
 		}
 }

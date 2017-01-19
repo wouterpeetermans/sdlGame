@@ -54,7 +54,7 @@
 
  void Enemy::Update(unsigned int timePast, Colidable** colidables, int amountColidables){
    Gvector gravityVector(0,-1);
-   if(seqb<3){
+   if(seqb<2){
      seqb++;
    }
    else{

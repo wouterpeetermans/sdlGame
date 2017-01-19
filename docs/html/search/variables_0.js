@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['backarray',['backArray',['../class_sprite.html#a99d7c95bea6a12cf00b3bde6b939888c',1,'Sprite']]],
-  ['blocksheet',['blockSheet',['../class_background.html#ac331f21f3db087c4b53fe0224ace3e6b',1,'Background']]]
+  ['amountenemies',['amountEnemies',['../class_level.html#ac209eb5a5168d2ea2c1dabe6168422a7',1,'Level']]],
+  ['amountobjects',['amountObjects',['../class_level.html#add127c9e6f6bc1bcffadac27496d0c6a',1,'Level']]]
 ];

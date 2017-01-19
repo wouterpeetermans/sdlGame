@@ -2,8 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="class_sprite" kind="class" prot="public" abstract="yes">
     <compoundname>Sprite</compoundname>
-    <basecompoundref refid="class_drawable" prot="private" virt="non-virtual">Drawable</basecompoundref>
-    <derivedcompoundref refid="class_hero" prot="private" virt="non-virtual">Hero</derivedcompoundref>
+    <basecompoundref refid="class_drawable" prot="public" virt="non-virtual">Drawable</basecompoundref>
+    <derivedcompoundref refid="class_hero" prot="public" virt="non-virtual">Hero</derivedcompoundref>
     <includes refid="_sprite_8h" local="no">Sprite.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="protected" static="no" mutable="no">
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
@@ -82,26 +82,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="protected" static="no" mutable="no">
         <type>SDL_Rect *</type>
         <definition>SDL_Rect* Sprite::posRect</definition>
         <argsstring></argsstring>
         <name>posRect</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_sprite_1a4e670cff3df22a9eebf5870972c75889" prot="protected" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Sprite::hasJumped</definition>
-        <argsstring></argsstring>
-        <name>hasJumped</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -144,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="22" bodyend="24"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="39" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="22" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,17 +144,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="41" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="26" bodyend="34"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.cpp" bodystart="26" bodyend="35"/>
       </memberdef>
-      <memberdef kind="function" id="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="class_sprite_1a733136fecfb81865a2e42ccc329f4574" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Sprite::Update</definition>
-        <argsstring>(unsigned int)=0</argsstring>
+        <argsstring>(unsigned int, Colidable **, int)=0</argsstring>
         <name>Update</name>
-        <reimplementedby refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956">Update</reimplementedby>
+        <reimplementedby refid="class_hero_1a5a38603fdc0e19abec194249357187f1">Update</reimplementedby>
         <param>
           <type>unsigned</type>
           <declname>int</declname>
+        </param>
+        <param>
+          <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+        </param>
+        <param>
+          <type>int</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -175,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="42" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="41" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -183,48 +176,47 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="60">
+      <node id="112">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="61" relation="private-inheritance">
+        <childnode refid="113" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="61">
+      <node id="113">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="62">
+      <node id="114">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="60" relation="private-inheritance">
+        <childnode refid="112" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="63">
+      <node id="115">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="64" relation="private-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="65" relation="usage">
+        <childnode refid="117" relation="usage">
           <edgelabel>speedVector</edgelabel>
         </childnode>
       </node>
-      <node id="65">
+      <node id="117">
         <label>Gvector</label>
         <link refid="class_gvector"/>
       </node>
-      <node id="64">
+      <node id="116">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="25" bodyend="43"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Sprite.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Sprite.h" bodystart="26" bodyend="42"/>
     <listofallmembers>
       <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>backArray</name></member>
-      <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" prot="private" virt="pure-virtual"><scope>Sprite</scope><name>Draw</name></member>
+      <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" prot="public" virt="pure-virtual"><scope>Sprite</scope><name>Draw</name></member>
       <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>frontArray</name></member>
-      <member refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>hasJumped</name></member>
       <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>leftArray</name></member>
       <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>posRect</name></member>
       <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>rightArray</name></member>
@@ -232,7 +224,7 @@
       <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" prot="public" virt="non-virtual"><scope>Sprite</scope><name>Sprite</name></member>
       <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>spriteSheet</name></member>
       <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>srcRect</name></member>
-      <member refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0" prot="public" virt="pure-virtual"><scope>Sprite</scope><name>Update</name></member>
+      <member refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" prot="public" virt="pure-virtual"><scope>Sprite</scope><name>Update</name></member>
       <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="public" virt="non-virtual"><scope>Sprite</scope><name>~Sprite</name></member>
     </listofallmembers>
   </compounddef>

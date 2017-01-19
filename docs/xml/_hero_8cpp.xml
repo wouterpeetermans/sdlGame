@@ -4,57 +4,67 @@
     <compoundname>Hero.cpp</compoundname>
     <includes refid="_hero_8h" local="yes">Hero.h</includes>
     <incdepgraph>
-      <node id="217">
+      <node id="405">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="211">
+      <node id="399">
         <label>Hero.h</label>
         <link refid="_hero_8h"/>
-        <childnode refid="212" relation="include">
+        <childnode refid="400" relation="include">
         </childnode>
       </node>
-      <node id="214">
+      <node id="402">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="210">
+      <node id="398">
         <label>src/Hero.cpp</label>
         <link refid="Hero.cpp"/>
-        <childnode refid="211" relation="include">
+        <childnode refid="399" relation="include">
         </childnode>
       </node>
-      <node id="213">
+      <node id="401">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="214" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
-        <childnode refid="215" relation="include">
+        <childnode refid="403" relation="include">
         </childnode>
       </node>
-      <node id="215">
+      <node id="403">
         <label>iostream</label>
       </node>
-      <node id="218">
+      <node id="407">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+      </node>
+      <node id="406">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="216">
+      <node id="404">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="214" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="405" relation="include">
         </childnode>
-        <childnode refid="215" relation="include">
+        <childnode refid="403" relation="include">
         </childnode>
       </node>
-      <node id="212">
+      <node id="400">
         <label>Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="213" relation="include">
+        <childnode refid="401" relation="include">
         </childnode>
-        <childnode refid="216" relation="include">
+        <childnode refid="404" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -83,7 +93,7 @@
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="_hero_8h" kindref="compound">Hero.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><ref refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" kindref="member">Hero::Hero</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context):<ref refid="class_sprite" kindref="compound">Sprite</ref>(</highlight><highlight class="stringliteral">&quot;game/hero.png&quot;</highlight><highlight class="normal">,<sp/>context){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><ref refid="class_hero_1a87c7529628cbb4633ca7a427b4382ef1" kindref="member">Hero::Hero</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y):<ref refid="class_sprite" kindref="compound">Sprite</ref>(</highlight><highlight class="stringliteral">&quot;game/hero.png&quot;</highlight><highlight class="normal">,<sp/>context){</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lenght<sp/>=<sp/>6;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>leftArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>rightArray<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect[lenght];</highlight></codeline>
@@ -106,8 +116,8 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>posRect<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;h<sp/>=<sp/>64;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;w<sp/>=<sp/>32;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;x<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;y<sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;x<sp/>=<sp/>x*32;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>posRect-&gt;y<sp/>=<sp/>y*32;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>srcRect<sp/>=<sp/>frontArray;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>speedVector.xZero();</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>speedVector.yZero();</highlight></codeline>
@@ -120,79 +130,135 @@
 <codeline lineno="55"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kindref="member">Hero::GetKeys</ref>(SDL_Event*<sp/>e){</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>leftVector(-3,0);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>rightVector(3,0);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>jumpVector(0,10);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>jumpVector(0,12);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e-&gt;type<sp/>==<sp/>SDL_KEYDOWN)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e-&gt;key.keysym.sym)<sp/>{</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos++;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>=<sp/>rightVector;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>=<sp/>leftVector;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_UP:</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>jumpVector;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e-&gt;type<sp/>==<sp/>SDL_KEYUP)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e-&gt;key.keysym.sym)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos++;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" kindref="member">Hero::Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timePast){</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>gravityVector(0,-1);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(seqb&lt;36){</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb++;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seq<sp/>=<sp/>seqb/6;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>())<sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>-1:</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>+seq;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>+seq;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;x<sp/>+=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kindref="member">xSpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>-=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>(gravityVector<sp/>*<sp/>(timePast/10.0));</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>&gt;<sp/>512)<sp/>{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>();</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>=<sp/>512;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>rightVector;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>leftVector;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_UP:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jumpKeyPressed)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hasJumped&lt;2)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jumpKeyPressed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasJumped<sp/>++;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>jumpVector;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(e-&gt;type<sp/>==<sp/>SDL_KEYUP)<sp/>{</highlight><highlight class="comment">//keys<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(e-&gt;key.keysym.sym)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_RIGHT:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_LEFT:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pos--;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a66ff8fd9477a29ed9d4cfd4e549545a8" kindref="member">xZero</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_UP:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jumpKeyPressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a5a38603fdc0e19abec194249357187f1" kindref="member">Hero::Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timePast,<ref refid="class_colidable" kindref="compound">Colidable</ref>**<sp/>colideArray,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amountColidables){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>gravityVector(0,-1);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(seqb&lt;36){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>seqb<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seq<sp/>=<sp/>seqb/6;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>-1:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>+seq;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref><sp/>=<sp/><ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>+seq;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Hero::Draw</ref>(SDL_Renderer<sp/>*<sp/>renderer){</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/>SDL_RenderCopy(renderer,<sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>,<sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>,<sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>changeX<sp/>=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a7a463463cf7582041476c50ad8578566" kindref="member">xSpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;x<sp/>+=<sp/>changeX;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/>collisionDetectX(colideArray,amountColidables,changeX);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>changeY<sp/>=<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>()<sp/>*<sp/>(timePast/10.0);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>-=<sp/>changeY;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/>collisionDetectY(colideArray,amountColidables,changeY);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a5871741c8ab7fbb290561cbbc9620b06" kindref="member">ySpeed</ref>()&gt;(-7)){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref><sp/>+=<sp/>(gravityVector<sp/>*<sp/>(timePast/10.0));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>&gt;=<sp/>512)<sp/>{<sp/></highlight><highlight class="comment">//just<sp/>dont<sp/>drop<sp/>trough<sp/>the<sp/>floor<sp/>will<sp/>maybe<sp/>deleted<sp/>in<sp/>later<sp/>stage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>hasJumped<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//speedVector.xZero();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Hero::collisionDetectX(<ref refid="class_colidable" kindref="compound">Colidable</ref>**<sp/>colArray<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>colAmount,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Travel){</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>colided=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>biggestCollision<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect<sp/>collisionRect;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>colAmount;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(colArray[i]-&gt;OverlapDetect(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>,&amp;collisionRect)==<ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kindref="member">OL_COLLISION</ref>){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(collisionRect.w<sp/>&gt;<sp/>biggestCollision)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>biggestCollision<sp/>=<sp/>collisionRect.w;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colided<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(colided)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;x<sp/>+=<sp/>biggestCollision<sp/>*<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1acec4e482418f78afb153a7b3efd3144f" kindref="member">xDir</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Hero::collisionDetectY(<ref refid="class_colidable" kindref="compound">Colidable</ref>**<sp/>colArray<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>colAmount,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Travel){</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>colided=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>biggestCollision<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect<sp/>collisionRect;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>colAmount;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(colArray[i]-&gt;OverlapDetect(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>,&amp;collisionRect)==<ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kindref="member">OL_COLLISION</ref>){</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(collisionRect.h<sp/>&gt;<sp/>biggestCollision)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>biggestCollision<sp/>=<sp/>collisionRect.h;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colided<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(colided)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>-&gt;y<sp/>-=<sp/>biggestCollision<sp/>*<sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a8470e9a5cdd41b4f8b325a19c6364948" kindref="member">yDir</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>.<ref refid="class_gvector_1a966d98236a053f0e5f220ac6a0d944fc" kindref="member">yZero</ref>();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>hasJumped<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Hero::Draw</ref>(SDL_Renderer<sp/>*<sp/>renderer){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/>SDL_RenderCopy(renderer,<sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>,<sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>,<sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/>}</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Hero.cpp"/>
   </compounddef>

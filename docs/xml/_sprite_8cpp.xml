@@ -4,51 +4,61 @@
     <compoundname>Sprite.cpp</compoundname>
     <includes refid="_sprite_8h" local="yes">Sprite.h</includes>
     <incdepgraph>
-      <node id="277">
+      <node id="533">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="274">
+      <node id="530">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="273">
+      <node id="529">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="274" relation="include">
+        <childnode refid="530" relation="include">
         </childnode>
-        <childnode refid="275" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
       </node>
-      <node id="275">
+      <node id="531">
         <label>iostream</label>
       </node>
-      <node id="271">
-        <label>src/Sprite.cpp</label>
-        <link refid="Sprite.cpp"/>
-        <childnode refid="272" relation="include">
+      <node id="535">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="530" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
         </childnode>
       </node>
-      <node id="278">
+      <node id="527">
+        <label>src/Sprite.cpp</label>
+        <link refid="Sprite.cpp"/>
+        <childnode refid="528" relation="include">
+        </childnode>
+      </node>
+      <node id="534">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="276">
+      <node id="532">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="274" relation="include">
+        <childnode refid="530" relation="include">
         </childnode>
-        <childnode refid="277" relation="include">
+        <childnode refid="533" relation="include">
         </childnode>
-        <childnode refid="275" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
       </node>
-      <node id="272">
+      <node id="528">
         <label>Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="273" relation="include">
+        <childnode refid="529" relation="include">
         </childnode>
-        <childnode refid="276" relation="include">
+        <childnode refid="532" relation="include">
         </childnode>
-        <childnode refid="278" relation="include">
+        <childnode refid="534" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -79,18 +89,19 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><ref refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kindref="member">Sprite::Sprite</ref>(std::string<sp/>file<sp/>,<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context){</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref><sp/>=<sp/>context-&gt;<ref refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kindref="member">loadTexture</ref>(file);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref><sp/>=<sp/>context-&gt;<ref refid="class_scene_1a874a80710129274a51e0c55e43129e3e" kindref="member">LoadTexture</ref>(file);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><ref refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kindref="member">Sprite::~Sprite</ref>(){</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/>SDL_DestroyTexture(<ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" kindref="member">backArray</ref>);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[](<ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[](<ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[](<ref refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" kindref="member">backArray</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[](<ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//delete(srcRect);<sp/>==&gt;<sp/>is<sp/>not<sp/>nessisary<sp/>because<sp/>always<sp/>a<sp/>pointer<sp/>to<sp/>one<sp/>of<sp/>the<sp/>above<sp/>arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//causes<sp/>double<sp/>free<sp/>error<sp/>==&gt;<sp/>memory<sp/>leaking<sp/>==&gt;<sp/>not<sp/>good<sp/>remember</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Sprite.cpp"/>
   </compounddef>

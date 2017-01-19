@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="class_hero" kind="class" prot="public">
     <compoundname>Hero</compoundname>
-    <basecompoundref refid="class_sprite" prot="private" virt="non-virtual">Sprite</basecompoundref>
+    <basecompoundref refid="class_sprite" prot="public" virt="non-virtual">Sprite</basecompoundref>
     <includes refid="_hero_8h" local="no">Hero.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" prot="private" static="no" mutable="no">
@@ -18,16 +18,50 @@
         </inbodydescription>
         <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="27" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="class_hero_1addbace2315af0656e8a8aa6309693f25" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hero::hasJumped</definition>
+        <argsstring></argsstring>
+        <name>hasJumped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hero_1a1cc41435ed983a05d3f09572ef601546" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hero::jumpKeyPressed</definition>
+        <argsstring></argsstring>
+        <name>jumpKeyPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hero::Hero</definition>
-        <argsstring>(Scene *)</argsstring>
-        <name>Hero</name>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hero_1af3345e87539c56538986e7cf2139865d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hero::collisionDetectX</definition>
+        <argsstring>(Colidable **, int, int)</argsstring>
+        <name>collisionDetectX</name>
         <param>
-          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
-          <defname>context</defname>
+          <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+          <defname>colArray</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>colAmount</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>Travel</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -35,7 +69,59 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="21" bodyend="49"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="142" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hero_1af7091bcb466b80e14c93da1177f2e77b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hero::collisionDetectY</definition>
+        <argsstring>(Colidable **, int, int)</argsstring>
+        <name>collisionDetectY</name>
+        <param>
+          <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+          <defname>colArray</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>colAmount</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>Travel</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="162" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hero_1a87c7529628cbb4633ca7a427b4382ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hero::Hero</definition>
+        <argsstring>(Scene *, int, int)</argsstring>
+        <name>Hero</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>y</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="21" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -48,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="51" bodyend="53"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,18 +151,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="55" bodyend="94"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="35" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="55" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_hero_1a5a38603fdc0e19abec194249357187f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Hero::Update</definition>
-        <argsstring>(unsigned int)</argsstring>
+        <argsstring>(unsigned int, Colidable **, int)</argsstring>
         <name>Update</name>
-        <reimplements refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0">Update</reimplements>
+        <reimplements refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574">Update</reimplements>
         <param>
           <type>unsigned</type>
           <declname>int</declname>
           <defname>timePast</defname>
+        </param>
+        <param>
+          <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+          <defname>colideArray</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>amountColidables</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -84,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="96" bodyend="126"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="104" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -102,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="128" bodyend="130"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="37" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.cpp" bodystart="184" bodyend="186"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -110,67 +204,70 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="50">
+      <node id="87">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="51" relation="private-inheritance">
+        <childnode refid="88" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="51">
+      <node id="88">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="49">
+      <node id="86">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="50" relation="private-inheritance">
+        <childnode refid="87" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="53">
+      <node id="90">
         <label>Sprite</label>
         <link refid="class_sprite"/>
-        <childnode refid="54" relation="private-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
-        <childnode refid="55" relation="usage">
+        <childnode refid="92" relation="usage">
           <edgelabel>speedVector</edgelabel>
         </childnode>
       </node>
-      <node id="55">
+      <node id="92">
         <label>Gvector</label>
         <link refid="class_gvector"/>
       </node>
-      <node id="54">
+      <node id="91">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
-      <node id="52">
+      <node id="89">
         <label>Hero</label>
         <link refid="class_hero"/>
-        <childnode refid="53" relation="private-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="25" bodyend="34"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Hero.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Hero.h" bodystart="25" bodyend="38"/>
     <listofallmembers>
-      <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="private" virt="non-virtual"><scope>Hero</scope><name>backArray</name></member>
+      <member refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" prot="protected" virt="non-virtual"><scope>Hero</scope><name>backArray</name></member>
+      <member refid="class_hero_1af3345e87539c56538986e7cf2139865d" prot="private" virt="non-virtual"><scope>Hero</scope><name>collisionDetectX</name></member>
+      <member refid="class_hero_1af7091bcb466b80e14c93da1177f2e77b" prot="private" virt="non-virtual"><scope>Hero</scope><name>collisionDetectY</name></member>
       <member refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" prot="public" virt="virtual"><scope>Hero</scope><name>Draw</name></member>
-      <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="private" virt="non-virtual"><scope>Hero</scope><name>frontArray</name></member>
+      <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" prot="protected" virt="non-virtual"><scope>Hero</scope><name>frontArray</name></member>
       <member refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" prot="public" virt="non-virtual"><scope>Hero</scope><name>GetKeys</name></member>
-      <member refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" prot="private" virt="non-virtual"><scope>Hero</scope><name>hasJumped</name></member>
-      <member refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" prot="public" virt="non-virtual"><scope>Hero</scope><name>Hero</name></member>
-      <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="private" virt="non-virtual"><scope>Hero</scope><name>leftArray</name></member>
-      <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="private" virt="non-virtual"><scope>Hero</scope><name>posRect</name></member>
-      <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="private" virt="non-virtual"><scope>Hero</scope><name>rightArray</name></member>
+      <member refid="class_hero_1addbace2315af0656e8a8aa6309693f25" prot="private" virt="non-virtual"><scope>Hero</scope><name>hasJumped</name></member>
+      <member refid="class_hero_1a87c7529628cbb4633ca7a427b4382ef1" prot="public" virt="non-virtual"><scope>Hero</scope><name>Hero</name></member>
+      <member refid="class_hero_1a1cc41435ed983a05d3f09572ef601546" prot="private" virt="non-virtual"><scope>Hero</scope><name>jumpKeyPressed</name></member>
+      <member refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" prot="protected" virt="non-virtual"><scope>Hero</scope><name>leftArray</name></member>
+      <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" prot="protected" virt="non-virtual"><scope>Hero</scope><name>posRect</name></member>
+      <member refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" prot="protected" virt="non-virtual"><scope>Hero</scope><name>rightArray</name></member>
       <member refid="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" prot="private" virt="non-virtual"><scope>Hero</scope><name>seqb</name></member>
-      <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" prot="private" virt="non-virtual"><scope>Hero</scope><name>speedVector</name></member>
-      <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" prot="private" virt="non-virtual"><scope>Hero</scope><name>Sprite</name></member>
-      <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="private" virt="non-virtual"><scope>Hero</scope><name>spriteSheet</name></member>
-      <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="private" virt="non-virtual"><scope>Hero</scope><name>srcRect</name></member>
-      <member refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" prot="public" virt="virtual"><scope>Hero</scope><name>Update</name></member>
+      <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" prot="protected" virt="non-virtual"><scope>Hero</scope><name>speedVector</name></member>
+      <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" prot="public" virt="non-virtual"><scope>Hero</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" prot="protected" virt="non-virtual"><scope>Hero</scope><name>spriteSheet</name></member>
+      <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" prot="protected" virt="non-virtual"><scope>Hero</scope><name>srcRect</name></member>
+      <member refid="class_hero_1a5a38603fdc0e19abec194249357187f1" prot="public" virt="virtual"><scope>Hero</scope><name>Update</name></member>
       <member refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" prot="public" virt="non-virtual"><scope>Hero</scope><name>~Hero</name></member>
-      <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="private" virt="non-virtual"><scope>Hero</scope><name>~Sprite</name></member>
+      <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="public" virt="non-virtual"><scope>Hero</scope><name>~Sprite</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

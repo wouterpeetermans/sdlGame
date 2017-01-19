@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['xdir',['xDir',['../class_gvector.html#acec4e482418f78afb153a7b3efd3144f',1,'Gvector']]],
-  ['xspeed',['xSpeed',['../class_gvector.html#a7a463463cf7582041476c50ad8578566',1,'Gvector']]],
-  ['xzero',['xZero',['../class_gvector.html#a66ff8fd9477a29ed9d4cfd4e549545a8',1,'Gvector']]]
+  ['update',['Update',['../class_hero.html#a5a38603fdc0e19abec194249357187f1',1,'Hero::Update()'],['../class_level.html#ae6a51f3a856804131b198f5af1719091',1,'Level::Update()'],['../class_sprite.html#a733136fecfb81865a2e42ccc329f4574',1,'Sprite::Update()']]]
 ];

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['ol_5fcollision',['OL_COLLISION',['../_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b',1,'Colidable.h']]],
-  ['ol_5fdeadly',['OL_DEADLY',['../_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652',1,'Colidable.h']]],
-  ['ol_5fno_5fcollision',['OL_NO_COLLISION',['../_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2',1,'Colidable.h']]],
-  ['ol_5fspecial',['OL_SPECIAL',['../_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa',1,'Colidable.h']]],
-  ['operator_2a',['operator*',['../class_gvector.html#ad78df5d8611c432443c72c8886fc8296',1,'Gvector']]],
-  ['operator_2b_3d',['operator+=',['../class_gvector.html#ab6965c34e152b637453e901a5498741f',1,'Gvector']]],
-  ['overlapdetect',['OverlapDetect',['../class_background.html#af1206ce342dd773755f60e9f995bbbb4',1,'Background::OverlapDetect()'],['../class_colidable.html#ae180ab230bc892567ff8cc7d30f5cbd1',1,'Colidable::OverlapDetect()']]],
-  ['overlaptype',['OverlapType',['../_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3',1,'Colidable.h']]]
+  ['leftarray',['leftArray',['../class_sprite.html#a59f5ebe152863a252d5d97f5882820b7',1,'Sprite']]],
+  ['level',['Level',['../class_level.html',1,'Level'],['../class_level.html#ad9a71d900fcb095ad577a5806e5e0ff2',1,'Level::Level()']]],
+  ['level_2ecpp',['Level.cpp',['../_level_8cpp.html',1,'']]],
+  ['level_2eh',['Level.h',['../_level_8h.html',1,'']]],
+  ['level1',['Level1',['../class_level1.html',1,'Level1'],['../class_level1.html#a7ae202bfba01ca621fe712858e06bed3',1,'Level1::Level1()']]],
+  ['level1_2ecpp',['Level1.cpp',['../_level1_8cpp.html',1,'']]],
+  ['level1_2eh',['Level1.h',['../_level1_8h.html',1,'']]],
+  ['loadtexture',['LoadTexture',['../class_scene.html#a874a80710129274a51e0c55e43129e3e',1,'Scene']]]
 ];

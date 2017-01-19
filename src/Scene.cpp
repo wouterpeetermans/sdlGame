@@ -18,7 +18,7 @@
 
 #include "Scene.h"
 #include "Level1.h"
-#include "Brick.h"
+//#include "Brick.h"
 //#include "Colidable.h"
 //constructor
 Scene::Scene(){

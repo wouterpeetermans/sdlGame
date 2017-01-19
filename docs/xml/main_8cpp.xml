@@ -3,39 +3,33 @@
   <compounddef id="main_8cpp" kind="file">
     <compoundname>main.cpp</compoundname>
     <includes local="no">iostream</includes>
-    <includes refid="main_8h" local="yes">main.h</includes>
+    <includes refid="_scene_8h" local="yes">Scene.h</includes>
     <incdepgraph>
-      <node id="238">
+      <node id="491">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="233">
+      <node id="487">
         <label>src/main.cpp</label>
         <link refid="main.cpp"/>
-        <childnode refid="234" relation="include">
+        <childnode refid="488" relation="include">
         </childnode>
-        <childnode refid="235" relation="include">
-        </childnode>
-      </node>
-      <node id="235">
-        <label>main.h</label>
-        <link refid="main_8h"/>
-        <childnode refid="236" relation="include">
+        <childnode refid="489" relation="include">
         </childnode>
       </node>
-      <node id="237">
+      <node id="490">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="234">
+      <node id="488">
         <label>iostream</label>
       </node>
-      <node id="236">
+      <node id="489">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="237" relation="include">
+        <childnode refid="490" relation="include">
         </childnode>
-        <childnode refid="238" relation="include">
+        <childnode refid="491" relation="include">
         </childnode>
-        <childnode refid="234" relation="include">
+        <childnode refid="488" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -89,7 +83,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="main_8h" kindref="compound">main.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]){<sp/></highlight><highlight class="comment">//<sp/>main<sp/>program</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>

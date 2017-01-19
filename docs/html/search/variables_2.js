@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hasjumped',['hasJumped',['../class_sprite.html#a4e670cff3df22a9eebf5870972c75889',1,'Sprite']]]
+  ['colidables',['colidables',['../class_level.html#a492ea490f96e988a88c01d8432bae9b4',1,'Level']]]
 ];

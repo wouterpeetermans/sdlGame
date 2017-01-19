@@ -4,72 +4,106 @@
     <compoundname>Hero.h</compoundname>
     <includes refid="_sprite_8h" local="yes">Sprite.h</includes>
     <includedby refid="_hero_8cpp" local="yes">src/Hero.cpp</includedby>
-    <includedby refid="_scene_8cpp" local="yes">src/Scene.cpp</includedby>
+    <includedby refid="_level_8h" local="yes">src/Level.h</includedby>
     <incdepgraph>
-      <node id="226">
+      <node id="415">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="220">
+      <node id="409">
         <label>src/Hero.h</label>
         <link refid="Hero.h"/>
-        <childnode refid="221" relation="include">
+        <childnode refid="410" relation="include">
         </childnode>
       </node>
-      <node id="223">
+      <node id="412">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="222">
+      <node id="411">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="223" relation="include">
+        <childnode refid="412" relation="include">
         </childnode>
-        <childnode refid="224" relation="include">
+        <childnode refid="413" relation="include">
         </childnode>
       </node>
-      <node id="224">
+      <node id="413">
         <label>iostream</label>
       </node>
-      <node id="227">
+      <node id="417">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="225">
+      <node id="414">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="223" relation="include">
+        <childnode refid="412" relation="include">
         </childnode>
-        <childnode refid="226" relation="include">
+        <childnode refid="415" relation="include">
         </childnode>
-        <childnode refid="224" relation="include">
+        <childnode refid="413" relation="include">
         </childnode>
       </node>
-      <node id="221">
+      <node id="410">
         <label>Sprite.h</label>
         <link refid="_sprite_8h"/>
-        <childnode refid="222" relation="include">
+        <childnode refid="411" relation="include">
         </childnode>
-        <childnode refid="225" relation="include">
+        <childnode refid="414" relation="include">
         </childnode>
-        <childnode refid="227" relation="include">
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="228">
-        <label>src/Hero.h</label>
-        <link refid="Hero.h"/>
-        <childnode refid="229" relation="include">
+      <node id="422">
+        <label>src/Level1.h</label>
+        <link refid="_level1_8h"/>
+        <childnode refid="423" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="424" relation="include">
         </childnode>
       </node>
-      <node id="229">
+      <node id="418">
+        <label>src/Hero.h</label>
+        <link refid="Hero.h"/>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>src/Level1.cpp</label>
+        <link refid="_level1_8cpp"/>
+      </node>
+      <node id="419">
         <label>src/Hero.cpp</label>
         <link refid="_hero_8cpp"/>
       </node>
-      <node id="230">
+      <node id="424">
         <label>src/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
+      </node>
+      <node id="421">
+        <label>src/Level.cpp</label>
+        <link refid="_level_8cpp"/>
+      </node>
+      <node id="420">
+        <label>src/Level.h</label>
+        <link refid="_level_8h"/>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="class_hero" prot="public">Hero</innerclass>
@@ -102,23 +136,27 @@
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="class_hero" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hero" kindref="compound">Hero</ref>:<ref refid="class_sprite" kindref="compound">Sprite</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="class_hero" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hero" kindref="compound">Hero</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_sprite" kindref="compound">Sprite</ref><sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seqb;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" kindref="member">Hero</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" kindref="member">~Hero</ref>();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kindref="member">GetKeys</ref>(SDL_Event<sp/>*);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Draw</ref>(SDL_Renderer*);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hasJumped;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>jumpKeyPressed;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>collisionDetectX(<ref refid="class_colidable" kindref="compound">Colidable</ref>**,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>collisionDetectY(<ref refid="class_colidable" kindref="compound">Colidable</ref>**,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="class_hero_1a87c7529628cbb4633ca7a427b4382ef1" kindref="member">Hero</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" kindref="member">~Hero</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kindref="member">GetKeys</ref>(SDL_Event<sp/>*);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1a5a38603fdc0e19abec194249357187f1" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<ref refid="class_colidable" kindref="compound">Colidable</ref>**,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Draw</ref>(SDL_Renderer*);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Hero.h"/>
   </compounddef>

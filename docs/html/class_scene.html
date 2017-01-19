@@ -120,8 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b8cec2e32546713915f8c6303c951f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093259fe8ed34be3da9cbf16aa84af60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Run</a> ()</td></tr>
 <tr class="separator:a093259fe8ed34be3da9cbf16aa84af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab52e5e4e39ea9788f8f2e2cd38beab7f"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f">loadTexture</a> (std::string)</td></tr>
-<tr class="separator:ab52e5e4e39ea9788f8f2e2cd38beab7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874a80710129274a51e0c55e43129e3e"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a874a80710129274a51e0c55e43129e3e">LoadTexture</a> (std::string)</td></tr>
+<tr class="separator:a874a80710129274a51e0c55e43129e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08f5ffcaabc45634e6c60eafcf74dbe"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ab08f5ffcaabc45634e6c60eafcf74dbe">CreateMapTexture</a> (int, int)</td></tr>
+<tr class="separator:ab08f5ffcaabc45634e6c60eafcf74dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eed9d166ea0abb455a4c69ae4ce8bf5"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1eed9d166ea0abb455a4c69ae4ce8bf5">GetRenderer</a> ()</td></tr>
+<tr class="separator:a1eed9d166ea0abb455a4c69ae4ce8bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad10176d75a9cc0da56626f682d083507"></a>
@@ -155,12 +159,61 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab52e5e4e39ea9788f8f2e2cd38beab7f"></a>
+<a class="anchor" id="ab08f5ffcaabc45634e6c60eafcf74dbe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Texture * Scene::loadTexture </td>
+          <td class="memname">SDL_Texture * Scene::CreateMapTexture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1eed9d166ea0abb455a4c69ae4ce8bf5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer* Scene::GetRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a874a80710129274a51e0c55e43129e3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * Scene::LoadTexture </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -196,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_scene.html">Scene</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:19 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

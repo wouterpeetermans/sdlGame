@@ -1,0 +1,5 @@
+<map id="Brick" name="Brick">
+<area shape="rect" id="node2" href="$class_background.html" title="Background" alt="" coords="49,80,140,107"/>
+<area shape="rect" id="node3" href="$class_drawable.html" title="Drawable" alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node4" href="$class_colidable.html" title="Colidable" alt="" coords="107,5,183,32"/>
+</map>

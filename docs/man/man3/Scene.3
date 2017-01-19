@@ -1,4 +1,4 @@
-.TH "Scene" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "Scene" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,13 @@ Scene \-
 .RI "void \fBRun\fP ()"
 .br
 .ti -1c
-.RI "SDL_Texture * \fBloadTexture\fP (std::string)"
+.RI "SDL_Texture * \fBLoadTexture\fP (std::string)"
+.br
+.ti -1c
+.RI "SDL_Texture * \fBCreateMapTexture\fP (int, int)"
+.br
+.ti -1c
+.RI "SDL_Renderer * \fBGetRenderer\fP ()"
 .br
 .in -1c
 .SH "Constructor & Destructor Documentation"
@@ -32,7 +38,11 @@ Scene \-
 
 .SH "Member Function Documentation"
 .PP 
-.SS "SDL_Texture * Scene::loadTexture (std::stringpath)"
+.SS "SDL_Texture * Scene::CreateMapTexture (intwidth, intheight)"
+
+.SS "SDL_Renderer* Scene::GetRenderer ()\fC [inline]\fP"
+
+.SS "SDL_Texture * Scene::LoadTexture (std::stringpath)"
 
 .SS "void Scene::Run ()"
 

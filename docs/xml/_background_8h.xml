@@ -6,67 +6,110 @@
     <includes refid="_drawable_8h" local="yes">Drawable.h</includes>
     <includes refid="_scene_8h" local="yes">Scene.h</includes>
     <includedby refid="_background_8cpp" local="yes">src/Background.cpp</includedby>
+    <includedby refid="_brick_8h" local="yes">src/Brick.h</includedby>
     <incdepgraph>
-      <node id="163">
+      <node id="294">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="156">
+      <node id="287">
         <label>src/Background.h</label>
         <link refid="Background.h"/>
-        <childnode refid="157" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="160" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
-        <childnode refid="162" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
       </node>
-      <node id="158">
+      <node id="289">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="160">
+      <node id="291">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="158" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="161" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
       </node>
-      <node id="161">
+      <node id="292">
         <label>iostream</label>
       </node>
-      <node id="157">
+      <node id="288">
         <label>Colidable.h</label>
         <link refid="_colidable_8h"/>
-        <childnode refid="158" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="159" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="159">
+      <node id="290">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="162">
+      <node id="293">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="158" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="163" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="161" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="164">
-        <label>src/Background.h</label>
-        <link refid="Background.h"/>
-        <childnode refid="165" relation="include">
+      <node id="301">
+        <label>src/Level1.h</label>
+        <link refid="_level1_8h"/>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
         </childnode>
       </node>
-      <node id="165">
+      <node id="295">
+        <label>src/Background.h</label>
+        <link refid="Background.h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>src/Brick.cpp</label>
+        <link refid="_brick_8cpp"/>
+      </node>
+      <node id="302">
+        <label>src/Level1.cpp</label>
+        <link refid="_level1_8cpp"/>
+      </node>
+      <node id="296">
         <label>src/Background.cpp</label>
         <link refid="_background_8cpp"/>
+      </node>
+      <node id="297">
+        <label>src/Brick.h</label>
+        <link refid="_brick_8h"/>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+      </node>
+      <node id="303">
+        <label>src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="300">
+        <label>src/Level.cpp</label>
+        <link refid="_level_8cpp"/>
+      </node>
+      <node id="299">
+        <label>src/Level.h</label>
+        <link refid="_level_8h"/>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="class_background" prot="public">Background</innerclass>
@@ -100,23 +143,22 @@
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="class_background" refkind="compound"><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_background" kindref="compound">Background</ref>:<ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>,<sp/><ref refid="class_colidable" kindref="compound">Colidable</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="class_background" refkind="compound"><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_background" kindref="compound">Background</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_colidable" kindref="compound">Colidable</ref><sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="28" refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" kindref="member">blockSheet</ref>;</highlight></codeline>
-<codeline lineno="29" refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" kindref="member">srcRect</ref>;</highlight></codeline>
-<codeline lineno="30" refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" refkind="member"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" kindref="member">posRect</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_background_1a9daf44b8008c20bab553dd18b5b0d867" refkind="member"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect<sp/><ref refid="class_background_1a9daf44b8008c20bab553dd18b5b0d867" kindref="member">srcRect</ref>;</highlight></codeline>
+<codeline lineno="30" refid="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/>SDL_Rect<sp/><ref refid="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" kindref="member">posRect</ref>;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kindref="member">Background</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*,std::string);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kindref="member">Background</ref>(SDL_Texture*);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" kindref="member">Draw</ref>(SDL_Renderer*)=0;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" kindref="member">OverlapDetect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Rect&amp;<sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref>&amp;);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116" kindref="member">OverlapDetect</ref>(SDL_Rect*<sp/>,SDL_Rect*);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Background.h"/>
   </compounddef>

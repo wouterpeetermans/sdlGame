@@ -104,29 +104,85 @@ $(document).ready(function(){initNavTree('class_level.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_level-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Level Class Reference</div>  </div>
+<div class="title">Level Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_level_8h_source.html">Level.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Level:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level__inherit__graph.png" border="0" usemap="#_level_inherit__map" alt="Inheritance graph"/></div>
+<map name="_level_inherit__map" id="_level_inherit__map">
+<area shape="rect" id="node2" href="class_level1.html" title="Level1" alt="" coords="5,80,65,107"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Level:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level__coll__graph.png" border="0" usemap="#_level_coll__map" alt="Collaboration graph"/></div>
+<map name="_level_coll__map" id="_level_coll__map">
+<area shape="rect" id="node2" href="class_sprite.html" title="Sprite" alt="" coords="64,95,120,121"/><area shape="rect" id="node5" href="class_hero.html" title="Hero" alt="" coords="136,171,187,197"/><area shape="rect" id="node3" href="class_drawable.html" title="Drawable" alt="" coords="5,5,83,32"/><area shape="rect" id="node4" href="class_gvector.html" title="Gvector" alt="" coords="107,5,175,32"/><area shape="rect" id="node6" href="class_colidable.html" title="Colidable" alt="" coords="211,171,287,197"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6a51f3a856804131b198f5af1719091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae6a51f3a856804131b198f5af1719091">Update</a> (unsigned int)</td></tr>
+<tr class="memitem:ad9a71d900fcb095ad577a5806e5e0ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ad9a71d900fcb095ad577a5806e5e0ff2">Level</a> (<a class="el" href="class_scene.html">Scene</a> *)</td></tr>
+<tr class="separator:ad9a71d900fcb095ad577a5806e5e0ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249eac1e8f19ff44134efa5e986feaca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a249eac1e8f19ff44134efa5e986feaca">~Level</a> ()</td></tr>
+<tr class="separator:a249eac1e8f19ff44134efa5e986feaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a51f3a856804131b198f5af1719091"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae6a51f3a856804131b198f5af1719091">Update</a> (unsigned int)</td></tr>
 <tr class="separator:ae6a51f3a856804131b198f5af1719091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7d43491002eaabf22f3463485fd8f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a0b7d43491002eaabf22f3463485fd8f9">Draw</a> (SDL_Renderer *)</td></tr>
+<tr class="separator:a0b7d43491002eaabf22f3463485fd8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7ead34c62ce6dde1e75743d8719fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#aaf7ead34c62ce6dde1e75743d8719fbd">GetKeys</a> (SDL_Event *)</td></tr>
+<tr class="separator:aaf7ead34c62ce6dde1e75743d8719fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486c2efd1403cdb5d51475b89ecb71be"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_colidable.html">Colidable</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a486c2efd1403cdb5d51475b89ecb71be">GetColidables</a> ()</td></tr>
+<tr class="separator:a486c2efd1403cdb5d51475b89ecb71be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c79635195bf0aba535b537f016e019d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a5c79635195bf0aba535b537f016e019d">GetAmountColidables</a> ()</td></tr>
+<tr class="separator:a5c79635195bf0aba535b537f016e019d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3fe3943b3327ccb12ccaf74342a21cb4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a3fe3943b3327ccb12ccaf74342a21cb4">CreateMap</a> ()=0</td></tr>
+<tr class="separator:a3fe3943b3327ccb12ccaf74342a21cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971779b6738f1d566b1608b1f1b94f4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a971779b6738f1d566b1608b1f1b94f4c">DrawMap</a> (<a class="el" href="class_scene.html">Scene</a> *)</td></tr>
+<tr class="separator:a971779b6738f1d566b1608b1f1b94f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9abd431eafb9c1ee29e63d3e1aae27db"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a9abd431eafb9c1ee29e63d3e1aae27db">mapTexture</a></td></tr>
+<tr class="separator:a9abd431eafb9c1ee29e63d3e1aae27db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492ea490f96e988a88c01d8432bae9b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_colidable.html">Colidable</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a492ea490f96e988a88c01d8432bae9b4">colidables</a></td></tr>
+<tr class="separator:a492ea490f96e988a88c01d8432bae9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b153fae1dda32e793fac0b7e0f54863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sprite.html">Sprite</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a4b153fae1dda32e793fac0b7e0f54863">enemies</a></td></tr>
+<tr class="separator:a4b153fae1dda32e793fac0b7e0f54863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a5bfe170913471f22ded61dec8efd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hero.html">Hero</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a02a5bfe170913471f22ded61dec8efd3">player</a></td></tr>
+<tr class="separator:a02a5bfe170913471f22ded61dec8efd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add127c9e6f6bc1bcffadac27496d0c6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#add127c9e6f6bc1bcffadac27496d0c6a">amountObjects</a></td></tr>
+<tr class="separator:add127c9e6f6bc1bcffadac27496d0c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac209eb5a5168d2ea2c1dabe6168422a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ac209eb5a5168d2ea2c1dabe6168422a7">amountEnemies</a></td></tr>
+<tr class="separator:ac209eb5a5168d2ea2c1dabe6168422a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c873dd1faff072635e148ecbd07ea9b"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a4c873dd1faff072635e148ecbd07ea9b">tileArray</a></td></tr>
+<tr class="separator:a4c873dd1faff072635e148ecbd07ea9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae664f4cb3c3a2769d5fe91f2c4e2f3ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae664f4cb3c3a2769d5fe91f2c4e2f3ce">mapWidth</a></td></tr>
+<tr class="separator:ae664f4cb3c3a2769d5fe91f2c4e2f3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8f9c0ee45ef3b70eb38510c18e8eff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a7c8f9c0ee45ef3b70eb38510c18e8eff">mapHeight</a></td></tr>
+<tr class="separator:a7c8f9c0ee45ef3b70eb38510c18e8eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae6a51f3a856804131b198f5af1719091"></a>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad9a71d900fcb095ad577a5806e5e0ff2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Level::Update </td>
+          <td class="memname">Level::Level </td>
           <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -134,8 +190,373 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a class="anchor" id="a249eac1e8f19ff44134efa5e986feaca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Level::~Level </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3fe3943b3327ccb12ccaf74342a21cb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Level::CreateMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_level1.html#a911e27257190f41e2ccbe82cfe86d9b3">Level1</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b7d43491002eaabf22f3463485fd8f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Level::Draw </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a971779b6738f1d566b1608b1f1b94f4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Level::DrawMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c79635195bf0aba535b537f016e019d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Level::GetAmountColidables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a486c2efd1403cdb5d51475b89ecb71be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_colidable.html">Colidable</a>** Level::GetColidables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf7ead34c62ce6dde1e75743d8719fbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Level::GetKeys </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Event *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6a51f3a856804131b198f5af1719091"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Level::Update </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>timePast</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac209eb5a5168d2ea2c1dabe6168422a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level::amountEnemies</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add127c9e6f6bc1bcffadac27496d0c6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level::amountObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a492ea490f96e988a88c01d8432bae9b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_colidable.html">Colidable</a>** Level::colidables</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b153fae1dda32e793fac0b7e0f54863"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sprite.html">Sprite</a>** Level::enemies</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7c8f9c0ee45ef3b70eb38510c18e8eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level::mapHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9abd431eafb9c1ee29e63d3e1aae27db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture* Level::mapTexture</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae664f4cb3c3a2769d5fe91f2c4e2f3ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level::mapWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02a5bfe170913471f22ded61dec8efd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hero.html">Hero</a>* Level::player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c873dd1faff072635e148ecbd07ea9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* Level::tileArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="_level_8h_source.html">Level.h</a></li>
+<li>src/<a class="el" href="_level_8cpp.html">Level.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,7 +564,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_level.html">Level</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:19 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

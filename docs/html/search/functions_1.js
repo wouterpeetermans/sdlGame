@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['draw',['Draw',['../class_background.html#ab47321940f5ac53dfe87315ba2ca7a45',1,'Background::Draw()'],['../class_drawable.html#a3a063894185ac869766edd4ebc4ba51a',1,'Drawable::Draw()'],['../class_hero.html#af11ab514ade4144d5764fc8e6bc2fbc0',1,'Hero::Draw()']]]
+  ['createmap',['CreateMap',['../class_level.html#a3fe3943b3327ccb12ccaf74342a21cb4',1,'Level::CreateMap()'],['../class_level1.html#a911e27257190f41e2ccbe82cfe86d9b3',1,'Level1::CreateMap()']]],
+  ['createmaptexture',['CreateMapTexture',['../class_scene.html#ab08f5ffcaabc45634e6c60eafcf74dbe',1,'Scene']]]
 ];

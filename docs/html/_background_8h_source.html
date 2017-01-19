@@ -129,36 +129,34 @@ $(document).ready(function(){initNavTree('_background_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"> #include &quot;<a class="code" href="_scene_8h.html">Scene.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_background.html">   26</a></span>&#160; <span class="keyword">class </span><a class="code" href="class_background.html">Background</a>:<a class="code" href="class_drawable.html">Drawable</a> , <a class="code" href="class_colidable.html">Colidable</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_background.html">   26</a></span>&#160; <span class="keyword">class </span><a class="code" href="class_background.html">Background</a>:<span class="keyword">public</span> <a class="code" href="class_drawable.html">Drawable</a> , <span class="keyword">public</span> <a class="code" href="class_colidable.html">Colidable</a> {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_background.html#ac331f21f3db087c4b53fe0224ace3e6b">   28</a></span>&#160;   SDL_Texture* <a class="code" href="class_background.html#ac331f21f3db087c4b53fe0224ace3e6b">blockSheet</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_background.html#aa3ba181fb3ab4a766a6f11ba8d1260a4">   29</a></span>&#160;   SDL_Rect* <a class="code" href="class_background.html#aa3ba181fb3ab4a766a6f11ba8d1260a4">srcRect</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_background.html#a9aa2531b07a38f6fff74cc2f747e8c66">   30</a></span>&#160;   SDL_Rect* <a class="code" href="class_background.html#a9aa2531b07a38f6fff74cc2f747e8c66">posRect</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_background.html#a9daf44b8008c20bab553dd18b5b0d867">   29</a></span>&#160;   SDL_Rect <a class="code" href="class_background.html#a9daf44b8008c20bab553dd18b5b0d867">srcRect</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_background.html#a1d0b1a450982d3f8bc973b66091e5b1e">   30</a></span>&#160;   SDL_Rect <a class="code" href="class_background.html#a1d0b1a450982d3f8bc973b66091e5b1e">posRect</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <a class="code" href="class_background.html#a3788195ebad89268ef6fd2fb4af1ebd2">Background</a>(<a class="code" href="class_scene.html">Scene</a>*,std::string);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <a class="code" href="class_background.html#a3788195ebad89268ef6fd2fb4af1ebd2">Background</a>(SDL_Texture*);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_background.html#ab47321940f5ac53dfe87315ba2ca7a45">Draw</a>(SDL_Renderer*)=0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keyword">virtual</span> <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> <a class="code" href="class_background.html#af1206ce342dd773755f60e9f995bbbb4">OverlapDetect</a>(<span class="keyword">const</span> SDL_Rect&amp; , <span class="keyword">const</span> <a class="code" href="class_gvector.html">Gvector</a>&amp;);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keyword">virtual</span> <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> <a class="code" href="class_background.html#a9169fdd8cf5b0624183eede6f6e18116">OverlapDetect</a>(SDL_Rect* ,SDL_Rect*);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"> #endif</span></div>
-<div class="ttc" id="class_gvector_html"><div class="ttname"><a href="class_gvector.html">Gvector</a></div><div class="ttdef"><b>Definition:</b> Gvector.h:23</div></div>
-<div class="ttc" id="class_background_html_aa3ba181fb3ab4a766a6f11ba8d1260a4"><div class="ttname"><a href="class_background.html#aa3ba181fb3ab4a766a6f11ba8d1260a4">Background::srcRect</a></div><div class="ttdeci">SDL_Rect * srcRect</div><div class="ttdef"><b>Definition:</b> Background.h:29</div></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"> #endif</span></div>
+<div class="ttc" id="class_background_html_a1d0b1a450982d3f8bc973b66091e5b1e"><div class="ttname"><a href="class_background.html#a1d0b1a450982d3f8bc973b66091e5b1e">Background::posRect</a></div><div class="ttdeci">SDL_Rect posRect</div><div class="ttdef"><b>Definition:</b> Background.h:30</div></div>
+<div class="ttc" id="class_background_html_a9169fdd8cf5b0624183eede6f6e18116"><div class="ttname"><a href="class_background.html#a9169fdd8cf5b0624183eede6f6e18116">Background::OverlapDetect</a></div><div class="ttdeci">virtual OverlapType OverlapDetect(SDL_Rect *, SDL_Rect *)</div><div class="ttdef"><b>Definition:</b> Background.cpp:31</div></div>
 <div class="ttc" id="class_background_html_ab47321940f5ac53dfe87315ba2ca7a45"><div class="ttname"><a href="class_background.html#ab47321940f5ac53dfe87315ba2ca7a45">Background::Draw</a></div><div class="ttdeci">virtual void Draw(SDL_Renderer *)=0</div></div>
-<div class="ttc" id="class_background_html_af1206ce342dd773755f60e9f995bbbb4"><div class="ttname"><a href="class_background.html#af1206ce342dd773755f60e9f995bbbb4">Background::OverlapDetect</a></div><div class="ttdeci">virtual OverlapType OverlapDetect(const SDL_Rect &amp;, const Gvector &amp;)</div><div class="ttdef"><b>Definition:</b> Background.cpp:31</div></div>
 <div class="ttc" id="class_background_html"><div class="ttname"><a href="class_background.html">Background</a></div><div class="ttdef"><b>Definition:</b> Background.h:26</div></div>
 <div class="ttc" id="_scene_8h_html"><div class="ttname"><a href="_scene_8h.html">Scene.h</a></div></div>
 <div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a></div><div class="ttdeci">OverlapType</div><div class="ttdef"><b>Definition:</b> Colidable.h:22</div></div>
 <div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:31</div></div>
+<div class="ttc" id="class_background_html_a9daf44b8008c20bab553dd18b5b0d867"><div class="ttname"><a href="class_background.html#a9daf44b8008c20bab553dd18b5b0d867">Background::srcRect</a></div><div class="ttdeci">SDL_Rect srcRect</div><div class="ttdef"><b>Definition:</b> Background.h:29</div></div>
 <div class="ttc" id="_colidable_8h_html"><div class="ttname"><a href="_colidable_8h.html">Colidable.h</a></div></div>
-<div class="ttc" id="class_colidable_html"><div class="ttname"><a href="class_colidable.html">Colidable</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:29</div></div>
+<div class="ttc" id="class_colidable_html"><div class="ttname"><a href="class_colidable.html">Colidable</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:32</div></div>
 <div class="ttc" id="class_drawable_html"><div class="ttname"><a href="class_drawable.html">Drawable</a></div><div class="ttdef"><b>Definition:</b> Drawable.h:29</div></div>
 <div class="ttc" id="_drawable_8h_html"><div class="ttname"><a href="_drawable_8h.html">Drawable.h</a></div></div>
-<div class="ttc" id="class_background_html_a9aa2531b07a38f6fff74cc2f747e8c66"><div class="ttname"><a href="class_background.html#a9aa2531b07a38f6fff74cc2f747e8c66">Background::posRect</a></div><div class="ttdeci">SDL_Rect * posRect</div><div class="ttdef"><b>Definition:</b> Background.h:30</div></div>
 <div class="ttc" id="class_background_html_a3788195ebad89268ef6fd2fb4af1ebd2"><div class="ttname"><a href="class_background.html#a3788195ebad89268ef6fd2fb4af1ebd2">Background::Background</a></div><div class="ttdeci">Background(Scene *, std::string)</div><div class="ttdef"><b>Definition:</b> Background.cpp:21</div></div>
 <div class="ttc" id="class_background_html_ac331f21f3db087c4b53fe0224ace3e6b"><div class="ttname"><a href="class_background.html#ac331f21f3db087c4b53fe0224ace3e6b">Background::blockSheet</a></div><div class="ttdeci">SDL_Texture * blockSheet</div><div class="ttdef"><b>Definition:</b> Background.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -167,7 +165,7 @@ $(document).ready(function(){initNavTree('_background_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_background_8h.html">Background.h</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:18 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

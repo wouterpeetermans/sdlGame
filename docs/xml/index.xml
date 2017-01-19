@@ -2,15 +2,24 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.8">
   <compound refid="class_background" kind="class"><name>Background</name>
     <member refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" kind="variable"><name>blockSheet</name></member>
-    <member refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" kind="variable"><name>srcRect</name></member>
-    <member refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" kind="variable"><name>posRect</name></member>
+    <member refid="class_background_1a9daf44b8008c20bab553dd18b5b0d867" kind="variable"><name>srcRect</name></member>
+    <member refid="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" kind="variable"><name>posRect</name></member>
     <member refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kind="function"><name>Background</name></member>
     <member refid="class_background_1a5385891dafdc857eb5d29915f5163ebe" kind="function"><name>Background</name></member>
     <member refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" kind="function"><name>Draw</name></member>
-    <member refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" kind="function"><name>OverlapDetect</name></member>
+    <member refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116" kind="function"><name>OverlapDetect</name></member>
+  </compound>
+  <compound refid="class_brick" kind="class"><name>Brick</name>
+    <member refid="class_brick_1a3829fd4f516ae1d7e2802afa88ddedab" kind="variable"><name>colRect</name></member>
+    <member refid="class_brick_1a1c0e78ed11e36c07206e0ef3bd5edc8d" kind="function"><name>init</name></member>
+    <member refid="class_brick_1abd7520a8efa3023b5e2d28870206a342" kind="function"><name>Brick</name></member>
+    <member refid="class_brick_1a11a624423d858608cc51aeac96f2a23a" kind="function"><name>Brick</name></member>
+    <member refid="class_brick_1a0e27476ccaeaed1d61a06bddf247c8ee" kind="function"><name>~Brick</name></member>
+    <member refid="class_brick_1a035a72f469abf3f1b50221825e9afb4e" kind="function"><name>Draw</name></member>
+    <member refid="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a" kind="function"><name>OverlapDetect</name></member>
   </compound>
   <compound refid="class_colidable" kind="class"><name>Colidable</name>
-    <member refid="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1" kind="function"><name>OverlapDetect</name></member>
+    <member refid="class_colidable_1a082b047d6e7e66b85761ced37142fe70" kind="function"><name>OverlapDetect</name></member>
   </compound>
   <compound refid="class_drawable" kind="class"><name>Drawable</name>
     <member refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kind="function"><name>Draw</name></member>
@@ -31,14 +40,39 @@
   </compound>
   <compound refid="class_hero" kind="class"><name>Hero</name>
     <member refid="class_hero_1a19bb7a367668d6cd9278aa87d3f9c002" kind="variable"><name>seqb</name></member>
-    <member refid="class_hero_1abcc46e2e7419c1a2995ee0fb492a6f42" kind="function"><name>Hero</name></member>
+    <member refid="class_hero_1addbace2315af0656e8a8aa6309693f25" kind="variable"><name>hasJumped</name></member>
+    <member refid="class_hero_1a1cc41435ed983a05d3f09572ef601546" kind="variable"><name>jumpKeyPressed</name></member>
+    <member refid="class_hero_1af3345e87539c56538986e7cf2139865d" kind="function"><name>collisionDetectX</name></member>
+    <member refid="class_hero_1af7091bcb466b80e14c93da1177f2e77b" kind="function"><name>collisionDetectY</name></member>
+    <member refid="class_hero_1a87c7529628cbb4633ca7a427b4382ef1" kind="function"><name>Hero</name></member>
     <member refid="class_hero_1a5aeef41ede5a80dc29c5acd7b553c4da" kind="function"><name>~Hero</name></member>
     <member refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kind="function"><name>GetKeys</name></member>
-    <member refid="class_hero_1ad3d2a6b036aff466d6711ca28ee52956" kind="function"><name>Update</name></member>
+    <member refid="class_hero_1a5a38603fdc0e19abec194249357187f1" kind="function"><name>Update</name></member>
     <member refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="class_level" kind="class"><name>Level</name>
+    <member refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" kind="variable"><name>mapTexture</name></member>
+    <member refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kind="variable"><name>colidables</name></member>
+    <member refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" kind="variable"><name>enemies</name></member>
+    <member refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kind="variable"><name>player</name></member>
+    <member refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kind="variable"><name>amountObjects</name></member>
+    <member refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kind="variable"><name>amountEnemies</name></member>
+    <member refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kind="variable"><name>tileArray</name></member>
+    <member refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" kind="variable"><name>mapWidth</name></member>
+    <member refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" kind="variable"><name>mapHeight</name></member>
+    <member refid="class_level_1a3fe3943b3327ccb12ccaf74342a21cb4" kind="function"><name>CreateMap</name></member>
+    <member refid="class_level_1a971779b6738f1d566b1608b1f1b94f4c" kind="function"><name>DrawMap</name></member>
+    <member refid="class_level_1ad9a71d900fcb095ad577a5806e5e0ff2" kind="function"><name>Level</name></member>
+    <member refid="class_level_1a249eac1e8f19ff44134efa5e986feaca" kind="function"><name>~Level</name></member>
     <member refid="class_level_1ae6a51f3a856804131b198f5af1719091" kind="function"><name>Update</name></member>
+    <member refid="class_level_1a0b7d43491002eaabf22f3463485fd8f9" kind="function"><name>Draw</name></member>
+    <member refid="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" kind="function"><name>GetKeys</name></member>
+    <member refid="class_level_1a486c2efd1403cdb5d51475b89ecb71be" kind="function"><name>GetColidables</name></member>
+    <member refid="class_level_1a5c79635195bf0aba535b537f016e019d" kind="function"><name>GetAmountColidables</name></member>
+  </compound>
+  <compound refid="class_level1" kind="class"><name>Level1</name>
+    <member refid="class_level1_1a911e27257190f41e2ccbe82cfe86d9b3" kind="function"><name>CreateMap</name></member>
+    <member refid="class_level1_1a7ae202bfba01ca621fe712858e06bed3" kind="function"><name>Level1</name></member>
   </compound>
   <compound refid="class_scene" kind="class"><name>Scene</name>
     <member refid="class_scene_1a60bbc016ba46c8d8c3929e75d0c07bf3" kind="variable"><name>window</name></member>
@@ -46,7 +80,9 @@
     <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kind="function"><name>Scene</name></member>
     <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kind="function"><name>~Scene</name></member>
     <member refid="class_scene_1a093259fe8ed34be3da9cbf16aa84af60" kind="function"><name>Run</name></member>
-    <member refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kind="function"><name>loadTexture</name></member>
+    <member refid="class_scene_1a874a80710129274a51e0c55e43129e3e" kind="function"><name>LoadTexture</name></member>
+    <member refid="class_scene_1ab08f5ffcaabc45634e6c60eafcf74dbe" kind="function"><name>CreateMapTexture</name></member>
+    <member refid="class_scene_1a1eed9d166ea0abb455a4c69ae4ce8bf5" kind="function"><name>GetRenderer</name></member>
   </compound>
   <compound refid="class_sprite" kind="class"><name>Sprite</name>
     <member refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kind="variable"><name>spriteSheet</name></member>
@@ -56,15 +92,18 @@
     <member refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kind="variable"><name>frontArray</name></member>
     <member refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kind="variable"><name>srcRect</name></member>
     <member refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kind="variable"><name>posRect</name></member>
-    <member refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kind="variable"><name>hasJumped</name></member>
     <member refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kind="variable"><name>speedVector</name></member>
     <member refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kind="function"><name>Sprite</name></member>
     <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kind="function"><name>~Sprite</name></member>
-    <member refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0" kind="function"><name>Update</name></member>
+    <member refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="_background_8cpp" kind="file"><name>Background.cpp</name>
   </compound>
   <compound refid="_background_8h" kind="file"><name>Background.h</name>
+  </compound>
+  <compound refid="_brick_8cpp" kind="file"><name>Brick.cpp</name>
+  </compound>
+  <compound refid="_brick_8h" kind="file"><name>Brick.h</name>
   </compound>
   <compound refid="_colidable_8cpp" kind="file"><name>Colidable.cpp</name>
   </compound>
@@ -72,6 +111,9 @@
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kind="enum"><name>OverlapType</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kind="enumvalue"><name>OL_NO_COLLISION</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b" kind="enumvalue"><name>OL_COLLISION</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6" kind="enumvalue"><name>OL_COLLISION_X</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8" kind="enumvalue"><name>OL_COLLISION_Y</name></member>
+    <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053" kind="enumvalue"><name>OL_COLLISION_XY</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa" kind="enumvalue"><name>OL_SPECIAL</name></member>
     <member refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652" kind="enumvalue"><name>OL_DEADLY</name></member>
   </compound>
@@ -87,12 +129,16 @@
   </compound>
   <compound refid="_hero_8h" kind="file"><name>Hero.h</name>
   </compound>
+  <compound refid="_level_8cpp" kind="file"><name>Level.cpp</name>
+  </compound>
   <compound refid="_level_8h" kind="file"><name>Level.h</name>
+  </compound>
+  <compound refid="_level1_8cpp" kind="file"><name>Level1.cpp</name>
+  </compound>
+  <compound refid="_level1_8h" kind="file"><name>Level1.h</name>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
-  </compound>
-  <compound refid="main_8h" kind="file"><name>main.h</name>
   </compound>
   <compound refid="_scene_8cpp" kind="file"><name>Scene.cpp</name>
   </compound>

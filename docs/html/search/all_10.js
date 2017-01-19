@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ehero',['~Hero',['../class_hero.html#a5aeef41ede5a80dc29c5acd7b553c4da',1,'Hero']]],
-  ['_7escene',['~Scene',['../class_scene.html#a3b8cec2e32546713915f8c6303c951f1',1,'Scene']]],
-  ['_7esprite',['~Sprite',['../class_sprite.html#a8accab430f9d90ae5117b57d67e32b84',1,'Sprite']]]
+  ['window_5fheight',['window_Height',['../_scene_8h.html#a854e2c54b966212d598afc2d1288f411',1,'Scene.h']]],
+  ['window_5fwidth',['window_Width',['../_scene_8h.html#a51ad4e0aa01aae093b93150fcbf90652',1,'Scene.h']]]
 ];

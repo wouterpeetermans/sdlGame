@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update',['Update',['../class_hero.html#ad3d2a6b036aff466d6711ca28ee52956',1,'Hero::Update()'],['../class_level.html#ae6a51f3a856804131b198f5af1719091',1,'Level::Update()'],['../class_sprite.html#a59b6ee43b4c9a38b65f6f73e02a163a0',1,'Sprite::Update()']]]
+  ['rightarray',['rightArray',['../class_sprite.html#a232f054ea1232499c6a82b678916db3e',1,'Sprite']]],
+  ['run',['Run',['../class_scene.html#a093259fe8ed34be3da9cbf16aa84af60',1,'Scene']]]
 ];

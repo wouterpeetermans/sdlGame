@@ -1,0 +1,54 @@
+.TH "Brick" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Brick \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Brick\&.h>\fP
+.PP
+Inherits \fBBackground\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBrick\fP (\fBScene\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBBrick\fP (SDL_Texture *, int, int)"
+.br
+.ti -1c
+.RI "\fB~Brick\fP ()"
+.br
+.ti -1c
+.RI "void \fBDraw\fP (SDL_Renderer *)"
+.br
+.ti -1c
+.RI "\fBOverlapType\fP \fBOverlapDetect\fP (SDL_Rect *, SDL_Rect *)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Brick::Brick (\fBScene\fP *context, intxpos, intypos)"
+
+.SS "Brick::Brick (SDL_Texture *texture, intxpos, intypos)"
+
+.SS "Brick::~Brick ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Brick::Draw (SDL_Renderer *renderer)\fC [virtual]\fP"
+
+.PP
+Implements \fBBackground\fP\&.
+.SS "\fBOverlapType\fP Brick::OverlapDetect (SDL_Rect *rect, SDL_Rect *resultRect)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBBackground\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for sdlGame from the source code\&.

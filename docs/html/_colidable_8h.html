@@ -121,7 +121,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_colidable_8h__dep__incl.png" border="0" usemap="#src_2_colidable_8hdep" alt=""/></div>
 <map name="src_2_colidable_8hdep" id="src_2_colidable_8hdep">
-<area shape="rect" id="node2" href="_background_8h.html" title="src/Background.h" alt="" coords="13,80,137,107"/><area shape="rect" id="node4" href="_colidable_8cpp.html" title="src/Colidable.cpp" alt="" coords="161,80,284,107"/><area shape="rect" id="node3" href="_background_8cpp.html" title="src/Background.cpp" alt="" coords="5,155,144,181"/></map>
+<area shape="rect" id="node2" href="_background_8h.html" title="src/Background.h" alt="" coords="58,80,182,107"/><area shape="rect" id="node11" href="_colidable_8cpp.html" title="src/Colidable.cpp" alt="" coords="207,80,329,107"/><area shape="rect" id="node12" href="_sprite_8h.html" title="src/Sprite.h" alt="" coords="354,80,443,107"/><area shape="rect" id="node3" href="_background_8cpp.html" title="src/Background.cpp" alt="" coords="5,155,144,181"/><area shape="rect" id="node4" href="_brick_8h.html" title="src/Brick.h" alt="" coords="168,155,253,181"/><area shape="rect" id="node5" href="_brick_8cpp.html" title="src/Brick.cpp" alt="" coords="81,229,180,256"/><area shape="rect" id="node6" href="_level_8h.html" title="src/Level.h" alt="" coords="205,229,291,256"/><area shape="rect" id="node7" href="_level_8cpp.html" title="src/Level.cpp" alt="" coords="138,304,238,331"/><area shape="rect" id="node8" href="_level1_8h.html" title="src/Level1.h" alt="" coords="263,304,356,331"/><area shape="rect" id="node9" href="_level1_8cpp.html" title="src/Level1.cpp" alt="" coords="191,379,297,405"/><area shape="rect" id="node10" href="_scene_8cpp.html" title="src/Scene.cpp" alt="" coords="321,379,428,405"/><area shape="rect" id="node13" href="_hero_8h.html" title="src/Hero.h" alt="" coords="319,155,401,181"/><area shape="rect" id="node15" href="_sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="426,155,529,181"/><area shape="rect" id="node14" href="_hero_8cpp.html" title="src/Hero.cpp" alt="" coords="315,229,413,256"/></map>
 </div>
 </div>
 <p><a href="_colidable_8h_source.html">Go to the source code of this file.</a></p>
@@ -133,10 +133,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aadda79d10876621f6d849e367f3e85a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> { <a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a> =0, 
+<tr class="memitem:aadda79d10876621f6d849e367f3e85a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> { <br />
+&#160;&#160;<a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a> =0, 
 <a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a>, 
+<a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6">OL_COLLISION_X</a>, 
+<a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8">OL_COLLISION_Y</a>, 
+<br />
+&#160;&#160;<a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053">OL_COLLISION_XY</a>, 
 <a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a>, 
 <a class="el" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a>
+<br />
  }</td></tr>
 <tr class="separator:aadda79d10876621f6d849e367f3e85a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -155,6 +161,12 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b"></a>OL_COLLISION&#160;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6"></a>OL_COLLISION_X&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8"></a>OL_COLLISION_Y&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053"></a>OL_COLLISION_XY&#160;</td><td class="fielddoc">
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa"></a>OL_SPECIAL&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652"></a>OL_DEADLY&#160;</td><td class="fielddoc">
@@ -169,7 +181,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_colidable_8h.html">Colidable.h</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:18 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

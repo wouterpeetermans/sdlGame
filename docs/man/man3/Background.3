@@ -1,4 +1,4 @@
-.TH "Background" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "Background" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,6 +10,8 @@ Background \-
 \fC#include <Background\&.h>\fP
 .PP
 Inherits \fBDrawable\fP, and \fBColidable\fP\&.
+.PP
+Inherited by \fBBrick\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -23,7 +25,7 @@ Inherits \fBDrawable\fP, and \fBColidable\fP\&.
 .RI "virtual void \fBDraw\fP (SDL_Renderer *)=0"
 .br
 .ti -1c
-.RI "virtual \fBOverlapType\fP \fBOverlapDetect\fP (const SDL_Rect &, const \fBGvector\fP &)"
+.RI "virtual \fBOverlapType\fP \fBOverlapDetect\fP (SDL_Rect *, SDL_Rect *)"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -33,10 +35,10 @@ Inherits \fBDrawable\fP, and \fBColidable\fP\&.
 .RI "SDL_Texture * \fBblockSheet\fP"
 .br
 .ti -1c
-.RI "SDL_Rect * \fBsrcRect\fP"
+.RI "SDL_Rect \fBsrcRect\fP"
 .br
 .ti -1c
-.RI "SDL_Rect * \fBposRect\fP"
+.RI "SDL_Rect \fBposRect\fP"
 .br
 .in -1c
 .SH "Constructor & Destructor Documentation"
@@ -51,17 +53,21 @@ Inherits \fBDrawable\fP, and \fBColidable\fP\&.
 
 .PP
 Implements \fBDrawable\fP\&.
-.SS "\fBOverlapType\fP Background::OverlapDetect (const SDL_Rect &rect, const \fBGvector\fP &vector)\fC [virtual]\fP"
+.PP
+Implemented in \fBBrick\fP\&.
+.SS "\fBOverlapType\fP Background::OverlapDetect (SDL_Rect *rect, SDL_Rect *result)\fC [virtual]\fP"
 
 .PP
 Implements \fBColidable\fP\&.
+.PP
+Reimplemented in \fBBrick\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "SDL_Texture* Background::blockSheet\fC [protected]\fP"
 
-.SS "SDL_Rect* Background::posRect\fC [protected]\fP"
+.SS "SDL_Rect Background::posRect\fC [protected]\fP"
 
-.SS "SDL_Rect* Background::srcRect\fC [protected]\fP"
+.SS "SDL_Rect Background::srcRect\fC [protected]\fP"
 
 
 .SH "Author"

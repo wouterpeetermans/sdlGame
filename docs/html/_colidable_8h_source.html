@@ -128,33 +128,38 @@ $(document).ready(function(){initNavTree('_colidable_8h_source.html','');});
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">   22</a></span>&#160; <span class="keyword">enum</span> <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">   23</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a>=0,</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">   24</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">   25</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a>,</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">   26</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_colidable.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_colidable.html">Colidable</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> <a class="code" href="class_colidable.html#ae180ab230bc892567ff8cc7d30f5cbd1">OverlapDetect</a>(<span class="keyword">const</span> SDL_Rect&amp;,<span class="keyword">const</span> <a class="code" href="class_gvector.html">Gvector</a>&amp;)=0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"> #endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6">   25</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6">OL_COLLISION_X</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8">   26</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8">OL_COLLISION_Y</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053">   27</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053">OL_COLLISION_XY</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">   28</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">   29</a></span>&#160;   <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_colidable.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_colidable.html">Colidable</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a> <a class="code" href="class_colidable.html#a082b047d6e7e66b85761ced37142fe70">OverlapDetect</a>(SDL_Rect*,SDL_Rect*)=0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"> #endif</span></div>
+<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a18d8bc9acbccdacb3628dff7d0a7a1d6">OL_COLLISION_X</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:25</div></div>
 <div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a967c83815688d8bc727e2641578de27b">OL_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:24</div></div>
-<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:26</div></div>
-<div class="ttc" id="class_gvector_html"><div class="ttname"><a href="class_gvector.html">Gvector</a></div><div class="ttdef"><b>Definition:</b> Gvector.h:23</div></div>
-<div class="ttc" id="class_colidable_html_ae180ab230bc892567ff8cc7d30f5cbd1"><div class="ttname"><a href="class_colidable.html#ae180ab230bc892567ff8cc7d30f5cbd1">Colidable::OverlapDetect</a></div><div class="ttdeci">virtual OverlapType OverlapDetect(const SDL_Rect &amp;, const Gvector &amp;)=0</div></div>
+<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a9ad2cec5276e6bfc36227eac6be0a652">OL_DEADLY</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:29</div></div>
 <div class="ttc" id="_gvector_8h_html"><div class="ttname"><a href="_gvector_8h.html">Gvector.h</a></div></div>
 <div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2">OL_NO_COLLISION</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:23</div></div>
 <div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3">OverlapType</a></div><div class="ttdeci">OverlapType</div><div class="ttdef"><b>Definition:</b> Colidable.h:22</div></div>
-<div class="ttc" id="class_colidable_html"><div class="ttname"><a href="class_colidable.html">Colidable</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:29</div></div>
-<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:25</div></div>
+<div class="ttc" id="class_colidable_html"><div class="ttname"><a href="class_colidable.html">Colidable</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:32</div></div>
+<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa26ab35f8af0dacb5609a9948b50a6fa">OL_SPECIAL</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:28</div></div>
+<div class="ttc" id="class_colidable_html_a082b047d6e7e66b85761ced37142fe70"><div class="ttname"><a href="class_colidable.html#a082b047d6e7e66b85761ced37142fe70">Colidable::OverlapDetect</a></div><div class="ttdeci">virtual OverlapType OverlapDetect(SDL_Rect *, SDL_Rect *)=0</div></div>
+<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3afbba20bee1794138cf0c736ef18ac053">OL_COLLISION_XY</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:27</div></div>
+<div class="ttc" id="_colidable_8h_html_aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8"><div class="ttname"><a href="_colidable_8h.html#aadda79d10876621f6d849e367f3e85a3aa1a5903c515e66c7b4ee30b584bd51c8">OL_COLLISION_Y</a></div><div class="ttdef"><b>Definition:</b> Colidable.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_colidable_8h.html">Colidable.h</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:18 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

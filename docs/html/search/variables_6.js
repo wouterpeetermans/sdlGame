@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['speedvector',['speedVector',['../class_sprite.html#a176a0bf0f92082d4999f5e06e6888561',1,'Sprite']]],
-  ['spritesheet',['spriteSheet',['../class_sprite.html#aec7102885a3ca3fdd5124f8677135013',1,'Sprite']]],
-  ['srcrect',['srcRect',['../class_background.html#aa3ba181fb3ab4a766a6f11ba8d1260a4',1,'Background::srcRect()'],['../class_sprite.html#ad12b634d7dd3f378dd205ba7e48dd63d',1,'Sprite::srcRect()']]]
+  ['mapheight',['mapHeight',['../class_level.html#a7c8f9c0ee45ef3b70eb38510c18e8eff',1,'Level']]],
+  ['maptexture',['mapTexture',['../class_level.html#a9abd431eafb9c1ee29e63d3e1aae27db',1,'Level']]],
+  ['mapwidth',['mapWidth',['../class_level.html#ae664f4cb3c3a2769d5fe91f2c4e2f3ce',1,'Level']]]
 ];

@@ -4,59 +4,59 @@
     <compoundname>Background.cpp</compoundname>
     <includes refid="_background_8h" local="yes">Background.h</includes>
     <incdepgraph>
-      <node id="154">
+      <node id="285">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="147">
+      <node id="278">
         <label>Background.h</label>
         <link refid="_background_8h"/>
-        <childnode refid="148" relation="include">
+        <childnode refid="279" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="282" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="284" relation="include">
         </childnode>
       </node>
-      <node id="146">
+      <node id="277">
         <label>src/Background.cpp</label>
         <link refid="Background.cpp"/>
-        <childnode refid="147" relation="include">
+        <childnode refid="278" relation="include">
         </childnode>
       </node>
-      <node id="149">
+      <node id="280">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="151">
+      <node id="282">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="149" relation="include">
+        <childnode refid="280" relation="include">
         </childnode>
-        <childnode refid="152" relation="include">
+        <childnode refid="283" relation="include">
         </childnode>
       </node>
-      <node id="152">
+      <node id="283">
         <label>iostream</label>
       </node>
-      <node id="148">
+      <node id="279">
         <label>Colidable.h</label>
         <link refid="_colidable_8h"/>
-        <childnode refid="149" relation="include">
+        <childnode refid="280" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="281" relation="include">
         </childnode>
       </node>
-      <node id="150">
+      <node id="281">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="153">
+      <node id="284">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="149" relation="include">
+        <childnode refid="280" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="285" relation="include">
         </childnode>
-        <childnode refid="152" relation="include">
+        <childnode refid="283" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -86,7 +86,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="_background_8h" kindref="compound">Background.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><ref refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kindref="member">Background::Background</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context<sp/>,std::string<sp/>file){</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" kindref="member">blockSheet</ref><sp/>=<sp/>context-&gt;<ref refid="class_scene_1ab52e5e4e39ea9788f8f2e2cd38beab7f" kindref="member">loadTexture</ref>(file);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" kindref="member">blockSheet</ref><sp/>=<sp/>context-&gt;<ref refid="class_scene_1a874a80710129274a51e0c55e43129e3e" kindref="member">LoadTexture</ref>(file);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/>}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><ref refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" kindref="member">Background::Background</ref>(SDL_Texture*<sp/>texture){</highlight></codeline>
@@ -95,7 +95,7 @@
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" kindref="member">Background::OverlapDetect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Rect<sp/>&amp;<sp/>rect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/>&amp;<sp/>vector){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref><sp/><ref refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116" kindref="member">Background::OverlapDetect</ref>(SDL_Rect*<sp/>rect,SDL_Rect*<sp/>result){</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3a14a7a39c100848c4570017b2ef208be2" kindref="member">OL_NO_COLLISION</ref>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/>}</highlight></codeline>
     </programlisting>

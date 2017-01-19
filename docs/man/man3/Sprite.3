@@ -1,4 +1,4 @@
-.TH "Sprite" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "Sprite" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,7 +11,7 @@ Sprite \-
 .PP
 Inherits \fBDrawable\fP\&.
 .PP
-Inherited by \fBHero\fP\fC [private]\fP\&.
+Inherited by \fBHero\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -22,7 +22,7 @@ Inherited by \fBHero\fP\fC [private]\fP\&.
 .RI "\fB~Sprite\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBUpdate\fP (unsigned int)=0"
+.RI "virtual void \fBUpdate\fP (unsigned int, \fBColidable\fP **, int)=0"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -50,9 +50,6 @@ Inherited by \fBHero\fP\fC [private]\fP\&.
 .RI "SDL_Rect * \fBposRect\fP"
 .br
 .ti -1c
-.RI "bool \fBhasJumped\fP"
-.br
-.ti -1c
 .RI "\fBGvector\fP \fBspeedVector\fP"
 .br
 .in -1c
@@ -64,7 +61,7 @@ Inherited by \fBHero\fP\fC [private]\fP\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "virtual void Sprite::Update (unsignedint)\fC [pure virtual]\fP"
+.SS "virtual void Sprite::Update (unsignedint, \fBColidable\fP **, int)\fC [pure virtual]\fP"
 
 .PP
 Implemented in \fBHero\fP\&.
@@ -73,8 +70,6 @@ Implemented in \fBHero\fP\&.
 .SS "SDL_Rect* Sprite::backArray\fC [protected]\fP"
 
 .SS "SDL_Rect* Sprite::frontArray\fC [protected]\fP"
-
-.SS "bool Sprite::hasJumped\fC [protected]\fP"
 
 .SS "SDL_Rect* Sprite::leftArray\fC [protected]\fP"
 

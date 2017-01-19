@@ -1,4 +1,4 @@
-.TH "src/Colidable.h" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "src/Colidable.h" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,7 +22,7 @@ src/Colidable.h \-
 
 .in +1c
 .ti -1c
-.RI "enum \fBOverlapType\fP { \fBOL_NO_COLLISION\fP =0, \fBOL_COLLISION\fP, \fBOL_SPECIAL\fP, \fBOL_DEADLY\fP }"
+.RI "enum \fBOverlapType\fP { \fBOL_NO_COLLISION\fP =0, \fBOL_COLLISION\fP, \fBOL_COLLISION_X\fP, \fBOL_COLLISION_Y\fP, \fBOL_COLLISION_XY\fP, \fBOL_SPECIAL\fP, \fBOL_DEADLY\fP }"
 .br
 .in -1c
 .SH "Enumeration Type Documentation"
@@ -36,6 +36,12 @@ src/Colidable.h \-
 \fB\fIOL_NO_COLLISION \fP\fP
 .TP
 \fB\fIOL_COLLISION \fP\fP
+.TP
+\fB\fIOL_COLLISION_X \fP\fP
+.TP
+\fB\fIOL_COLLISION_Y \fP\fP
+.TP
+\fB\fIOL_COLLISION_XY \fP\fP
 .TP
 \fB\fIOL_SPECIAL \fP\fP
 .TP

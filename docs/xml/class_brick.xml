@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_brick" kind="class" prot="public">
+    <compoundname>Brick</compoundname>
+    <basecompoundref refid="class_background" prot="public" virt="non-virtual">Background</basecompoundref>
+    <includes refid="_brick_8h" local="no">Brick.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_brick_1a3829fd4f516ae1d7e2802afa88ddedab" prot="private" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Brick::colRect</definition>
+        <argsstring></argsstring>
+        <name>colRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_brick_1a1c0e78ed11e36c07206e0ef3bd5edc8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Brick::init</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>y</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="25" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="32" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_brick_1abd7520a8efa3023b5e2d28870206a342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Brick::Brick</definition>
+        <argsstring>(Scene *, int, int)</argsstring>
+        <name>Brick</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>xpos</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ypos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_brick_1a11a624423d858608cc51aeac96f2a23a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Brick::Brick</definition>
+        <argsstring>(SDL_Texture *, int, int)</argsstring>
+        <name>Brick</name>
+        <param>
+          <type>SDL_Texture *</type>
+          <defname>texture</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>xpos</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ypos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_brick_1a0e27476ccaeaed1d61a06bddf247c8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Brick::~Brick</definition>
+        <argsstring>()</argsstring>
+        <name>~Brick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_brick_1a035a72f469abf3f1b50221825e9afb4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Brick::Draw</definition>
+        <argsstring>(SDL_Renderer *)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45">Draw</reimplements>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
+        <definition>OverlapType Brick::OverlapDetect</definition>
+        <argsstring>(SDL_Rect *, SDL_Rect *)</argsstring>
+        <name>OverlapDetect</name>
+        <reimplements refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116">OverlapDetect</reimplements>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>rect</defname>
+        </param>
+        <param>
+          <type>SDL_Rect *</type>
+          <defname>resultRect</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.cpp" bodystart="46" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="69">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="67">
+        <label>Background</label>
+        <link refid="class_background"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="66">
+        <label>Brick</label>
+        <link refid="class_brick"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="73">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="71">
+        <label>Background</label>
+        <link refid="class_background"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="70">
+        <label>Brick</label>
+        <link refid="class_brick"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Brick.h" line="22" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Brick.h" bodystart="22" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" prot="public" virt="non-virtual"><scope>Brick</scope><name>Background</name></member>
+      <member refid="class_background_1a5385891dafdc857eb5d29915f5163ebe" prot="public" virt="non-virtual"><scope>Brick</scope><name>Background</name></member>
+      <member refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" prot="protected" virt="non-virtual"><scope>Brick</scope><name>blockSheet</name></member>
+      <member refid="class_brick_1abd7520a8efa3023b5e2d28870206a342" prot="public" virt="non-virtual"><scope>Brick</scope><name>Brick</name></member>
+      <member refid="class_brick_1a11a624423d858608cc51aeac96f2a23a" prot="public" virt="non-virtual"><scope>Brick</scope><name>Brick</name></member>
+      <member refid="class_brick_1a3829fd4f516ae1d7e2802afa88ddedab" prot="private" virt="non-virtual"><scope>Brick</scope><name>colRect</name></member>
+      <member refid="class_brick_1a035a72f469abf3f1b50221825e9afb4e" prot="public" virt="virtual"><scope>Brick</scope><name>Draw</name></member>
+      <member refid="class_brick_1a1c0e78ed11e36c07206e0ef3bd5edc8d" prot="private" virt="non-virtual"><scope>Brick</scope><name>init</name></member>
+      <member refid="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a" prot="public" virt="virtual"><scope>Brick</scope><name>OverlapDetect</name></member>
+      <member refid="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" prot="protected" virt="non-virtual"><scope>Brick</scope><name>posRect</name></member>
+      <member refid="class_background_1a9daf44b8008c20bab553dd18b5b0d867" prot="protected" virt="non-virtual"><scope>Brick</scope><name>srcRect</name></member>
+      <member refid="class_brick_1a0e27476ccaeaed1d61a06bddf247c8ee" prot="public" virt="non-virtual"><scope>Brick</scope><name>~Brick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

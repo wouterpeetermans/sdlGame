@@ -147,23 +147,27 @@ $(document).ready(function(){initNavTree('_scene_8h_source.html','');});
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//functions</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Run</a>();<span class="comment">// this is the main function of Scene and it wil go on till the program ends</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SDL_Texture* <a class="code" href="class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f">loadTexture</a>(std::string);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SDL_Texture* <a class="code" href="class_scene.html#a874a80710129274a51e0c55e43129e3e">LoadTexture</a>(std::string);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        SDL_Texture* <a class="code" href="class_scene.html#ab08f5ffcaabc45634e6c60eafcf74dbe">CreateMapTexture</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_scene.html#a1eed9d166ea0abb455a4c69ae4ce8bf5">   46</a></span>&#160;        SDL_Renderer* <a class="code" href="class_scene.html#a1eed9d166ea0abb455a4c69ae4ce8bf5">GetRenderer</a>(){<span class="keywordflow">return</span> screenRenderer;};</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // end of includeGuard</span></div>
-<div class="ttc" id="class_scene_html_ab52e5e4e39ea9788f8f2e2cd38beab7f"><div class="ttname"><a href="class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f">Scene::loadTexture</a></div><div class="ttdeci">SDL_Texture * loadTexture(std::string)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:60</div></div>
-<div class="ttc" id="class_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:49</div></div>
-<div class="ttc" id="class_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:22</div></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // end of includeGuard</span></div>
+<div class="ttc" id="class_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:51</div></div>
+<div class="ttc" id="class_scene_html_a1eed9d166ea0abb455a4c69ae4ce8bf5"><div class="ttname"><a href="class_scene.html#a1eed9d166ea0abb455a4c69ae4ce8bf5">Scene::GetRenderer</a></div><div class="ttdeci">SDL_Renderer * GetRenderer()</div><div class="ttdef"><b>Definition:</b> Scene.h:46</div></div>
+<div class="ttc" id="class_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:24</div></div>
+<div class="ttc" id="class_scene_html_ab08f5ffcaabc45634e6c60eafcf74dbe"><div class="ttname"><a href="class_scene.html#ab08f5ffcaabc45634e6c60eafcf74dbe">Scene::CreateMapTexture</a></div><div class="ttdeci">SDL_Texture * CreateMapTexture(int, int)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:78</div></div>
 <div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:31</div></div>
-<div class="ttc" id="class_scene_html_a093259fe8ed34be3da9cbf16aa84af60"><div class="ttname"><a href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Scene::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:76</div></div>
+<div class="ttc" id="class_scene_html_a093259fe8ed34be3da9cbf16aa84af60"><div class="ttname"><a href="class_scene.html#a093259fe8ed34be3da9cbf16aa84af60">Scene::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:82</div></div>
+<div class="ttc" id="class_scene_html_a874a80710129274a51e0c55e43129e3e"><div class="ttname"><a href="class_scene.html#a874a80710129274a51e0c55e43129e3e">Scene::LoadTexture</a></div><div class="ttdeci">SDL_Texture * LoadTexture(std::string)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_scene_8h.html">Scene.h</a></li>
-    <li class="footer">Generated on Thu Jan 12 2017 16:09:13 for sdlGame by
+    <li class="footer">Generated on Wed Jan 18 2017 22:38:18 for sdlGame by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

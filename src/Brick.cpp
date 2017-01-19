@@ -25,6 +25,9 @@ Brick::Brick(Scene* context,int xpos ,int ypos):Background(context,"game/castle.
 Brick::Brick(SDL_Texture* texture,int xpos,int ypos):Background(texture){
   init(xpos,ypos);
 }
+Brick::~Brick(){
+  delete colRect;
+}
 
 void Brick::init(int x , int y){
   srcRect.h = 64;

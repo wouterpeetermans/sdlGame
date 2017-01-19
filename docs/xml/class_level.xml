@@ -1,17 +1,151 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
-  <compounddef id="class_level" kind="class" prot="public">
+  <compounddef id="class_level" kind="class" prot="public" abstract="yes">
     <compoundname>Level</compoundname>
+    <derivedcompoundref refid="class_level1" prot="public" virt="non-virtual">Level1</derivedcompoundref>
     <includes refid="_level_8h" local="no">Level.h</includes>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_level_1ae6a51f3a856804131b198f5af1719091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" prot="protected" static="no" mutable="no">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture* Level::mapTexture</definition>
+        <argsstring></argsstring>
+        <name>mapTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1a492ea490f96e988a88c01d8432bae9b4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+        <definition>Colidable** Level::colidables</definition>
+        <argsstring></argsstring>
+        <name>colidables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="27" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1a4b153fae1dda32e793fac0b7e0f54863" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_sprite" kindref="compound">Sprite</ref> **</type>
+        <definition>Sprite** Level::enemies</definition>
+        <argsstring></argsstring>
+        <name>enemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1a02a5bfe170913471f22ded61dec8efd3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_hero" kindref="compound">Hero</ref> *</type>
+        <definition>Hero* Level::player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Level::amountObjects</definition>
+        <argsstring></argsstring>
+        <name>amountObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="30" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Level::amountEnemies</definition>
+        <argsstring></argsstring>
+        <name>amountEnemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="31" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1a4c873dd1faff072635e148ecbd07ea9b" prot="protected" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* Level::tileArray</definition>
+        <argsstring></argsstring>
+        <name>tileArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Level::mapWidth</definition>
+        <argsstring></argsstring>
+        <name>mapWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="33" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Level::mapHeight</definition>
+        <argsstring></argsstring>
+        <name>mapHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="34" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_level_1a3fe3943b3327ccb12ccaf74342a21cb4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>void Level::Update</definition>
-        <argsstring>(unsigned int)</argsstring>
-        <name>Update</name>
+        <definition>virtual void Level::CreateMap</definition>
+        <argsstring>()=0</argsstring>
+        <name>CreateMap</name>
+        <reimplementedby refid="class_level1_1a911e27257190f41e2ccbe82cfe86d9b3">CreateMap</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a971779b6738f1d566b1608b1f1b94f4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Level::DrawMap</definition>
+        <argsstring>(Scene *)</argsstring>
+        <name>DrawMap</name>
         <param>
-          <type>unsigned</type>
-          <declname>int</declname>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -19,16 +153,197 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="24" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="36" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="31" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_level_1ad9a71d900fcb095ad577a5806e5e0ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Level::Level</definition>
+        <argsstring>(Scene *)</argsstring>
+        <name>Level</name>
+        <param>
+          <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="38" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a249eac1e8f19ff44134efa5e986feaca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Level::~Level</definition>
+        <argsstring>()</argsstring>
+        <name>~Level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="39" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1ae6a51f3a856804131b198f5af1719091" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Level::Update</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+          <defname>timePast</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="40" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a0b7d43491002eaabf22f3463485fd8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Level::Draw</definition>
+        <argsstring>(SDL_Renderer *)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SDL_Renderer *</type>
+          <defname>renderer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="41" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="93" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Level::GetKeys</definition>
+        <argsstring>(SDL_Event *)</argsstring>
+        <name>GetKeys</name>
+        <param>
+          <type>SDL_Event *</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="42" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.cpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a486c2efd1403cdb5d51475b89ecb71be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_colidable" kindref="compound">Colidable</ref> **</type>
+        <definition>virtual Colidable** Level::GetColidables</definition>
+        <argsstring>()</argsstring>
+        <name>GetColidables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="43" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a5c79635195bf0aba535b537f016e019d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Level::GetAmountColidables</definition>
+        <argsstring>()</argsstring>
+        <name>GetAmountColidables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="44" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="44" bodyend="44"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="22" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="22" bodyend="25"/>
+    <inheritancegraph>
+      <node id="94">
+        <label>Level1</label>
+        <link refid="class_level1"/>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>Level</label>
+        <link refid="class_level"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="100">
+        <label>Colidable</label>
+        <link refid="class_colidable"/>
+      </node>
+      <node id="96">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>speedVector</edgelabel>
+        </childnode>
+      </node>
+      <node id="98">
+        <label>Gvector</label>
+        <link refid="class_gvector"/>
+      </node>
+      <node id="97">
+        <label>Drawable</label>
+        <link refid="class_drawable"/>
+      </node>
+      <node id="99">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>Level</label>
+        <link refid="class_level"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>enemies</edgelabel>
+        </childnode>
+        <childnode refid="99" relation="usage">
+          <edgelabel>player</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>colidables</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wouter/Documents/sdlGame/src/Level.h" line="24" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Level.h" bodystart="24" bodyend="45"/>
     <listofallmembers>
-      <member refid="class_level_1ae6a51f3a856804131b198f5af1719091" prot="public" virt="non-virtual"><scope>Level</scope><name>Update</name></member>
+      <member refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" prot="protected" virt="non-virtual"><scope>Level</scope><name>amountEnemies</name></member>
+      <member refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" prot="protected" virt="non-virtual"><scope>Level</scope><name>amountObjects</name></member>
+      <member refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" prot="protected" virt="non-virtual"><scope>Level</scope><name>colidables</name></member>
+      <member refid="class_level_1a3fe3943b3327ccb12ccaf74342a21cb4" prot="protected" virt="pure-virtual"><scope>Level</scope><name>CreateMap</name></member>
+      <member refid="class_level_1a0b7d43491002eaabf22f3463485fd8f9" prot="public" virt="virtual"><scope>Level</scope><name>Draw</name></member>
+      <member refid="class_level_1a971779b6738f1d566b1608b1f1b94f4c" prot="protected" virt="virtual"><scope>Level</scope><name>DrawMap</name></member>
+      <member refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" prot="protected" virt="non-virtual"><scope>Level</scope><name>enemies</name></member>
+      <member refid="class_level_1a5c79635195bf0aba535b537f016e019d" prot="public" virt="virtual"><scope>Level</scope><name>GetAmountColidables</name></member>
+      <member refid="class_level_1a486c2efd1403cdb5d51475b89ecb71be" prot="public" virt="virtual"><scope>Level</scope><name>GetColidables</name></member>
+      <member refid="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" prot="public" virt="virtual"><scope>Level</scope><name>GetKeys</name></member>
+      <member refid="class_level_1ad9a71d900fcb095ad577a5806e5e0ff2" prot="public" virt="non-virtual"><scope>Level</scope><name>Level</name></member>
+      <member refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" prot="protected" virt="non-virtual"><scope>Level</scope><name>mapHeight</name></member>
+      <member refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" prot="protected" virt="non-virtual"><scope>Level</scope><name>mapTexture</name></member>
+      <member refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" prot="protected" virt="non-virtual"><scope>Level</scope><name>mapWidth</name></member>
+      <member refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" prot="protected" virt="non-virtual"><scope>Level</scope><name>player</name></member>
+      <member refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" prot="protected" virt="non-virtual"><scope>Level</scope><name>tileArray</name></member>
+      <member refid="class_level_1ae6a51f3a856804131b198f5af1719091" prot="public" virt="virtual"><scope>Level</scope><name>Update</name></member>
+      <member refid="class_level_1a249eac1e8f19ff44134efa5e986feaca" prot="public" virt="non-virtual"><scope>Level</scope><name>~Level</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

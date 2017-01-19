@@ -2,6 +2,123 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="_level_8h" kind="file">
     <compoundname>Level.h</compoundname>
+    <includes refid="_hero_8h" local="yes">Hero.h</includes>
+    <includes refid="_brick_8h" local="yes">Brick.h</includes>
+    <includedby refid="_level_8cpp" local="yes">src/Level.cpp</includedby>
+    <includedby refid="_level1_8h" local="yes">src/Level1.h</includedby>
+    <incdepgraph>
+      <node id="446">
+        <label>SDL2/SDL_image.h</label>
+      </node>
+      <node id="450">
+        <label>Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="449">
+        <label>Brick.h</label>
+        <link refid="_brick_8h"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>Drawable.h</label>
+        <link refid="_drawable_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+      </node>
+      <node id="444">
+        <label>iostream</label>
+      </node>
+      <node id="448">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+      </node>
+      <node id="447">
+        <label>Gvector.h</label>
+        <link refid="_gvector_8h"/>
+      </node>
+      <node id="445">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+      </node>
+      <node id="439">
+        <label>src/Level.h</label>
+        <link refid="Level.h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="453">
+        <label>src/Level1.h</label>
+        <link refid="_level1_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>src/Level1.cpp</label>
+        <link refid="_level1_8cpp"/>
+      </node>
+      <node id="455">
+        <label>src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="452">
+        <label>src/Level.cpp</label>
+        <link refid="_level_8cpp"/>
+      </node>
+      <node id="451">
+        <label>src/Level.h</label>
+        <link refid="Level.h"/>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_level" prot="public">Level</innerclass>
     <briefdescription>
     </briefdescription>
@@ -28,20 +145,40 @@
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_Level</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_Level<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="class_level" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_level" kindref="compound">Level</ref><sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1ae6a51f3a856804131b198f5af1719091" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hero_8h" kindref="compound">Hero.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_brick_8h" kindref="compound">Brick.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_level" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_level" kindref="compound">Level</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" refkind="member"><highlight class="normal"><sp/><sp/>SDL_Texture*<sp/><ref refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" kindref="member">mapTexture</ref>;</highlight></codeline>
+<codeline lineno="27" refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_colidable" kindref="compound">Colidable</ref>**<sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref>;</highlight></codeline>
+<codeline lineno="28" refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_sprite" kindref="compound">Sprite</ref>**<sp/><ref refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" kindref="member">enemies</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_hero" kindref="compound">Hero</ref>*<sp/><ref refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kindref="member">player</ref>;</highlight></codeline>
+<codeline lineno="30" refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref>;</highlight></codeline>
+<codeline lineno="31" refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kindref="member">tileArray</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" kindref="member">mapWidth</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" kindref="member">mapHeight</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1a3fe3943b3327ccb12ccaf74342a21cb4" kindref="member">CreateMap</ref>()=0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1a971779b6738f1d566b1608b1f1b94f4c" kindref="member">DrawMap</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="class_level_1ad9a71d900fcb095ad577a5806e5e0ff2" kindref="member">Level</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a249eac1e8f19ff44134efa5e986feaca" kindref="member">~Level</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1ae6a51f3a856804131b198f5af1719091" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1a0b7d43491002eaabf22f3463485fd8f9" kindref="member">Draw</ref>(SDL_Renderer*);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" kindref="member">GetKeys</ref>(SDL_Event*);</highlight></codeline>
+<codeline lineno="43" refid="class_level_1a486c2efd1403cdb5d51475b89ecb71be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_colidable" kindref="compound">Colidable</ref>**<sp/><ref refid="class_level_1a486c2efd1403cdb5d51475b89ecb71be" kindref="member">GetColidables</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref>;};</highlight></codeline>
+<codeline lineno="44" refid="class_level_1a5c79635195bf0aba535b537f016e019d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_level_1a5c79635195bf0aba535b537f016e019d" kindref="member">GetAmountColidables</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>amountObjects+<ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>;}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Level.h"/>
   </compounddef>

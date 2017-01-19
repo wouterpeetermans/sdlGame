@@ -5,78 +5,113 @@
     <includes refid="_drawable_8h" local="yes">Drawable.h</includes>
     <includes refid="_scene_8h" local="yes">Scene.h</includes>
     <includes refid="_gvector_8h" local="yes">Gvector.h</includes>
+    <includes refid="_colidable_8h" local="yes">Colidable.h</includes>
     <includedby refid="_hero_8h" local="yes">src/Hero.h</includedby>
     <includedby refid="_sprite_8cpp" local="yes">src/Sprite.cpp</includedby>
     <incdepgraph>
-      <node id="285">
+      <node id="542">
         <label>SDL2/SDL_image.h</label>
       </node>
-      <node id="282">
+      <node id="539">
         <label>SDL2/SDL.h</label>
       </node>
-      <node id="281">
+      <node id="538">
         <label>Drawable.h</label>
         <link refid="_drawable_8h"/>
-        <childnode refid="282" relation="include">
+        <childnode refid="539" relation="include">
         </childnode>
-        <childnode refid="283" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="283">
+      <node id="540">
         <label>iostream</label>
       </node>
-      <node id="286">
+      <node id="544">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+      </node>
+      <node id="543">
         <label>Gvector.h</label>
         <link refid="_gvector_8h"/>
       </node>
-      <node id="284">
+      <node id="541">
         <label>Scene.h</label>
         <link refid="_scene_8h"/>
-        <childnode refid="282" relation="include">
+        <childnode refid="539" relation="include">
         </childnode>
-        <childnode refid="285" relation="include">
+        <childnode refid="542" relation="include">
         </childnode>
-        <childnode refid="283" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="280">
+      <node id="537">
         <label>src/Sprite.h</label>
         <link refid="Sprite.h"/>
-        <childnode refid="281" relation="include">
+        <childnode refid="538" relation="include">
         </childnode>
-        <childnode refid="284" relation="include">
+        <childnode refid="541" relation="include">
         </childnode>
-        <childnode refid="286" relation="include">
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="288">
-        <label>src/Hero.h</label>
-        <link refid="_hero_8h"/>
-        <childnode refid="289" relation="include">
+      <node id="550">
+        <label>src/Level1.h</label>
+        <link refid="_level1_8h"/>
+        <childnode refid="551" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+        <childnode refid="552" relation="include">
         </childnode>
       </node>
-      <node id="289">
+      <node id="546">
+        <label>src/Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="547" relation="include">
+        </childnode>
+        <childnode refid="548" relation="include">
+        </childnode>
+      </node>
+      <node id="551">
+        <label>src/Level1.cpp</label>
+        <link refid="_level1_8cpp"/>
+      </node>
+      <node id="547">
         <label>src/Hero.cpp</label>
         <link refid="_hero_8cpp"/>
       </node>
-      <node id="290">
+      <node id="552">
         <label>src/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
       </node>
-      <node id="291">
+      <node id="553">
         <label>src/Sprite.cpp</label>
         <link refid="_sprite_8cpp"/>
       </node>
-      <node id="287">
+      <node id="549">
+        <label>src/Level.cpp</label>
+        <link refid="_level_8cpp"/>
+      </node>
+      <node id="548">
+        <label>src/Level.h</label>
+        <link refid="_level_8h"/>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+      </node>
+      <node id="545">
         <label>src/Sprite.h</label>
         <link refid="Sprite.h"/>
-        <childnode refid="288" relation="include">
+        <childnode refid="546" relation="include">
         </childnode>
-        <childnode refid="291" relation="include">
+        <childnode refid="553" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -108,31 +143,30 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_drawable_8h" kindref="compound">Drawable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_gvector_8h" kindref="compound">Gvector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_colidable_8h" kindref="compound">Colidable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="class_sprite" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sprite" kindref="compound">Sprite</ref>:<ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="27" refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>;</highlight></codeline>
-<codeline lineno="30" refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>;</highlight></codeline>
-<codeline lineno="31" refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" kindref="member">backArray</ref>;</highlight></codeline>
-<codeline lineno="32" refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>;</highlight></codeline>
-<codeline lineno="33" refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>;</highlight></codeline>
-<codeline lineno="34" refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>;</highlight></codeline>
-<codeline lineno="35" refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a4e670cff3df22a9eebf5870972c75889" kindref="member">hasJumped</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_sprite" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sprite" kindref="compound">Sprite</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_drawable" kindref="compound">Drawable</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="class_sprite_1aec7102885a3ca3fdd5124f8677135013" kindref="member">spriteSheet</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a59f5ebe152863a252d5d97f5882820b7" kindref="member">leftArray</ref>;</highlight></codeline>
+<codeline lineno="31" refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a232f054ea1232499c6a82b678916db3e" kindref="member">rightArray</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a99d7c95bea6a12cf00b3bde6b939888c" kindref="member">backArray</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a06d3e9cbf8881c2c20856bc594765c09" kindref="member">frontArray</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1ad12b634d7dd3f378dd205ba7e48dd63d" kindref="member">srcRect</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect*<sp/><ref refid="class_sprite_1a264e91f241ab0f13e71eaa1d012f8af6" kindref="member">posRect</ref>;</highlight></codeline>
 <codeline lineno="36" refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_gvector" kindref="compound">Gvector</ref><sp/><ref refid="class_sprite_1a176a0bf0f92082d4999f5e06e6888561" kindref="member">speedVector</ref>;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kindref="member">Sprite</ref>(std::string,<sp/><ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kindref="member">~Sprite</ref>();</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a59b6ee43b4c9a38b65f6f73e02a163a0" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)=0;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a93f7ad09babf69908163e10a5315f189" kindref="member">Sprite</ref>(std::string,<sp/><ref refid="class_scene" kindref="compound">Scene</ref>*);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kindref="member">~Sprite</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<ref refid="class_colidable" kindref="compound">Colidable</ref>**,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)=0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/wouter/Documents/sdlGame/src/Sprite.h"/>
   </compounddef>

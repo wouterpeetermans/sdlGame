@@ -2,8 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="class_background" kind="class" prot="public" abstract="yes">
     <compoundname>Background</compoundname>
-    <basecompoundref refid="class_drawable" prot="private" virt="non-virtual">Drawable</basecompoundref>
-    <basecompoundref refid="class_colidable" prot="private" virt="non-virtual">Colidable</basecompoundref>
+    <basecompoundref refid="class_drawable" prot="public" virt="non-virtual">Drawable</basecompoundref>
+    <basecompoundref refid="class_colidable" prot="public" virt="non-virtual">Colidable</basecompoundref>
+    <derivedcompoundref refid="class_brick" prot="public" virt="non-virtual">Brick</derivedcompoundref>
     <includes refid="_background_8h" local="no">Background.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" prot="protected" static="no" mutable="no">
@@ -19,9 +20,9 @@
         </inbodydescription>
         <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="28" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="28" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" prot="protected" static="no" mutable="no">
-        <type>SDL_Rect *</type>
-        <definition>SDL_Rect* Background::srcRect</definition>
+      <memberdef kind="variable" id="class_background_1a9daf44b8008c20bab553dd18b5b0d867" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect Background::srcRect</definition>
         <argsstring></argsstring>
         <name>srcRect</name>
         <briefdescription>
@@ -32,9 +33,9 @@
         </inbodydescription>
         <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="29" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" prot="protected" static="no" mutable="no">
-        <type>SDL_Rect *</type>
-        <definition>SDL_Rect* Background::posRect</definition>
+      <memberdef kind="variable" id="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect Background::posRect</definition>
         <argsstring></argsstring>
         <name>posRect</name>
         <briefdescription>
@@ -91,6 +92,7 @@
         <argsstring>(SDL_Renderer *)=0</argsstring>
         <name>Draw</name>
         <reimplements refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a">Draw</reimplements>
+        <reimplementedby refid="class_brick_1a035a72f469abf3f1b50221825e9afb4e">Draw</reimplementedby>
         <param>
           <type>SDL_Renderer *</type>
         </param>
@@ -102,19 +104,20 @@
         </inbodydescription>
         <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="35" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="class_background_1af1206ce342dd773755f60e9f995bbbb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_background_1a9169fdd8cf5b0624183eede6f6e18116" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
         <definition>OverlapType Background::OverlapDetect</definition>
-        <argsstring>(const SDL_Rect &amp;, const Gvector &amp;)</argsstring>
+        <argsstring>(SDL_Rect *, SDL_Rect *)</argsstring>
         <name>OverlapDetect</name>
-        <reimplements refid="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1">OverlapDetect</reimplements>
+        <reimplements refid="class_colidable_1a082b047d6e7e66b85761ced37142fe70">OverlapDetect</reimplements>
+        <reimplementedby refid="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a">OverlapDetect</reimplementedby>
         <param>
-          <type>const SDL_Rect &amp;</type>
+          <type>SDL_Rect *</type>
           <defname>rect</defname>
         </param>
         <param>
-          <type>const <ref refid="class_gvector" kindref="compound">Gvector</ref> &amp;</type>
-          <defname>vector</defname>
+          <type>SDL_Rect *</type>
+          <defname>result</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -130,50 +133,56 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="35">
+      <node id="61">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="33">
+      <node id="59">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="34" relation="private-inheritance">
+        <childnode refid="60" relation="public-inheritance">
         </childnode>
-        <childnode refid="35" relation="private-inheritance">
+        <childnode refid="61" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="34">
+      <node id="60">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
+      <node id="62">
+        <label>Brick</label>
+        <link refid="class_brick"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="38">
+      <node id="65">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="36">
+      <node id="63">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="37" relation="private-inheritance">
+        <childnode refid="64" relation="public-inheritance">
         </childnode>
-        <childnode refid="38" relation="private-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="37">
+      <node id="64">
         <label>Drawable</label>
         <link refid="class_drawable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="26" bodyend="38"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Background.h" line="26" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Background.h" bodystart="26" bodyend="37"/>
     <listofallmembers>
       <member refid="class_background_1a3788195ebad89268ef6fd2fb4af1ebd2" prot="public" virt="non-virtual"><scope>Background</scope><name>Background</name></member>
       <member refid="class_background_1a5385891dafdc857eb5d29915f5163ebe" prot="public" virt="non-virtual"><scope>Background</scope><name>Background</name></member>
       <member refid="class_background_1ac331f21f3db087c4b53fe0224ace3e6b" prot="protected" virt="non-virtual"><scope>Background</scope><name>blockSheet</name></member>
       <member refid="class_background_1ab47321940f5ac53dfe87315ba2ca7a45" prot="public" virt="pure-virtual"><scope>Background</scope><name>Draw</name></member>
-      <member refid="class_background_1af1206ce342dd773755f60e9f995bbbb4" prot="public" virt="virtual"><scope>Background</scope><name>OverlapDetect</name></member>
-      <member refid="class_background_1a9aa2531b07a38f6fff74cc2f747e8c66" prot="protected" virt="non-virtual"><scope>Background</scope><name>posRect</name></member>
-      <member refid="class_background_1aa3ba181fb3ab4a766a6f11ba8d1260a4" prot="protected" virt="non-virtual"><scope>Background</scope><name>srcRect</name></member>
+      <member refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116" prot="public" virt="virtual"><scope>Background</scope><name>OverlapDetect</name></member>
+      <member refid="class_background_1a1d0b1a450982d3f8bc973b66091e5b1e" prot="protected" virt="non-virtual"><scope>Background</scope><name>posRect</name></member>
+      <member refid="class_background_1a9daf44b8008c20bab553dd18b5b0d867" prot="protected" virt="non-virtual"><scope>Background</scope><name>srcRect</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

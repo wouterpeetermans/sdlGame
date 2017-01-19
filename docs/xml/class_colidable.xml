@@ -2,20 +2,21 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="class_colidable" kind="class" prot="public" abstract="yes">
     <compoundname>Colidable</compoundname>
-    <derivedcompoundref refid="class_background" prot="private" virt="non-virtual">Background</derivedcompoundref>
+    <derivedcompoundref refid="class_background" prot="public" virt="non-virtual">Background</derivedcompoundref>
     <includes refid="_colidable_8h" local="no">Colidable.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="class_colidable_1a082b047d6e7e66b85761ced37142fe70" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="_colidable_8h_1aadda79d10876621f6d849e367f3e85a3" kindref="member">OverlapType</ref></type>
         <definition>virtual OverlapType Colidable::OverlapDetect</definition>
-        <argsstring>(const SDL_Rect &amp;, const Gvector &amp;)=0</argsstring>
+        <argsstring>(SDL_Rect *, SDL_Rect *)=0</argsstring>
         <name>OverlapDetect</name>
-        <reimplementedby refid="class_background_1af1206ce342dd773755f60e9f995bbbb4">OverlapDetect</reimplementedby>
+        <reimplementedby refid="class_brick_1adf1f62c2c51e4cc934bcb9569ba9ce2a">OverlapDetect</reimplementedby>
+        <reimplementedby refid="class_background_1a9169fdd8cf5b0624183eede6f6e18116">OverlapDetect</reimplementedby>
         <param>
-          <type>const SDL_Rect &amp;</type>
+          <type>SDL_Rect *</type>
         </param>
         <param>
-          <type>const <ref refid="class_gvector" kindref="compound">Gvector</ref> &amp;</type>
+          <type>SDL_Rect *</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -23,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="31" column="1"/>
+        <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="34" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -31,20 +32,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="39">
+      <node id="74">
         <label>Colidable</label>
         <link refid="class_colidable"/>
       </node>
-      <node id="40">
+      <node id="75">
         <label>Background</label>
         <link refid="class_background"/>
-        <childnode refid="39" relation="private-inheritance">
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>Brick</label>
+        <link refid="class_brick"/>
+        <childnode refid="75" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="29" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Colidable.h" bodystart="29" bodyend="32"/>
+    <location file="/home/wouter/Documents/sdlGame/src/Colidable.h" line="32" column="1" bodyfile="/home/wouter/Documents/sdlGame/src/Colidable.h" bodystart="32" bodyend="35"/>
     <listofallmembers>
-      <member refid="class_colidable_1ae180ab230bc892567ff8cc7d30f5cbd1" prot="public" virt="pure-virtual"><scope>Colidable</scope><name>OverlapDetect</name></member>
+      <member refid="class_colidable_1a082b047d6e7e66b85761ced37142fe70" prot="public" virt="pure-virtual"><scope>Colidable</scope><name>OverlapDetect</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

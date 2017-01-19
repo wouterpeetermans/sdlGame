@@ -1,4 +1,4 @@
-.TH "Hero" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "Hero" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,7 +14,7 @@ Inherits \fBSprite\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBHero\fP (\fBScene\fP *)"
+.RI "\fBHero\fP (\fBScene\fP *, int, int)"
 .br
 .ti -1c
 .RI "\fB~Hero\fP ()"
@@ -23,15 +23,16 @@ Inherits \fBSprite\fP\&.
 .RI "void \fBGetKeys\fP (SDL_Event *)"
 .br
 .ti -1c
-.RI "void \fBUpdate\fP (unsigned int)"
+.RI "void \fBUpdate\fP (unsigned int, \fBColidable\fP **, int)"
 .br
 .ti -1c
 .RI "void \fBDraw\fP (SDL_Renderer *)"
 .br
 .in -1c
+.SS "Additional Inherited Members"
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Hero::Hero (\fBScene\fP *context)"
+.SS "Hero::Hero (\fBScene\fP *context, intx, inty)"
 
 .SS "Hero::~Hero ()"
 
@@ -43,7 +44,7 @@ Inherits \fBSprite\fP\&.
 Implements \fBDrawable\fP\&.
 .SS "void Hero::GetKeys (SDL_Event *e)"
 
-.SS "void Hero::Update (unsigned inttimePast)\fC [virtual]\fP"
+.SS "void Hero::Update (unsigned inttimePast, \fBColidable\fP **colideArray, intamountColidables)\fC [virtual]\fP"
 
 .PP
 Implements \fBSprite\fP\&.

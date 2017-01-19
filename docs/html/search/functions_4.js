@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadtexture',['loadTexture',['../class_scene.html#ab52e5e4e39ea9788f8f2e2cd38beab7f',1,'Scene']]]
+  ['hero',['Hero',['../class_hero.html#a87c7529628cbb4633ca7a427b4382ef1',1,'Hero']]]
 ];

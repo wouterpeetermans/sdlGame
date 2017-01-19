@@ -1,4 +1,4 @@
-.TH "Level" 3 "Thu Jan 12 2017" "sdlGame" \" -*- nroff -*-
+.TH "Level" 3 "Wed Jan 18 2017" "sdlGame" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,16 +8,117 @@ Level \-
 .PP
 .PP
 \fC#include <Level\&.h>\fP
+.PP
+Inherited by \fBLevel1\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBUpdate\fP (unsigned int)"
+.RI "\fBLevel\fP (\fBScene\fP *)"
+.br
+.ti -1c
+.RI "\fB~Level\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (unsigned int)"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP (SDL_Renderer *)"
+.br
+.ti -1c
+.RI "virtual void \fBGetKeys\fP (SDL_Event *)"
+.br
+.ti -1c
+.RI "virtual \fBColidable\fP ** \fBGetColidables\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBGetAmountColidables\fP ()"
 .br
 .in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBCreateMap\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBDrawMap\fP (\fBScene\fP *)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "SDL_Texture * \fBmapTexture\fP"
+.br
+.ti -1c
+.RI "\fBColidable\fP ** \fBcolidables\fP"
+.br
+.ti -1c
+.RI "\fBSprite\fP ** \fBenemies\fP"
+.br
+.ti -1c
+.RI "\fBHero\fP * \fBplayer\fP"
+.br
+.ti -1c
+.RI "int \fBamountObjects\fP"
+.br
+.ti -1c
+.RI "int \fBamountEnemies\fP"
+.br
+.ti -1c
+.RI "int * \fBtileArray\fP"
+.br
+.ti -1c
+.RI "int \fBmapWidth\fP"
+.br
+.ti -1c
+.RI "int \fBmapHeight\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Level::Level (\fBScene\fP *context)"
+
+.SS "Level::~Level ()"
+
 .SH "Member Function Documentation"
 .PP 
-.SS "void Level::Update (unsignedint)"
+.SS "virtual void Level::CreateMap ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBLevel1\fP\&.
+.SS "void Level::Draw (SDL_Renderer *renderer)\fC [virtual]\fP"
+
+.SS "void Level::DrawMap (\fBScene\fP *context)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "virtual int Level::GetAmountColidables ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "virtual \fBColidable\fP** Level::GetColidables ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "void Level::GetKeys (SDL_Event *e)\fC [virtual]\fP"
+
+.SS "void Level::Update (unsigned inttimePast)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int Level::amountEnemies\fC [protected]\fP"
+
+.SS "int Level::amountObjects\fC [protected]\fP"
+
+.SS "\fBColidable\fP** Level::colidables\fC [protected]\fP"
+
+.SS "\fBSprite\fP** Level::enemies\fC [protected]\fP"
+
+.SS "int Level::mapHeight\fC [protected]\fP"
+
+.SS "SDL_Texture* Level::mapTexture\fC [protected]\fP"
+
+.SS "int Level::mapWidth\fC [protected]\fP"
+
+.SS "\fBHero\fP* Level::player\fC [protected]\fP"
+
+.SS "int* Level::tileArray\fC [protected]\fP"
 
 
 .SH "Author"

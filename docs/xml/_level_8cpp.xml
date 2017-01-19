@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_level_8cpp" kind="file">
+    <compoundname>Level.cpp</compoundname>
+    <includes refid="_level_8h" local="yes">Level.h</includes>
+    <incdepgraph>
+      <node id="433">
+        <label>SDL2/SDL_image.h</label>
+      </node>
+      <node id="437">
+        <label>Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="435" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+      </node>
+      <node id="427">
+        <label>Hero.h</label>
+        <link refid="_hero_8h"/>
+        <childnode refid="428" relation="include">
+        </childnode>
+      </node>
+      <node id="430">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="436">
+        <label>Brick.h</label>
+        <link refid="_brick_8h"/>
+        <childnode refid="437" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>Drawable.h</label>
+        <link refid="_drawable_8h"/>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+      </node>
+      <node id="431">
+        <label>iostream</label>
+      </node>
+      <node id="435">
+        <label>Colidable.h</label>
+        <link refid="_colidable_8h"/>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+      </node>
+      <node id="434">
+        <label>Gvector.h</label>
+        <link refid="_gvector_8h"/>
+      </node>
+      <node id="432">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+      </node>
+      <node id="425">
+        <label>src/Level.cpp</label>
+        <link refid="Level.cpp"/>
+        <childnode refid="426" relation="include">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>Level.h</label>
+        <link refid="_level_8h"/>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="428">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+        <childnode refid="435" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>a<sp/>simple<sp/>platformer<sp/>game<sp/>written<sp/>for<sp/>a<sp/>shool<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/><sp/>Wouter<sp/>Peetermans</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_level_8h" kindref="compound">Level.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="class_level_1ad9a71d900fcb095ad577a5806e5e0ff2" kindref="member">Level::Level</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kindref="member">player</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_hero" kindref="compound">Hero</ref>(context,1,5);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="class_level_1a249eac1e8f19ff44134efa5e986feaca" kindref="member">Level::~Level</ref>(){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<ref refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kindref="member">tileArray</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1a971779b6738f1d566b1608b1f1b94f4c" kindref="member">Level::DrawMap</ref>(<ref refid="class_scene" kindref="compound">Scene</ref>*<sp/>context){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" kindref="member">mapTexture</ref><sp/>=<sp/>context-&gt;<ref refid="class_scene_1ab08f5ffcaabc45634e6c60eafcf74dbe" kindref="member">CreateMapTexture</ref>(<ref refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" kindref="member">mapWidth</ref>*32,<ref refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" kindref="member">mapHeight</ref>*32);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>(<ref refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" kindref="member">mapWidth</ref>*<ref refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" kindref="member">mapHeight</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kindref="member">tileArray</ref>[i]&gt;1)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref>++;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kindref="member">tileArray</ref>[i]==1)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>++;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_colidable" kindref="compound">Colidable</ref>*[<ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref>+<ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" kindref="member">enemies</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_sprite" kindref="compound">Sprite</ref>*[<ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="class_drawable" kindref="compound">Drawable</ref>**<sp/>d<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_drawable" kindref="compound">Drawable</ref>*[<ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref>];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>SDL_Texture*<sp/>blockSheet<sp/>=<sp/>context-&gt;<ref refid="class_scene_1a874a80710129274a51e0c55e43129e3e" kindref="member">LoadTexture</ref>(</highlight><highlight class="stringliteral">&quot;game/castle.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objectStep<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enemieStep<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_level_1a7c8f9c0ee45ef3b70eb38510c18e8eff" kindref="member">mapHeight</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="class_level_1ae664f4cb3c3a2769d5fe91f2c4e2f3ce" kindref="member">mapWidth</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_level_1a4c873dd1faff072635e148ecbd07ea9b" kindref="member">tileArray</ref>[(i*mapWidth)+j])<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//do<sp/>nothing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//do<sp/>nothing<sp/>for<sp/>the<sp/>moment<sp/>(stil<sp/>working<sp/>on<sp/>this<sp/>enemie<sp/>thing)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//make<sp/>a<sp/>brick</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_brick" kindref="compound">Brick</ref>*<sp/>b<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_brick" kindref="compound">Brick</ref>(blockSheet,j,i);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref>[objectStep+enemieStep]<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d[objectStep+enemieStep]<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objectStep++;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>SDL_Renderer*<sp/>r<sp/>=<sp/>context-&gt;<ref refid="class_scene_1a1eed9d166ea0abb455a4c69ae4ce8bf5" kindref="member">GetRenderer</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>SDL_SetRenderTarget(r,<sp/><ref refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" kindref="member">mapTexture</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_level_1add127c9e6f6bc1bcffadac27496d0c6a" kindref="member">amountObjects</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>d[i]-&gt;<ref refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kindref="member">Draw</ref>(r);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>SDL_SetRenderTarget(r,<sp/>NULL);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>d;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1aaf7ead34c62ce6dde1e75743d8719fbd" kindref="member">Level::GetKeys</ref>(SDL_Event<sp/>*e){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kindref="member">player</ref>-&gt;<ref refid="class_hero_1a796e7fadaf52d7ddaff286258c2b9769" kindref="member">GetKeys</ref>(e);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1ae6a51f3a856804131b198f5af1719091" kindref="member">Level::Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timePast){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" kindref="member">enemies</ref>[i]-&gt;<ref refid="class_sprite_1a733136fecfb81865a2e42ccc329f4574" kindref="member">Update</ref>(timePast,<sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref>,<sp/>amountObjects);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kindref="member">player</ref>-&gt;<ref refid="class_hero_1a5a38603fdc0e19abec194249357187f1" kindref="member">Update</ref>(timePast,<sp/><ref refid="class_level_1a492ea490f96e988a88c01d8432bae9b4" kindref="member">colidables</ref>,<sp/>(amountObjects+amountEnemies));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_1a0b7d43491002eaabf22f3463485fd8f9" kindref="member">Level::Draw</ref>(SDL_Renderer<sp/>*<sp/>renderer){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>SDL_Rect<sp/>src,<sp/>dest;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>dest.h<sp/>=<sp/>src.h<sp/>=<sp/><ref refid="_scene_8h_1a854e2c54b966212d598afc2d1288f411" kindref="member">window_Height</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>dest.w<sp/>=<sp/>src.w<sp/>=<sp/><ref refid="_scene_8h_1a51ad4e0aa01aae093b93150fcbf90652" kindref="member">window_Width</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>dest.x<sp/>=<sp/>src.x<sp/>=<sp/>dest.y<sp/>=<sp/>src.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>SDL_RenderCopy(renderer,<sp/><ref refid="class_level_1a9abd431eafb9c1ee29e63d3e1aae27db" kindref="member">mapTexture</ref>,&amp;src,&amp;dest);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_level_1ac209eb5a5168d2ea2c1dabe6168422a7" kindref="member">amountEnemies</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_level_1a4b153fae1dda32e793fac0b7e0f54863" kindref="member">enemies</ref>[i]-&gt;<ref refid="class_drawable_1a3a063894185ac869766edd4ebc4ba51a" kindref="member">Draw</ref>(renderer);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><ref refid="class_level_1a02a5bfe170913471f22ded61dec8efd3" kindref="member">player</ref>-&gt;<ref refid="class_hero_1af11ab514ade4144d5764fc8e6bc2fbc0" kindref="member">Draw</ref>(renderer);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/wouter/Documents/sdlGame/src/Level.cpp"/>
+  </compounddef>
+</doxygen>

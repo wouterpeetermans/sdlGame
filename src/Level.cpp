@@ -42,7 +42,8 @@ void Level::DrawMap(Scene* context){
   }
   colidables = new Colidable*[amountObjects+amountEnemies];
   enemies = new Sprite*[amountEnemies];
-  Drawable* d[amountObjects];
+  Drawable** d = new Drawable*[amountObjects];
+  SDL_Texture* blockSheet = context->LoadTexture("game/castle.png");
   int objectStep = 0;
   int enemieStep = 0;
   for (int i = 0; i < mapHeight; i++) {
@@ -56,7 +57,7 @@ void Level::DrawMap(Scene* context){
           break;
         case 2:{
           //make a brick
-          Brick* b = new Brick(context,j,i);
+          Brick* b = new Brick(blockSheet,j,i);
           colidables[objectStep+enemieStep] = b;
           d[objectStep+enemieStep] = b;
           objectStep++;
@@ -75,6 +76,7 @@ void Level::DrawMap(Scene* context){
     d[i]->Draw(r);
   }
   SDL_SetRenderTarget(r, NULL);
+  delete[] d;
 }
 
 void Level::GetKeys(SDL_Event *e){

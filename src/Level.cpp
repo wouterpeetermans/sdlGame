@@ -19,6 +19,7 @@
 #include "Level.h"
 #include "Brick.h"
 #include "Enemy.h"
+#include "SpikesUp.h"
 
 Level::Level(Scene* context){
   player = new Hero(context,1,5);
@@ -67,6 +68,13 @@ void Level::DrawMap(Scene* context){
           Brick* b = new Brick(blockSheet,j,i);
           colidables[objectStep+enemieStep] = b;
           d[objectStep] = b;
+          objectStep++;
+          break;
+        }
+        case 3:{
+          SpikesUp* s = new SpikesUp(blockSheet,j,i);
+          colidables[objectStep+enemieStep] = s;
+          d[objectStep] = s;
           objectStep++;
           break;
         }

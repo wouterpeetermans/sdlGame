@@ -8,27 +8,27 @@
     (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef _Brick
-#define _Brick 1
+#ifndef _SpikesUp
+#define _SpikesUp 1
+
 #include "Background.h"
 
-class Brick: public Background{
-private:
-  void init(int,int);
+class SpikesUp:public Background{
 public:
-  Brick(Scene*,int,int);
-  Brick(SDL_Texture*,int,int);
-  ~Brick();
+  SpikesUp(SDL_Texture*,int,int);
+  ~SpikesUp();
   void Draw(SDL_Renderer*);
   OverlapType OverlapDetect(SDL_Rect*,SDL_Rect*);
 };
+
+
 
 
 

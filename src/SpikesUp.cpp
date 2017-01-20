@@ -8,7 +8,7 @@
     (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
@@ -16,34 +16,31 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "Brick.h"
+#include "SpikesUp.h"
 
 
-Brick::Brick(Scene* context,int xpos ,int ypos):Background(context,"game/castle.png"){
-  init(xpos,ypos);
-}
-Brick::Brick(SDL_Texture* texture,int xpos,int ypos):Background(texture){
-  init(xpos,ypos);
-}
-Brick::~Brick(){
-}
-
-void Brick::init(int x , int y){
-  srcRect.h = 64;
-  srcRect.w = 64;
-  srcRect.x = 0;
-  srcRect.y = 192;
+SpikesUp::SpikesUp(SDL_Texture* texture,int xpos,int ypos):Background(texture){
+  int corSize = 10;
+  int corSizeX = 20;
+  srcRect.h = 32 - corSize;
+  srcRect.w = 64 -corSizeX;
+  srcRect.x = 192 +(corSizeX/2);
+  srcRect.y = 160 + corSize;
   posRect.h = 32;
   posRect.w = 32;
-  posRect.x = x*32;
-  posRect.y = y*32;
+  posRect.x = xpos*32;
+  posRect.y = ypos*32;
 }
-void Brick::Draw(SDL_Renderer* renderer){
+SpikesUp::~SpikesUp(){
+}
+
+
+void SpikesUp::Draw(SDL_Renderer* renderer){
   SDL_RenderCopy(renderer, blockSheet, &srcRect, &posRect);
 }
-OverlapType Brick::OverlapDetect(SDL_Rect* rect,SDL_Rect* resultRect){
+OverlapType SpikesUp::OverlapDetect(SDL_Rect* rect,SDL_Rect* resultRect){
   if(SDL_IntersectRect(rect,&posRect,resultRect)) {
-    return OL_COLLISION;
+    return OL_DEADLY;
   } else {
     return OL_NO_COLLISION;
   }

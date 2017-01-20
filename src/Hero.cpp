@@ -132,16 +132,19 @@
    for (int i = 0; i < amountColidables; i++) {
      tempPosRect.x += changeX;
      OverlapType collisionType = colideArray[i]->OverlapDetect(&tempPosRect,&collisionRect);
-     if(collisionType==OL_COLLISION){
+     if(collisionType!=OL_NO_COLLISION){
        if (collisionRect.w > biggestCollisionX) {
          biggestCollisionX = collisionRect.w;
        }
        colidedX = true;
      }
+     //if (collisionType == OL_ENEMY) {
+    //   isAlive = false;
+     //}
      tempPosRect.x -= changeX;
      tempPosRect.y -= changeY;
      collisionType = colideArray[i]->OverlapDetect(&tempPosRect,&collisionRect);
-     if(collisionType==OL_COLLISION){
+     if(collisionType!=OL_NO_COLLISION){
        if (collisionRect.h > biggestCollisionY) {
          biggestCollisionY = collisionRect.h;
        }

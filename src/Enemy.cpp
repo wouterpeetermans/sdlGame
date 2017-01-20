@@ -24,7 +24,7 @@
    rightArray = new SDL_Rect[lenght];
    backArray = new SDL_Rect[lenght];
    frontArray = new SDL_Rect[lenght];
-   int sizeCor = 13;
+   int sizeCor = 25;
    for (int i = 0; i < lenght; i++) {
      SDL_Rect rect;
      rect.h = 64 - sizeCor;
@@ -49,6 +49,7 @@
    speedVector.xZero();
    Gvector initVector(-1,0);
    speedVector = initVector;
+   colRect = posRect;
  }
 
 

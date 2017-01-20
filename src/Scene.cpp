@@ -103,9 +103,17 @@ void Scene::Run(){ // the place where all the magic happens
 		Level* currentLevel;
 		Level1 l1(this);
 		Level2 l2(this);
-		currentLevel = &l2;
+
 		unsigned int startTime=0 , currentTime=0 , timeTook=0;
+		int levelCount = 0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
+			switch (levelCount) {
+				case 0:
+					currentLevel = &l1;
+					break;
+				case 1:
+					currentLevel = &l2;
+			}
 			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
 			while ( SDL_PollEvent( &e ) !=0 ) {//a loop to go over all the events the user managed to create in a fraction of a second
 				if (e.type == SDL_QUIT) { //now I am able to use the litle cross on top of the window
@@ -127,5 +135,8 @@ void Scene::Run(){ // the place where all the magic happens
 			}
 			timeTook = SDL_GetTicks() - startTime;
 			//SDL_Delay(100);
+			if (currentLevel->Done()) {
+				levelCount++;
+			}
 		}
 }

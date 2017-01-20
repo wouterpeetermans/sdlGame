@@ -49,7 +49,6 @@
    speedVector.xZero();
    Gvector initVector(-1,0);
    speedVector = initVector;
-   colRect = posRect;
  }
 
 
@@ -84,24 +83,30 @@
    int biggestCollisionX = 0 , biggestCollisionY = 0;
    SDL_Rect collisionRect;
    for (int i = 0; i < amountColidables; i++) {
-     tempPosRect.x += changeX;
-     OverlapType collisionType = colidables[i]->OverlapDetect(&tempPosRect,&collisionRect);
-     if(collisionType==OL_COLLISION){
-       if (collisionRect.w > biggestCollisionX) {
-         biggestCollisionX = collisionRect.w;
-       }
-       colidedX = true;
+     if (colidables[i] == this) {
+       goto skip;
      }
-     tempPosRect.x -= changeX;
-     tempPosRect.y -= changeY;
-     collisionType = colidables[i]->OverlapDetect(&tempPosRect,&collisionRect);
-     if(collisionType==OL_COLLISION){
-       if (collisionRect.h > biggestCollisionY) {
-         biggestCollisionY = collisionRect.h;
+     {
+       tempPosRect.x += changeX;
+       OverlapType collisionType = colidables[i]->OverlapDetect(&tempPosRect,&collisionRect);
+       if(collisionType!=OL_NO_COLLISION){
+         if (collisionRect.w > biggestCollisionX) {
+           biggestCollisionX = collisionRect.w;
+         }
+         colidedX = true;
        }
-       colidedY = true;
+       tempPosRect.x -= changeX;
+       tempPosRect.y -= changeY;
+       collisionType = colidables[i]->OverlapDetect(&tempPosRect,&collisionRect);
+       if(collisionType!=OL_NO_COLLISION){
+         if (collisionRect.h > biggestCollisionY) {
+           biggestCollisionY = collisionRect.h;
+         }
+         colidedY = true;
+       }
+       tempPosRect.y += changeY;
      }
-     tempPosRect.y += changeY;
+     skip: ;
    }
    posRect->x += changeX;
    posRect->y -= changeY;
@@ -128,7 +133,10 @@
 
 
  OverlapType Enemy::OverlapDetect(SDL_Rect* rect,SDL_Rect* resultRect){
-   if(SDL_IntersectRect(rect,colRect,resultRect)) {
+   if (rect == posRect) {
+     return OL_NO_COLLISION;
+   }
+   if(SDL_IntersectRect(rect,posRect,resultRect)) {
      return OL_ENEMY;
    } else {
      return OL_NO_COLLISION;

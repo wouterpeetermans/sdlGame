@@ -22,7 +22,6 @@
 
 class Enemy:public Sprite , public Colidable {
 private:
-  SDL_Rect* colRect;
   int seqb;
 public:
   Enemy(Scene*,int,int);

@@ -132,5 +132,11 @@ void Level::Draw(SDL_Renderer * renderer){
   } else {
     viewport.x = 0;
   }
+  SDL_Rect miniMapRect;
+  miniMapRect.h =(mapHeight*32)/8;
+  miniMapRect.w =(mapWidth*32)/8;
+  miniMapRect.x = 0;
+  miniMapRect.y = 0;
   SDL_RenderCopy(renderer, levelTexture, &viewport, NULL);
+  SDL_RenderCopy(renderer, levelTexture, NULL, &miniMapRect);
 }

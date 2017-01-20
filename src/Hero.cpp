@@ -19,7 +19,7 @@
  #include "Hero.h"
 
  Hero::Hero(Scene* context,int x, int y):Sprite("game/hero.png", context){
-   int lenght = 6;
+   int lenght = 4;
    leftArray = new SDL_Rect[lenght];
    rightArray = new SDL_Rect[lenght];
    backArray = new SDL_Rect[lenght];
@@ -28,7 +28,7 @@
      SDL_Rect rect;
      rect.h = 64;
      rect.w = 32;
-     rect.x = i*32;
+     rect.x = i*32+64;
      rect.y = 0;
      frontArray[i] = rect;
      rect.y = 64;
@@ -103,7 +103,7 @@
 
  void Hero::Update(unsigned int timePast,Colidable** colideArray,int amountColidables){
    Gvector gravityVector(0,-1);
-   if(seqb<36){
+   if(seqb<18){
      seqb++;
    }
    else{

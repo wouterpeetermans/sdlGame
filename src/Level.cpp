@@ -22,7 +22,11 @@
 #include "SpikesUp.h"
 
 Level::Level(Scene* context){
+  player = NULL;
   player = new Hero(context,1,5);
+  if (player == NULL) {
+    std::cout << "new failed" << '\n';
+  }
 }
 
 Level::~Level(){
@@ -44,9 +48,21 @@ void Level::DrawMap(Scene* context){
       amountEnemies++;
     }
   }
+  colidables = NULL;
+  enemies = NULL;
   colidables = new Colidable*[amountObjects+amountEnemies];
+  if (colidables == NULL) {
+    std::cout << "new failed" << '\n';
+  }
   enemies = new Sprite*[amountEnemies];
-  Drawable** d = new Drawable*[amountObjects];
+  if (enemies == NULL) {
+    std::cout << "new failed" << '\n';
+  }
+  Drawable** d = NULL;
+  d = new Drawable*[amountObjects];
+  if (d == NULL) {
+    std::cout << "new failed" << '\n';
+  }
   SDL_Texture* blockSheet = context->LoadTexture("game/castle.png");
   int objectStep = 0;
   int enemieStep = 0;
@@ -57,7 +73,11 @@ void Level::DrawMap(Scene* context){
           //do nothing
           break;
         case 1:{
-          Enemy* badGuy = new Enemy(context,j,i);
+          Enemy* badGuy = NULL;
+          badGuy = new Enemy(context,j,i);
+          if (badGuy == NULL) {
+            std::cout << "new failed" << '\n';
+          }
           colidables[objectStep+enemieStep] = badGuy;
           enemies[enemieStep] = badGuy;
           enemieStep++;
@@ -65,14 +85,22 @@ void Level::DrawMap(Scene* context){
         }
         case 2:{
           //make a brick
-          Brick* b = new Brick(blockSheet,j,i);
+          Brick* b = NULL;
+          b = new Brick(blockSheet,j,i);
+          if (b == NULL) {
+            std::cout << "new failed" << '\n';
+          }
           colidables[objectStep+enemieStep] = b;
           d[objectStep] = b;
           objectStep++;
           break;
         }
         case 3:{
-          SpikesUp* s = new SpikesUp(blockSheet,j,i);
+          SpikesUp* s = NULL;
+          s = new SpikesUp(blockSheet,j,i);
+          if (s == NULL) {
+            std::cout << "new failed" << '\n';
+          }
           colidables[objectStep+enemieStep] = s;
           d[objectStep] = s;
           objectStep++;
@@ -104,6 +132,10 @@ void Level::Update(unsigned int timePast){
     enemies[i]->Update(timePast, colidables, (amountObjects+amountEnemies));
   }
   player->Update(timePast, colidables, (amountObjects+amountEnemies));
+  if (!player->IsAlive()) {
+    player->SetPos(1, 5);
+    player->SetAlive();
+  }
 }
 
 void Level::Draw(SDL_Renderer * renderer){

@@ -20,10 +20,23 @@
 
  Enemy::Enemy(Scene* context,int xPos ,int yPos):Sprite("game/enemy.png", context){
    int lenght = 3;
+   leftArray = rightArray = backArray = frontArray = NULL;
    leftArray = new SDL_Rect[lenght];
+   if (leftArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    rightArray = new SDL_Rect[lenght];
+   if (rightArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    backArray = new SDL_Rect[lenght];
+   if (backArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    frontArray = new SDL_Rect[lenght];
+   if (frontArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    int sizeCor = 25;
    for (int i = 0; i < lenght; i++) {
      SDL_Rect rect;

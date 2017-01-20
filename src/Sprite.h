@@ -34,12 +34,15 @@ protected:
 	SDL_Rect* srcRect;
 	SDL_Rect* posRect;
 	Gvector speedVector;
+	bool isAlive;
 
 public:
 	Sprite(std::string, Scene*);
 	~Sprite();
+	bool IsAlive(){return isAlive;};
 	virtual void Update(unsigned int,Colidable**,int)=0;
 	virtual void Draw(SDL_Renderer*)=0;
+	void SetAlive(){isAlive = true;};
 };
 
 

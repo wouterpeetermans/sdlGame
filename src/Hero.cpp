@@ -20,10 +20,23 @@
 
  Hero::Hero(Scene* context,int x, int y):Sprite("game/hero.png", context){
    int lenght = 4;
+   leftArray = rightArray = backArray = frontArray = NULL;
    leftArray = new SDL_Rect[lenght];
+   if (leftArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    rightArray = new SDL_Rect[lenght];
+   if (rightArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    backArray = new SDL_Rect[lenght];
+   if (backArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    frontArray = new SDL_Rect[lenght];
+   if (frontArray == NULL) {
+     std::cout << "new fail" << '\n';
+   }
    for (int i = 0; i < lenght; i++) {
      SDL_Rect rect;
      rect.h = 64;
@@ -136,17 +149,23 @@
        if (collisionRect.w > biggestCollisionX) {
          biggestCollisionX = collisionRect.w;
        }
+       if (collisionType == OL_ENEMY) {
+         isAlive = false;
+       }
+       if (collisionType == OL_DEADLY){
+         isAlive = false;
+       }
        colidedX = true;
      }
-     //if (collisionType == OL_ENEMY) {
-    //   isAlive = false;
-     //}
      tempPosRect.x -= changeX;
      tempPosRect.y -= changeY;
      collisionType = colideArray[i]->OverlapDetect(&tempPosRect,&collisionRect);
      if(collisionType!=OL_NO_COLLISION){
        if (collisionRect.h > biggestCollisionY) {
          biggestCollisionY = collisionRect.h;
+       }
+       if (collisionType == OL_DEADLY){
+         isAlive = false;
        }
        colidedY = true;
      }
@@ -180,4 +199,9 @@
 
  int Hero::GetPos(){
    return posRect->x;
+ }
+
+ void Hero::SetPos(int x,int y){
+   posRect->x = x*32;
+   posRect->y = y*32;
  }

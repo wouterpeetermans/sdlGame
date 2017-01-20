@@ -34,6 +34,7 @@ public:
   void Update(unsigned int,Colidable**,int);
   void Draw(SDL_Renderer*);
   int GetPos();
+  void SetPos(int,int);
 };
 
 

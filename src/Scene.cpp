@@ -77,7 +77,11 @@ SDL_Texture* Scene::LoadTexture(std::string path){
 }
 
 SDL_Texture* Scene::CreateTexture(int width, int height){
-	return SDL_CreateTexture(screenRenderer, SDL_GetWindowPixelFormat(window), SDL_TEXTUREACCESS_TARGET, width, height);
+	SDL_Texture* newTexture = SDL_CreateTexture(screenRenderer, SDL_GetWindowPixelFormat(window), SDL_TEXTUREACCESS_TARGET, width, height);
+	if (newTexture == NULL) {
+		std::cout << "creating a texture failed" << '\n';
+	}
+	return newTexture;
 }
 
 void Scene::Run(){ // the place where all the magic happens

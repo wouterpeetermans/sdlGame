@@ -21,6 +21,7 @@
 
 Sprite::Sprite(std::string file ,Scene* context){
   spriteSheet = context->LoadTexture(file);
+  isAlive = true;
 }
 
 Sprite::~Sprite(){

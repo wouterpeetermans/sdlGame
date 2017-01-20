@@ -27,7 +27,11 @@ Level2::Level2(Scene* context):Level(context){
 void Level2::CreateMap(){//simulated 2d array because dynamicly allocating 2d arrays is imposible
   mapWidth = 49;
   mapHeight = 18;
+  tileArray = NULL;
   tileArray = new int[mapHeight*mapWidth];
+  if (tileArray == NULL) {
+    std::cout << "new failed" << '\n';
+  }
   int tempArray[mapWidth*mapHeight] = {
     2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,

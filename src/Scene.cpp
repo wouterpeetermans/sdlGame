@@ -18,6 +18,7 @@
 
 #include "Scene.h"
 #include "Level1.h"
+#include "Level2.h"
 //#include "Brick.h"
 //#include "Colidable.h"
 //constructor
@@ -95,8 +96,10 @@ void Scene::Run(){ // the place where all the magic happens
 		for (int i = 0; i < 10; i++) {
 			colidables[i]= blokjes[i] = new Brick(this,10+i,17-i);
 		}*/
+		Level* currentLevel;
 		Level1 l1(this);
-
+		Level2 l2(this);
+		currentLevel = &l2;
 		unsigned int startTime=0 , currentTime=0 , timeTook=0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
 			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
@@ -105,12 +108,12 @@ void Scene::Run(){ // the place where all the magic happens
 					quit = true;
 				}
 				//held.GetKeys(&e);
-				l1.GetKeys(&e);
+				currentLevel->GetKeys(&e);
 			}
 			//held.Update(timeTook,l1.GetColidables(),l1.GetAmountColidables());
-			l1.Update(timeTook);
+			currentLevel->Update(timeTook);
 			SDL_RenderClear(screenRenderer);
-			l1.Draw(screenRenderer);
+			currentLevel->Draw(screenRenderer);
 			//held.Draw(screenRenderer);
 			//blok.Draw(screenRenderer);
 			SDL_RenderPresent(screenRenderer);

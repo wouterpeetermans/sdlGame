@@ -19,6 +19,7 @@
 #include "Level.h"
 #include "Brick.h"
 #include "Enemy.h"
+#include "BounceEnemy.h"
 #include "SpikesUp.h"
 #include "Door.h"
 
@@ -33,7 +34,6 @@ Level::Level(Scene* context){
 
 Level::~Level(){
   delete[]tileArray;
-
 }
 
 
@@ -50,7 +50,7 @@ void Level::DrawMap(Scene* context){
       amountEnemies++;
     }
     if (tileArray[i]==2) {
-      /* code */
+      amountEnemies++;
     }
   }
   colidables = NULL;
@@ -89,7 +89,15 @@ void Level::DrawMap(Scene* context){
           break;
         }
         case 2:{
-          
+          BounceEnemy* bouncer = NULL;
+          bouncer = new BounceEnemy(context,j,i);
+          if (bouncer == NULL) {
+            std::cout << "new failed" << '\n';
+          }
+          colidables[objectStep+enemieStep] = bouncer;
+          enemies[enemieStep] = bouncer;
+          enemieStep++;
+          break;
         }
         case 3:{
           //make a brick

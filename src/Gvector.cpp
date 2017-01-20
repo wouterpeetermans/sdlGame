@@ -52,6 +52,10 @@ void Gvector::xInvert(){
   x*=-1;
 }
 
+void Gvector::yInvert(){
+  y*=-1;
+}
+
 Gvector Gvector::operator*(const double number){
   Gvector result;
   result.x = number*x;

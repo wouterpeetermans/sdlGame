@@ -59,6 +59,7 @@
    srcRect = frontArray;
    speedVector.xZero();
    speedVector.yZero();
+   isDone = false;
  }
 
  Hero::~Hero(){
@@ -155,6 +156,9 @@
        if (collisionType == OL_DEADLY){
          isAlive = false;
        }
+       if (collisionType == OL_READY) {
+         isDone = true;
+       }
        colidedX = true;
      }
      tempPosRect.x -= changeX;
@@ -166,6 +170,9 @@
        }
        if (collisionType == OL_DEADLY){
          isAlive = false;
+       }
+       if (collisionType == OL_READY) {
+         isDone = true;
        }
        colidedY = true;
      }

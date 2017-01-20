@@ -16,32 +16,27 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- #ifndef _Hero
- #define _Hero 1
- #include "Sprite.h"
+ #include "Door.h"
+
+ Door::Door(SDL_Texture* texture,int xpos,int ypos):Background(texture){
+   srcRect.h = 128;
+   srcRect.w = 64;
+   srcRect.x = 192;
+   srcRect.y = 384;
+   posRect.h = 64;
+   posRect.w = 32;
+   posRect.x = xpos*32;
+   posRect.y = ypos*32;
+ }
 
 
-
-class Hero:public Sprite {
-private:
-  int seqb;
-  int hasJumped;
-  bool jumpKeyPressed;
-  bool isDone;
-public:
-  Hero(Scene*,int,int);
-  ~Hero();
-  void GetKeys(SDL_Event *);
-  void Update(unsigned int,Colidable**,int);
-  void Draw(SDL_Renderer*);
-  int GetPos();
-  void SetPos(int,int);
-  bool Done(){return isDone;}
-};
-
-
-
-
-
-
- #endif
+ void Door::Draw(SDL_Renderer* renderer){
+   SDL_RenderCopy(renderer, blockSheet, &srcRect, &posRect);
+ }
+ OverlapType Door::OverlapDetect(SDL_Rect* rect,SDL_Rect* resultRect){
+   if(SDL_IntersectRect(rect,&posRect,resultRect)) {
+     return OL_READY;
+   } else {
+     return OL_NO_COLLISION;
+   }
+ }

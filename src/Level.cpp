@@ -20,6 +20,7 @@
 #include "Brick.h"
 #include "Enemy.h"
 #include "SpikesUp.h"
+#include "Door.h"
 
 Level::Level(Scene* context){
   player = NULL;
@@ -27,6 +28,7 @@ Level::Level(Scene* context){
   if (player == NULL) {
     std::cout << "new failed" << '\n';
   }
+  isDone = false;
 }
 
 Level::~Level(){
@@ -106,6 +108,17 @@ void Level::DrawMap(Scene* context){
           objectStep++;
           break;
         }
+        case 4:{
+          Door* door = NULL;
+          door = new Door(blockSheet,j,i);
+          if (door == NULL) {
+            std::cout << "new failed" << '\n';
+          }
+          colidables[objectStep+enemieStep] = door;
+          d[objectStep] = door;
+          objectStep++;
+          break;
+        }
         default:
           break;
       }
@@ -135,6 +148,9 @@ void Level::Update(unsigned int timePast){
   if (!player->IsAlive()) {
     player->SetPos(1, 5);
     player->SetAlive();
+  }
+  if (player->Done()) {
+    isDone = true;
   }
 }
 

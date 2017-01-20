@@ -23,7 +23,8 @@
    OL_NO_COLLISION=0,
    OL_COLLISION,
    OL_ENEMY,
-   OL_DEADLY
+   OL_DEADLY,
+   OL_READY
  };
 
 class Colidable {

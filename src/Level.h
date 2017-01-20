@@ -34,6 +34,7 @@ protected:
   int mapHeight;
   virtual void CreateMap()=0;
   virtual void DrawMap(Scene*);
+  bool isDone;
 public:
   Level(Scene*);
   ~Level();
@@ -42,6 +43,7 @@ public:
   virtual void GetKeys(SDL_Event*);
   virtual Colidable** GetColidables(){return colidables;};
   virtual int GetAmountColidables(){return amountObjects+amountEnemies;}
+  bool Done(){return isDone;};
 };
 
 

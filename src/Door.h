@@ -16,31 +16,17 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- #ifndef _Hero
- #define _Hero 1
- #include "Sprite.h"
+ #ifndef _Door
+ #define _Door 1
 
+ #include "Background.h"
 
-
-class Hero:public Sprite {
-private:
-  int seqb;
-  int hasJumped;
-  bool jumpKeyPressed;
-  bool isDone;
-public:
-  Hero(Scene*,int,int);
-  ~Hero();
-  void GetKeys(SDL_Event *);
-  void Update(unsigned int,Colidable**,int);
-  void Draw(SDL_Renderer*);
-  int GetPos();
-  void SetPos(int,int);
-  bool Done(){return isDone;}
-};
-
-
-
+ class Door:public Background {
+ public:
+   Door(SDL_Texture*,int,int);
+   void Draw(SDL_Renderer*);
+   OverlapType OverlapDetect(SDL_Rect*,SDL_Rect*);
+ };
 
 
 

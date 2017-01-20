@@ -43,11 +43,14 @@ void Level::DrawMap(Scene* context){
   mapTexture = context->CreateTexture(mapWidth*32,mapHeight*32);
   levelTexture = context->CreateTexture(mapWidth*32,mapHeight*32);
   for (int i = 0; i < (mapWidth*mapHeight); i++) {
-    if (tileArray[i]>1) {
+    if (tileArray[i]>2) {
       amountObjects++;
     }
     if (tileArray[i]==1) {
       amountEnemies++;
+    }
+    if (tileArray[i]==2) {
+      /* code */
     }
   }
   colidables = NULL;
@@ -86,6 +89,9 @@ void Level::DrawMap(Scene* context){
           break;
         }
         case 2:{
+          
+        }
+        case 3:{
           //make a brick
           Brick* b = NULL;
           b = new Brick(blockSheet,j,i);
@@ -97,7 +103,7 @@ void Level::DrawMap(Scene* context){
           objectStep++;
           break;
         }
-        case 3:{
+        case 4:{
           SpikesUp* s = NULL;
           s = new SpikesUp(blockSheet,j,i);
           if (s == NULL) {
@@ -108,7 +114,7 @@ void Level::DrawMap(Scene* context){
           objectStep++;
           break;
         }
-        case 4:{
+        case 5:{
           Door* door = NULL;
           door = new Door(blockSheet,j,i);
           if (door == NULL) {

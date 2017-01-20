@@ -79,6 +79,7 @@ void Level::DrawMap(Scene* context){
 
   SDL_Renderer* r = context->GetRenderer();
   SDL_SetRenderTarget(r, mapTexture);
+  SDL_RenderClear(r);
   for (int i = 0; i < amountObjects; i++) {
     d[i]->Draw(r);
   }

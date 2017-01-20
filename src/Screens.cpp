@@ -36,7 +36,7 @@ void Screen::GetKeys(SDL_Event * e){
 }
 
 void Screen::CreateMap(){
-
+  tileArray = new int[2];
 }
 
 void Screen::Draw(SDL_Renderer* r){

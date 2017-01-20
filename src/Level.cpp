@@ -24,7 +24,7 @@
 #include "Door.h"
 
 Level::Level(){
-  
+
 }
 
 Level::Level(Scene* context){
@@ -37,7 +37,7 @@ Level::Level(Scene* context){
 }
 
 Level::~Level(){
-  delete[]tileArray;
+  //delete[]tileArray;
 }
 
 

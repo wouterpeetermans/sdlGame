@@ -92,22 +92,30 @@ void Scene::Run(){ // the place where all the magic happens
 		Level* currentLevel;
 		Level1 l1(this);
 		Level2 l2(this);
-		Screen startScreen(this,"game/enemy.png");
+		Screen startScreen(this,"game/start.png");
+		Screen tussenScreen(this,"game/tussenLevel.png");
+		Screen endScreen(this,"game/einde.png");
 
 		unsigned int startTime=0 , currentTime=0 , timeTook=0;
 		int levelCount = 0;
 		while ( !quit ) { // the main loop that goes on until the user is done with it
 			switch (levelCount) {
 				case 0:
-					currentLevel = &l1;
-					break;
-				case 1:
-					currentLevel = &l2;
-					break;
-				case 2:
 					currentLevel = &startScreen;
 					break;
+				case 1:
+					currentLevel = &l1;
+					break;
+				case 2:
+					currentLevel = &tussenScreen;
+					break;
 				case 3:
+					currentLevel = &l2;
+					break;
+				case 4:
+					currentLevel = &endScreen;
+					break;
+				case 5:
 					quit = true;
 					break;
 			}
@@ -132,8 +140,11 @@ void Scene::Run(){ // the place where all the magic happens
 			}
 			timeTook = SDL_GetTicks() - startTime;
 			//SDL_Delay(100);
-			if (currentLevel->Done()) {
-				levelCount++;
+			if(!quit){
+				if (currentLevel->Done()) {
+					levelCount++;
+				}
 			}
+
 		}
 }

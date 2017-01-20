@@ -23,6 +23,10 @@
 #include "SpikesUp.h"
 #include "Door.h"
 
+Level::Level(){
+  
+}
+
 Level::Level(Scene* context){
   player = NULL;
   player = new Hero(context,1,5);

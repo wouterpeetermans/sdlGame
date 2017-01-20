@@ -19,9 +19,8 @@
 #include "Scene.h"
 #include "Level1.h"
 #include "Level2.h"
-//#include "Brick.h"
-//#include "Colidable.h"
-//constructor
+#include "Screens.h"
+
 Scene::Scene(){
 	SDL_Init(SDL_INIT_EVERYTHING); // everything because why not
 	window = SDL_CreateWindow("sdlGame", // give the window a name
@@ -48,18 +47,18 @@ Scene::Scene(){
 		}
 	}
 }
-	//destructor because I dont like memory leaks
+
 Scene::~Scene(){
 		SDL_DestroyRenderer(screenRenderer);
 		SDL_DestroyWindow(window);
-		screenRenderer = NULL; // destroy the pointers to
+		screenRenderer = NULL;
 		window = NULL;
 		IMG_Quit();
-		SDL_Quit(); // quit SDL
+		SDL_Quit();
 		std::cout << "quited properly" << std::endl;
 		std::cout << '\a';
 }
-// fuction does what it tells you it does
+
 SDL_Texture* Scene::LoadTexture(std::string path){
 		SDL_Texture* newTexture = NULL; //here I store the newly generated surface
 		SDL_Surface* loadedSurface = IMG_Load(path.c_str());//load a surface from a file
@@ -85,24 +84,15 @@ SDL_Texture* Scene::CreateTexture(int width, int height){
 }
 
 void Scene::Run(){ // the place where all the magic happens
-		//SDL_Rect scrn_rect; //this will go in to some class later on
-		//scrn_rect.x = 576;
-		//scrn_rect.y = 432;
-		//scrn_rect.w = 64;
-		//scrn_rect.h = 48;
+
+
 		bool quit = false; //this bool tels if the user has quited the hard game already
 		SDL_Event e;// a place to store an event of some type
 
-		//Hero held(this,1,5);
-		/*
-		Brick* blokjes[10];
-		Colidable* colidables[10];
-		for (int i = 0; i < 10; i++) {
-			colidables[i]= blokjes[i] = new Brick(this,10+i,17-i);
-		}*/
 		Level* currentLevel;
 		Level1 l1(this);
 		Level2 l2(this);
+		Screen startScreen(this,"game/enemy.png");
 
 		unsigned int startTime=0 , currentTime=0 , timeTook=0;
 		int levelCount = 0;
@@ -113,6 +103,13 @@ void Scene::Run(){ // the place where all the magic happens
 					break;
 				case 1:
 					currentLevel = &l2;
+					break;
+				case 2:
+					currentLevel = &startScreen;
+					break;
+				case 3:
+					quit = true;
+					break;
 			}
 			startTime = SDL_GetTicks();//get wath time we started to cap the framerate
 			while ( SDL_PollEvent( &e ) !=0 ) {//a loop to go over all the events the user managed to create in a fraction of a second
